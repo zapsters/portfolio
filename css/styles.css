@@ -39,6 +39,7 @@ p {
   color: #f2f2f2;
   font-family: "Arial";
   margin-bottom: 100px;
+  margin-top: 100px;
   text-shadow: 1px 3px 3px rgba(19, 0, 0, 0.54);
   padding: 70px 100px;
   font-family: "Arial";
@@ -124,27 +125,28 @@ nav .links .nav--active {
   text-decoration-style: wavy;
 }
 
-.hero.fullheight {
-  height: calc(100vh + 30px);
-  position: relative;
-}
-
-.hero {
-  padding: 100px 0 70px 0;
+.wrapper {
+  min-height: calc(100% - 109px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0 0 0;
   background-color: #f2f2f2;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.hero a {
+.wrapper a {
   color: #812a19;
 }
-.hero .content.homepage .headshot {
+.wrapper .content.homepage .headshot {
   margin-bottom: 25px;
 }
-.hero .content.homepage hr {
+.wrapper .content.homepage hr {
   margin-bottom: 12px;
 }
-.hero .content {
-  flex: 1;
+.wrapper .content {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  min-height: 100%;
   display: flex;
   align-items: center;
   background-color: #f2f2f2;
@@ -152,23 +154,23 @@ nav .links .nav--active {
   color: #0d0d0d;
   flex-direction: column;
 }
-.hero .content hr {
+.wrapper .content hr {
   width: 90%;
   max-width: 700px;
   border: 2px solid #812a19;
   margin: 0;
 }
-.hero .content h1 {
+.wrapper .content h1 {
   margin: 0 0 20px 0;
 }
-.hero .content .headshot {
+.wrapper .content .headshot {
   width: 300px;
   border-radius: 50px;
 }
-.hero .content h1 {
+.wrapper .content h1 {
   margin-bottom: 7px;
 }
-.hero .content h3 {
+.wrapper .content h3 {
   font-weight: 100;
 }
 
@@ -177,7 +179,6 @@ nav .links .nav--active {
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
-  margin-bottom: 120px;
 }
 .quoteBlock a {
   color: #812a19;
@@ -209,6 +210,7 @@ nav .links .nav--active {
   gap: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-bottom: 100px;
+  margin-top: 20px;
 }
 .workshowcase .projectEntry:hover .thumbnail {
   padding: 13px;
@@ -313,7 +315,6 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
   text-shadow: 1px 3px 3px rgba(19, 0, 0, 0.54);
-  margin-top: 100px;
 }
 footer p {
   font-size: 17px;

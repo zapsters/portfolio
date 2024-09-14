@@ -1,11 +1,9 @@
-.hero.fullheight {
-  height: calc(100vh + 30px);
-  position: relative;
-}
-
-.hero {
-  padding: 100px 0 70px 0;
-  background-color: $hero-background;
+.wrapper {
+  min-height: calc(100% - 109px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0 0 0;
+  background-color: $wrapper-background;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
@@ -23,12 +21,15 @@
   }
 
   .content {
-    flex: 1;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    min-height: 100%;
     display: flex;
     align-items: center;
-    background-color: $hero-background;
+    background-color: $wrapper-background;
     justify-content: center;
-    color: $hero-content-color;
+    color: $wrapper-content-color;
     flex-direction: column;
 
     hr {
