@@ -13,12 +13,12 @@
   text-shadow: 1px 3px 3px rgba(19, 0, 0, 0.54);
   padding: 70px 100px;
   font-family: $card-font-family;
-  a {
-    color: $main-site-color;
-  }
   line-height: 1.4em;
   font-weight: 500;
   font-size: 28px;
+  a {
+    color: $main-site-color;
+  }
 }
 
 .card--slanted {
