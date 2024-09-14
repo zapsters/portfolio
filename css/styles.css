@@ -128,11 +128,6 @@ nav .links .nav--active {
   height: calc(100vh + 30px);
   position: relative;
 }
-.hero.fullheight footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
 .hero {
   padding: 100px 0 70px 0;
@@ -269,7 +264,6 @@ nav .links .nav--active {
   max-width: 700px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
   gap: 7px;
 }
 .about .headshot {
@@ -319,6 +313,7 @@ footer {
   flex-wrap: wrap;
   gap: 20px;
   text-shadow: 1px 3px 3px rgba(19, 0, 0, 0.54);
+  margin-top: 100px;
 }
 footer p {
   font-size: 17px;
