@@ -1,0 +1,39 @@
+.about {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  .headshot {
+    border-radius: 30px !important;
+  }
+  div {
+    padding: 20px;
+    flex: 1;
+    h2 {
+      font-size: 22px;
+    }
+    hr {
+      border-radius: 10px;
+      border-width: 1.2px !important;
+      opacity: 0.7;
+      width: 100% !important;
+      margin-bottom: 20px !important;
+    }
+    .socials {
+      flex: 1;
+      text-align: left;
+      gap: 0px;
+      padding: 2px;
+      a,
+      p,
+      i {
+        margin-bottom: 3px;
+        font-size: 26px;
+      }
+      i {
+        width: 30px;
+      }
+    }
+  }
+}

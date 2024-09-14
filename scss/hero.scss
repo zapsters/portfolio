@@ -1,0 +1,63 @@
+.hero.fullheight {
+  height: calc(100vh + 30px);
+  position: relative;
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.hero {
+  padding: 100px 0 70px 0;
+  background-color: $hero-background;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  a {
+    color: $main-site-color;
+  }
+
+  .content.homepage {
+    .headshot {
+      margin-bottom: 25px;
+    }
+    hr {
+      margin-bottom: 12px;
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: $hero-background;
+    justify-content: center;
+    color: $hero-content-color;
+    flex-direction: column;
+
+    hr {
+      width: 90%;
+      max-width: 700px;
+      border: 2px solid $main-site-color;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0 0 20px 0;
+    }
+
+    .headshot {
+      width: 300px;
+      border-radius: 50px;
+    }
+
+    h1 {
+      margin-bottom: 7px;
+    }
+
+    h3 {
+      font-weight: 100;
+    }
+  }
+}

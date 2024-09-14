@@ -1,0 +1,33 @@
+nav {
+  min-height: 50px;
+  background-color: $main-site-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 25px;
+  color: $nav-textColor;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-shadow: 1px 3px 3px rgba(19, 0, 0, 0.54);
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .links {
+    text-align: center;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: $nav-textColor;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .nav--active {
+      color: $nav-active-link;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+    }
+  }
+}

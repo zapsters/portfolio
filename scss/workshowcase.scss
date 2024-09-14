@@ -1,0 +1,63 @@
+.workshowcase {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+  font-family: $font-sans-serif;
+  margin-bottom: 100px;
+
+  .projectEntry:hover {
+    .thumbnail {
+      padding: 13px;
+    }
+  }
+
+  .projectEntry {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.896);
+    cursor: pointer;
+    flex: 35%;
+    text-decoration: none;
+    .thumbnail {
+      transition: padding 0.2s linear;
+      background-color: $workshowcase-thumbnail;
+      min-height: 200px;
+      background-size: contain;
+      background-position: center;
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      padding: 19px;
+    }
+    .thumbnail.stardewtodo {
+      background-image: url("/images/showcase/stardewToDo.png");
+      image-rendering: pixelated;
+    }
+    .thumbnail.inputstack {
+      background-image: url("/images/showcase/InputStackLogo.png");
+    }
+    .thumbnail.paint {
+      background-image: url("/images/showcase/PaintLogoFull.png");
+      image-rendering: pixelated;
+    }
+    .thumbnail.travelfly {
+      background-image: url("/images/showcase/travelfly-logo-black.svg");
+    }
+    .thumbnail.n215finalproject {
+      background-image: url("/images/showcase/eventsy-logo-black.svg");
+    }
+    .details {
+      background-color: $workshowcase-details;
+      padding: 7px;
+      text-shadow: 1px 1px 3px #ffffff44;
+      color: black;
+      .title {
+        text-decoration: none;
+      }
+      .description {
+      }
+    }
+  }
+}
