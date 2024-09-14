@@ -260,6 +260,10 @@ nav .links .nav--active {
 .workshowcase .projectEntry .details .title {
   text-decoration: none;
 }
+.workshowcase .projectEntry .details .description {
+  text-decoration: none;
+}
+
 .about {
   width: 100%;
   max-width: 700px;
