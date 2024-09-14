@@ -235,21 +235,21 @@ nav .links .nav--active {
   padding: 19px;
 }
 .workshowcase .projectEntry .thumbnail.stardewtodo {
-  background-image: url("/images/showcase/stardewToDo.png");
+  background-image: url("./images/showcase/stardewToDo.png");
   image-rendering: pixelated;
 }
 .workshowcase .projectEntry .thumbnail.inputstack {
-  background-image: url("/images/showcase/InputStackLogo.png");
+  background-image: url("./images/showcase/InputStackLogo.png");
 }
 .workshowcase .projectEntry .thumbnail.paint {
-  background-image: url("/images/showcase/PaintLogoFull.png");
+  background-image: url("./images/showcase/PaintLogoFull.png");
   image-rendering: pixelated;
 }
 .workshowcase .projectEntry .thumbnail.travelfly {
-  background-image: url("/images/showcase/travelfly-logo-black.svg");
+  background-image: url("./images/showcase/travelfly-logo-black.svg");
 }
 .workshowcase .projectEntry .thumbnail.n215finalproject {
-  background-image: url("/images/showcase/eventsy-logo-black.svg");
+  background-image: url("./images/showcase/eventsy-logo-black.svg");
 }
 .workshowcase .projectEntry .details {
   background-color: #e95154;
@@ -265,6 +265,7 @@ nav .links .nav--active {
   max-width: 700px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
   gap: 7px;
 }
 .about .headshot {
