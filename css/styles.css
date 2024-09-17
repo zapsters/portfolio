@@ -45,14 +45,19 @@ p {
   font-family: "Arial";
   line-height: 1.4em;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
+  flex-direction: column;
 }
 .card a {
   color: #812a19;
 }
 .card p {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
+}
+.card .noPaddingMargin {
+  padding: 0;
+  margin: 0;
 }
 
 .card--slanted {
@@ -183,6 +188,7 @@ nav .links .nav--active {
   width: 90%;
   max-width: 700px;
   margin: 0 auto;
+  margin-top: 60px;
 }
 .quoteBlock a {
   color: #812a19;
