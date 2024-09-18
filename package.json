@@ -1,7 +1,7 @@
 {
-  "name": "homeworkone",
+  "name": "portfoliosite",
   "version": "1.0.0",
-  "description": "This assignment will help you understand styling with the Sass and how to implement it into your project.",
+  "description": "Portfolio Site for Zapsters / Erin Ballinger",
   "main": "index.js",
   "directories": {
     "lib": "lib"
