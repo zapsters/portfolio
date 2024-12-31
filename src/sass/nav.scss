@@ -12,20 +12,20 @@ nav {
   }
   .nav--content {
     width: 90%;
-    max-width: 1340px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 14px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     .logo {
-      background-image: url("../images/PersonalLogoFox.png");
+      background-image: url("../images/PersonalLogoFox.svg");
       image-rendering: crisp-edges;
       background-size: contain;
       background-position: top;
       background-repeat: no-repeat;
       aspect-ratio: 482 / 295;
-      width: 187px;
+      width: 170px;
     }
     .anchorTags {
       margin-left: 80px;
@@ -36,10 +36,11 @@ nav {
       a {
         color: $site-main;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 20px;
         text-decoration: none;
         display: inline-block;
-        padding: 3px 12px 2px 12px;
+        padding: 3px 8px;
+        padding-bottom: 0;
         border-bottom: 3px solid $site-main;
         border-radius: 11px 11px 0 0;
         transition: background-color 0.2s linear, color 0.1s linear;
@@ -73,31 +74,18 @@ nav {
   }
 }
 
-@media (max-width: $layout-breakpoint-desktopMedium) {
-  nav {
-    .nav--content {
-      .anchorTags {
-        margin-left: 65px;
-      }
-      .logo {
-        width: 147px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1032px) {
-  nav {
-    .nav--content {
-      .logo {
-        width: 220px;
-      }
-      .right {
-        display: none;
-      }
-      .anchorTags {
-        display: none;
-      }
-    }
-  }
-}
+// @media (max-width: 1032px) {
+//   nav {
+//     .nav--content {
+//       .logo {
+//         width: 220px;
+//       }
+//       .right {
+//         display: none;
+//       }
+//       .anchorTags {
+//         display: none;
+//       }
+//     }
+//   }
+// }

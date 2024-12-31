@@ -7,6 +7,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -35,7 +36,7 @@ nav .colorBar {
 }
 nav .nav--content {
   width: 90%;
-  max-width: 1340px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 14px 0px;
   display: flex;
@@ -43,13 +44,13 @@ nav .nav--content {
   justify-content: flex-start;
 }
 nav .nav--content .logo {
-  background-image: url("../images/PersonalLogoFox.png");
+  background-image: url("../images/PersonalLogoFox.svg");
   image-rendering: crisp-edges;
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
   aspect-ratio: 482/295;
-  width: 187px;
+  width: 170px;
 }
 nav .nav--content .anchorTags {
   margin-left: 80px;
@@ -61,10 +62,11 @@ nav .nav--content .anchorTags {
 nav .nav--content .anchorTags a {
   color: #127369;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   display: inline-block;
-  padding: 3px 12px 2px 12px;
+  padding: 3px 8px;
+  padding-bottom: 0;
   border-bottom: 3px solid #127369;
   border-radius: 11px 11px 0 0;
   transition: background-color 0.2s linear, color 0.1s linear;
@@ -94,25 +96,6 @@ nav .nav--content .right .contactBtn:hover {
   color: #f9fafb;
 }
 
-@media (max-width: 1920px) {
-  nav .nav--content .anchorTags {
-    margin-left: 65px;
-  }
-  nav .nav--content .logo {
-    width: 147px;
-  }
-}
-@media (max-width: 1032px) {
-  nav .nav--content .logo {
-    width: 220px;
-  }
-  nav .nav--content .right {
-    display: none;
-  }
-  nav .nav--content .anchorTags {
-    display: none;
-  }
-}
 .hero {
   margin-top: 51px;
 }
@@ -153,7 +136,6 @@ nav .nav--content .right .contactBtn:hover {
   font-family: "Afacad Flux", serif;
   background-color: #10403b;
   padding: 42px 0 71px 0;
-  margin-bottom: 92px;
 }
 .featuredWork a {
   text-decoration: none;
@@ -164,18 +146,18 @@ nav .nav--content .right .contactBtn:hover {
   font-size: 60px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .featuredWork .featuredWorkContent {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-around;
   max-width: 2500px;
   margin: 0 auto;
   padding: 0 15px;
-  gap: 30px;
+  gap: 40px;
 }
 .featuredWork .featuredWorkContent .featuredWorkCard:nth-of-type(2) .featuredWorkCard-Cover {
   background-image: url("../images/showcase/PaintHomepage.png");
@@ -184,11 +166,9 @@ nav .nav--content .right .contactBtn:hover {
   background-image: url("../images/showcase/InputStackGameplay.png");
 }
 .featuredWork .featuredWorkContent .featuredWorkCard {
-  max-width: 557px;
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
   overflow: hidden;
   border-radius: 21px 21px 0 0;
@@ -200,7 +180,8 @@ nav .nav--content .right .contactBtn:hover {
   text-decoration: underline;
 }
 .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Cover {
-  aspect-ratio: 9/6;
+  max-height: 240px;
+  aspect-ratio: 9/4.5;
   transition: scale 0.1s linear;
   width: 100%;
   background-image: url("../images/showcase/StardewExhibitHomepage.png");
@@ -232,76 +213,38 @@ nav .nav--content .right .contactBtn:hover {
   text-align: center;
 }
 
-@media (max-width: 1100px) {
-  .featuredWork .featuredWorkContent {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 557px;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard {
-    width: 100%;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content {
-    flex: 1;
-    width: 100%;
-    background-color: #8ab1ad;
-    color: #10403b;
-    min-height: 78px;
-    border-radius: 0 0 21px 21px;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 4px;
-    padding: 0 33px;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
-    padding: 0 16px;
-    font-size: 16px;
-    text-align: center;
-  }
-}
-@media (max-width: 1920px) {
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Cover {
-    aspect-ratio: 2/1;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
-    font-size: 35px;
-  }
-  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
-    font-size: 18px;
-  }
-}
 .projects {
   padding: 0 65px;
   max-width: 2500px;
   margin: 0 auto;
   font-family: "Afacad Flux", serif;
+  margin-bottom: 177px;
+  margin-top: 92px;
 }
 .projects h1 {
-  font-size: 60px;
+  font-size: 46px;
   margin-bottom: 13px;
 }
 .projects p {
-  font-size: 44px;
-  margin-bottom: 83px;
+  font-size: 32px;
+  margin-bottom: 45px;
 }
 .projects .projectsContent {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+  row-gap: 2vw;
 }
 .projects .projectsContent .projectCard {
-  border: 7px solid black;
+  border: 6px solid black;
   border-radius: 27px;
   max-width: 558px;
+  flex: 32%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 26px 25px 20px 25px;
   cursor: pointer;
@@ -314,18 +257,38 @@ nav .nav--content .right .contactBtn:hover {
 }
 .projects .projectsContent .projectCard img {
   transition: scale 0.1s linear;
-  max-width: 131px;
-  image-rendering: pixelated;
+  max-width: 100px;
   width: 100%;
 }
 .projects .projectsContent .projectCard h3 {
-  font-size: 44px;
+  font-size: 36px;
   font-weight: 500;
   margin: 0;
 }
 .projects .projectsContent .projectCard p {
-  font-size: 23px;
+  font-size: 20px;
   margin: 0;
+}
+
+.contact {
+  font-family: "Afacad Flux", serif;
+  background-color: #10403b;
+  padding: 42px 0 71px 0;
+  margin-bottom: 92px;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+.contact a {
+  text-decoration: none;
+}
+.contact h2 {
+  color: #f9fafb;
+  font-family: "Afacad Flux", serif;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
