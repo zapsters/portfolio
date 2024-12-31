@@ -1,1 +1,1 @@
-Live at ErinBallinger.com
+Live at [ErinBallinger.com](https://erinballinger.com/)
