@@ -1,0 +1,103 @@
+@use "variables.scss" as *;
+nav {
+  font-family: "Afacad Flux", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  height: 118px;
+  .colorBar {
+    height: 14px;
+    background-color: $site-main;
+    width: 100%;
+  }
+  .nav--content {
+    width: 90%;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 14px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .logo {
+      background-image: url("../images/PersonalLogoFox.png");
+      image-rendering: crisp-edges;
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      aspect-ratio: 482 / 295;
+      width: 187px;
+    }
+    .anchorTags {
+      margin-left: 80px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      a {
+        color: $site-main;
+        font-weight: bold;
+        font-size: 25px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 3px 12px 2px 12px;
+        border-bottom: 3px solid $site-main;
+        border-radius: 11px 11px 0 0;
+        transition: background-color 0.2s linear, color 0.1s linear;
+        &:hover {
+          background-color: $site-third;
+          color: $site-offWhite;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      .contactBtn {
+        // margin-right: 70px;
+        border-radius: 11px;
+        outline: $site-main 4px solid;
+        padding: 10px 32px;
+        transition: background-color 0.2s linear, color 0.1s linear;
+        color: $site-main;
+        font-weight: bold;
+        font-size: 23px;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+          background-color: $site-third;
+          color: $site-offWhite;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-desktopMedium) {
+  nav {
+    .nav--content {
+      .anchorTags {
+        margin-left: 65px;
+      }
+      .logo {
+        width: 147px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1032px) {
+  nav {
+    .nav--content {
+      .logo {
+        width: 220px;
+      }
+      .right {
+        display: none;
+      }
+      .anchorTags {
+        display: none;
+      }
+    }
+  }
+}

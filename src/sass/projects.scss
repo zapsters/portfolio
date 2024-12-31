@@ -1,0 +1,55 @@
+@use "variables" as *;
+
+.projects {
+  padding: 0 65px;
+  max-width: 2500px;
+  margin: 0 auto;
+  font-family: "Afacad Flux", serif;
+  h1 {
+    font-size: 60px;
+    margin-bottom: 13px;
+  }
+  p {
+    font-size: 44px;
+    margin-bottom: 83px;
+  }
+  .projectsContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .projectCard {
+      border: 7px solid black;
+      border-radius: 27px;
+      max-width: 558px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      padding: 26px 25px 20px 25px;
+      cursor: pointer;
+      &:hover {
+        img {
+          scale: 1.1;
+        }
+        h3 {
+          text-decoration: underline;
+        }
+      }
+      img {
+        transition: scale 0.1s linear;
+        max-width: 131px;
+        image-rendering: pixelated;
+        width: 100%;
+      }
+      h3 {
+        font-size: 44px;
+        font-weight: 500;
+        margin: 0;
+      }
+      p {
+        font-size: 23px;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "variables" as *;
+.hero {
+  margin-top: 51px;
+  .photoHolder {
+    width: 22%;
+    max-width: 466px;
+    min-width: 411px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    background-image: url("../images/IMG_1840.JPEG");
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 10px solid $site-main;
+    margin-bottom: 50px;
+  }
+  h1 {
+    font-size: 38px;
+    font-family: "Afacad Flux", serif;
+    font-weight: 500;
+    max-width: 1054px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 115px;
+    span {
+      color: $site-mainVibrant;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 42px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
