@@ -18,30 +18,35 @@ $(function () {
       name: "Stardew Valley Web Exhibit",
       description: "To-do list web app made in the style of Stardew Valley",
       icon: "images/projectIcons/StardewMuseumExhibit.gif",
+      link: "https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1",
       pixelated: true,
     },
     {
       name: "Stardew Todo",
       description: "To-do list web app made in the style of Stardew Valley",
       icon: "images/projectIcons/StardewTodo.png",
+      link: "https://github.com/zapsters/stardew-todo",
       pixelated: true,
     },
     {
       name: "Input Stack",
       description: "A multiplayer web game, continuously getting harder.",
       icon: "images/projectIcons/InputStackIcon.png",
+      link: "https://github.com/zapsters/inputstack",
       pixelated: false,
     },
     {
       name: "Realtime Paint Application",
       description: "A real time, online collaborative canvas.",
       icon: "images/projectIcons/PaintLogo.png",
+      link: "https://github.com/zapsters/paint",
       pixelated: true,
     },
     {
       name: "Science and Entity Research",
       description: "A passion project, collection of web apps.",
       icon: "images/projectIcons/SaERv2Spin.gif",
+      link: "https://github.com/zapsters/SaER",
       pixelated: false,
     },
   ];
@@ -52,34 +57,11 @@ $(function () {
       style += "image-rendering: pixelated;";
     }
     $("#projectsContent").append(
-      `<div class="projectCard">
+      `<a target="_blank" href="${projectEntry.link}" class="projectCard">
         <img style="${style}" src="${projectEntry.icon}" alt="" srcset="" />
         <h3>${projectEntry.name}</h3>
         <p>${projectEntry.description}</p>
-      </div>`
+      </a>`
     );
   });
 });
-
-function ajaxCall() {
-  $.ajax({
-    // Our sample url to make request
-    url: "https://email.erinballinger24.workers.dev/redirect?redirectUrl=https://example.com",
-
-    // Type of Request
-    type: "GET",
-
-    // Function to call when to
-    // request is ok
-    success: function (data) {
-      let x = JSON.stringify(data);
-      console.log(x);
-    },
-
-    // Error handling
-    error: function (error) {
-      console.log(`Error ${error}`);
-    },
-  });
-}
-ajaxCall();

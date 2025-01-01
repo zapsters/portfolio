@@ -134,7 +134,7 @@ nav .nav--content .right .contactBtn:hover {
 
 .featuredWork {
   font-family: "Afacad Flux", serif;
-  background-color: #10403b;
+  background-color: #20524d;
   padding: 42px 0 71px 0;
 }
 .featuredWork a {
@@ -180,8 +180,8 @@ nav .nav--content .right .contactBtn:hover {
   text-decoration: underline;
 }
 .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Cover {
-  max-height: 240px;
-  aspect-ratio: 9/4.5;
+  max-height: 340px;
+  aspect-ratio: 9/5;
   transition: scale 0.1s linear;
   width: 100%;
   background-image: url("../images/showcase/StardewExhibitHomepage.png");
@@ -195,7 +195,7 @@ nav .nav--content .right .contactBtn:hover {
   height: 100%;
   flex: 1;
   background-color: #8ab1ad;
-  color: #10403b;
+  color: #20524d;
   border-radius: 0 0 21px 21px;
   padding-top: 9px;
   min-height: 138px;
@@ -211,6 +211,8 @@ nav .nav--content .right .contactBtn:hover {
   padding: 0 16px;
   font-size: 20px;
   text-align: center;
+  max-width: 530px;
+  margin: 0 auto;
 }
 
 .projects {
@@ -228,6 +230,10 @@ nav .nav--content .right .contactBtn:hover {
 .projects p {
   font-size: 32px;
   margin-bottom: 45px;
+}
+.projects a {
+  text-decoration: none;
+  color: black;
 }
 .projects .projectsContent {
   display: flex;
@@ -272,15 +278,37 @@ nav .nav--content .right .contactBtn:hover {
 
 .contact {
   font-family: "Afacad Flux", serif;
-  background-color: #10403b;
+  background-color: #20524d;
   padding: 42px 0 71px 0;
   margin-bottom: 92px;
   height: 100%;
-  color: white;
   text-align: center;
 }
-.contact a {
+.contact .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 640px;
+  margin: 0 auto;
+  color: #f9fafb;
+}
+.contact .socials a {
+  color: #f9fafb;
+  font-size: 30px;
   text-decoration: none;
+}
+.contact .socials a i {
+  margin-right: 10px;
+}
+.contact .socials a:hover p {
+  text-decoration: underline;
+}
+.contact .socials span {
+  font-size: 44px;
+  transform: translateY(-10px);
+}
+.contact .socials--vertical {
+  flex-direction: column;
 }
 .contact h2 {
   color: #f9fafb;
@@ -289,6 +317,37 @@ nav .nav--content .right .contactBtn:hover {
   font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
+}
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact form input,
+.contact form textarea,
+.contact form .btn {
+  font-family: "Afacad Flux", serif;
+  border: 2px solid black;
+  font-size: 16px;
+  padding: 3px 5px;
+  color: #f9fafb;
+  width: 25%;
+  color: black;
+  min-height: 40px;
+  resize: vertical;
+  max-height: 400px;
+}
+.contact form textarea {
+  padding-top: 7px;
+  min-height: 190px;
+}
+.contact form .btn {
+  cursor: pointer;
+}
+.contact form .btn:hover {
+  background-color: #bfbfbf;
 }
 
 /*# sourceMappingURL=styles.css.map */

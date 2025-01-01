@@ -6,10 +6,34 @@
   padding: 42px 0 71px 0;
   margin-bottom: 92px;
   height: 100%;
-  color: white;
   text-align: center;
-  a {
-    text-decoration: none;
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 640px;
+    margin: 0 auto;
+    color: $site-offWhite;
+    a {
+      color: $site-offWhite;
+      font-size: 30px;
+      text-decoration: none;
+      i {
+        margin-right: 10px;
+      }
+      &:hover {
+        p {
+          text-decoration: underline;
+        }
+      }
+    }
+    span {
+      font-size: 44px;
+      transform: translateY(-10px);
+    }
+  }
+  .socials--vertical {
+    flex-direction: column;
   }
   h2 {
     color: $site-offWhite;
@@ -18,5 +42,36 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: 50px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+    input,
+    textarea,
+    .btn {
+      font-family: "Afacad Flux", serif;
+      border: 2px solid black;
+      font-size: 16px;
+      padding: 3px 5px;
+      color: $site-offWhite;
+      width: 25%;
+      color: black;
+      min-height: 40px;
+      resize: vertical;
+      max-height: 400px;
+    }
+    textarea {
+      padding-top: 7px;
+      min-height: 190px;
+    }
+    .btn {
+      cursor: pointer;
+      &:hover {
+        background-color: $site-fifth;
+      }
+    }
   }
 }
