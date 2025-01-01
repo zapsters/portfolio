@@ -572,7 +572,7 @@ body:has(#mobileNav.is-active) .hero {
   cursor: pointer;
 }
 .contact form .btn:hover {
-  background-color: #bfbfbf;
+  background-color: #d6d6d6;
 }
 
 @media (max-width: 720px) {
