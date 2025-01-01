@@ -22,19 +22,60 @@ p {
 }
 
 /* End of Reset */
+nav:has(#mobileNav.is-active) .nav--content {
+  margin-top: 53px;
+}
+
 nav {
   font-family: "Afacad Flux", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  height: 118px;
+  height: 14px;
+  padding-top: 14px;
+}
+nav #mobileNav.is-active {
+  transform: translateX(0);
 }
 nav .colorBar {
-  height: 14px;
+  transition-property: transform;
+  transition-duration: 0s;
+  position: absolute;
+  top: 0;
   background-color: #127369;
   width: 100%;
+  display: flex;
+  transform: translateY(calc(-100% + 14px));
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 14px 0 14px 0;
+}
+nav .colorBar .anchorTags {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+nav .colorBar .anchorTags a {
+  text-align: center;
+  color: #f9fafb;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  margin: 0;
+  padding: 5px 8px;
+  transition: background-color 0.2s linear, color 0.1s linear;
+}
+nav .colorBar .anchorTags a:hover {
+  background-color: #8ab1ad;
+  color: #f9fafb;
 }
 nav .nav--content {
+  transition: margin 700ms;
   width: 90%;
   max-width: 1700px;
   margin: 0 auto;
@@ -53,7 +94,7 @@ nav .nav--content .logo {
   width: 170px;
 }
 nav .nav--content .anchorTags {
-  margin-left: 80px;
+  margin-left: 40px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -95,14 +136,112 @@ nav .nav--content .right .contactBtn:hover {
   background-color: #8ab1ad;
   color: #f9fafb;
 }
+nav .nav--content .right .hamburger {
+  display: none;
+}
+
+#hamburger-9 {
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg) translateX(-6px);
+}
+
+#hamburger-9:before {
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  border: 5px solid transparent;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active:before {
+  border: 5px solid #127369;
+}
+
+#hamburger-9.is-active .line {
+  width: 35px;
+}
+
+#hamburger-9.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-9.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+#hamburger-9.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
+}
+
+.hamburger {
+  scale: 0.9;
+}
+
+.hamburger .line {
+  width: 40px;
+  height: 5px;
+  background-color: #127369;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  nav .colorBar {
+    position: fixed;
+    z-index: 10;
+  }
+  nav .nav--content .right .contactBtn {
+    display: none;
+  }
+  nav .nav--content .right .hamburger {
+    display: block;
+  }
+  nav .nav--content .anchorTags {
+    display: none;
+  }
+}
+body:has(#mobileNav.is-active) .hero {
+  margin-top: 180px;
+}
 
 .hero {
-  margin-top: 51px;
+  margin-top: 150px;
+  transition: margin 700ms;
 }
 .hero .photoHolder {
-  width: 22%;
   max-width: 466px;
-  min-width: 411px;
+  width: 90%;
   border-radius: 50%;
   aspect-ratio: 1/1;
   background-image: url("../images/IMG_1840.JPEG");
@@ -132,6 +271,19 @@ nav .nav--content .right .contactBtn:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 33px;
+  }
+  .hero h1 span {
+    font-size: 37px;
+  }
+}
+@media (max-width: 720px) {
+  .hero {
+    margin-top: 130px;
+  }
+}
 .featuredWork {
   font-family: "Afacad Flux", serif;
   background-color: #20524d;
@@ -153,7 +305,7 @@ nav .nav--content .right .contactBtn:hover {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 2500px;
   margin: 0 auto;
   padding: 0 15px;
@@ -215,21 +367,62 @@ nav .nav--content .right .contactBtn:hover {
   margin: 0 auto;
 }
 
+@media (max-width: 1920px) {
+  .featuredWork h2 {
+    font-size: 50px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
+    font-size: 35px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1620px) {
+  .featuredWork .featuredWorkContent {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .featuredWork .featuredWorkContent {
+    flex-direction: column;
+    width: 80%;
+    max-width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  .featuredWork .featuredWorkContent {
+    flex-direction: column;
+    width: 80%;
+    max-width: 700px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
+    font-size: 30px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
+    font-size: 15px;
+  }
+}
 .projects {
-  padding: 0 65px;
   max-width: 2500px;
-  margin: 0 auto;
   font-family: "Afacad Flux", serif;
-  margin-bottom: 177px;
-  margin-top: 92px;
+  max-width: 1800px;
+  width: 87%;
+  margin: 0 auto;
+  padding-top: 60px;
+  margin-bottom: 100px;
 }
 .projects h1 {
-  font-size: 46px;
+  font-size: 44px;
   margin-bottom: 13px;
 }
 .projects p {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 45px;
+}
+.projects h1,
+.projects p {
+  padding-left: 10px;
 }
 .projects a {
   text-decoration: none;
@@ -241,13 +434,14 @@ nav .nav--content .right .contactBtn:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2vw;
+  margin: 0 auto;
   row-gap: 2vw;
 }
 .projects .projectsContent .projectCard {
-  border: 6px solid black;
+  border: 5px solid black;
   border-radius: 27px;
   max-width: 558px;
-  flex: 32%;
+  flex: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -270,21 +464,47 @@ nav .nav--content .right .contactBtn:hover {
   font-size: 36px;
   font-weight: 500;
   margin: 0;
+  text-align: center;
+  line-height: 0.9em;
+  margin-bottom: 6px;
 }
 .projects .projectsContent .projectCard p {
   font-size: 20px;
   margin: 0;
 }
 
+@media (max-width: 1020px) {
+  .projects .projectsContent .projectCard {
+    flex: 40%;
+  }
+}
+@media (max-width: 720px) {
+  .projects h1 {
+    font-size: 38px;
+  }
+  .projects p {
+    font-size: 20px;
+  }
+  .projects .projectsContent {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .projects .projectsContent .projectCard {
+    flex: 1;
+    border-width: 4px;
+    padding: 16px 16px 16px 16px;
+  }
+}
 .contact {
   font-family: "Afacad Flux", serif;
   background-color: #20524d;
   padding: 42px 0 71px 0;
   margin-bottom: 92px;
-  height: 100%;
+  min-height: 100%;
   text-align: center;
 }
 .contact .socials {
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -313,17 +533,20 @@ nav .nav--content .right .contactBtn:hover {
 .contact h2 {
   color: #f9fafb;
   font-family: "Afacad Flux", serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
 }
 .contact form {
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   gap: 10px;
+  max-width: 620px;
+  margin: 0 auto;
 }
 .contact form input,
 .contact form textarea,
@@ -332,10 +555,12 @@ nav .nav--content .right .contactBtn:hover {
   border: 2px solid black;
   font-size: 16px;
   padding: 3px 5px;
-  color: #f9fafb;
-  width: 25%;
+  color: black !important;
+  background-color: #f9fafb;
+  width: 100%;
   color: black;
   min-height: 40px;
+  border-radius: 6px;
   resize: vertical;
   max-height: 400px;
 }
@@ -348,6 +573,15 @@ nav .nav--content .right .contactBtn:hover {
 }
 .contact form .btn:hover {
   background-color: #bfbfbf;
+}
+
+@media (max-width: 720px) {
+  .contact .socials a {
+    font-size: 20px;
+  }
+  .contact .socials span {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

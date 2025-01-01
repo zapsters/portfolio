@@ -1,19 +1,24 @@
 @use "variables" as *;
 
 .projects {
-  padding: 0 65px;
   max-width: 2500px;
-  margin: 0 auto;
   font-family: "Afacad Flux", serif;
-  margin-bottom: 177px;
-  margin-top: 92px;
+  max-width: 1800px;
+  width: 87%;
+  margin: 0 auto;
+  padding-top: 60px;
+  margin-bottom: 100px;
   h1 {
-    font-size: 46px;
+    font-size: 44px;
     margin-bottom: 13px;
   }
   p {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 45px;
+  }
+  h1,
+  p {
+    padding-left: 10px;
   }
   a {
     text-decoration: none;
@@ -25,12 +30,13 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2vw;
+    margin: 0 auto;
     row-gap: 2vw;
     .projectCard {
-      border: 6px solid black;
+      border: 5px solid black;
       border-radius: 27px;
       max-width: 558px;
-      flex: 32%;
+      flex: 30%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -54,10 +60,43 @@
         font-size: 36px;
         font-weight: 500;
         margin: 0;
+        text-align: center;
+        line-height: 0.9em;
+        margin-bottom: 6px;
       }
       p {
         font-size: 20px;
         margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .projects {
+    .projectsContent {
+      .projectCard {
+        flex: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-mobile) {
+  .projects {
+    h1 {
+      font-size: 38px;
+    }
+    p {
+      font-size: 20px;
+    }
+    .projectsContent {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .projectCard {
+        flex: 1;
+        border-width: 4px;
+        padding: 16px 16px 16px 16px;
       }
     }
   }

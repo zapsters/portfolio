@@ -1,10 +1,13 @@
 @use "variables" as *;
+body:has(#mobileNav.is-active) .hero {
+  margin-top: 180px;
+}
 .hero {
-  margin-top: 51px;
+  margin-top: 150px;
+  transition: margin 700ms;
   .photoHolder {
-    width: 22%;
     max-width: 466px;
-    min-width: 411px;
+    width: 90%;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     background-image: url("../images/IMG_1840.JPEG");
@@ -32,5 +35,22 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media (max-width: $layout-breakpoint-tablet) {
+  .hero {
+    h1 {
+      font-size: 33px;
+      span {
+        font-size: 37px;
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-mobile) {
+  .hero {
+    margin-top: 130px;
   }
 }

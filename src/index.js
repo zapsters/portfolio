@@ -13,10 +13,17 @@ $(function () {
                                                    |____/
     ________________________________________________________________`);
 
+  $(".hamburger").on("click", function () {
+    $(this).toggleClass("is-active");
+    $("#mobileNav").toggleClass("is-active");
+  });
+
+  $("#mobileNav").css("transition-duration", "700ms");
+
   var myProjects = [
     {
       name: "Stardew Valley Web Exhibit",
-      description: "To-do list web app made in the style of Stardew Valley",
+      description: "From User Personas, Wireframing, Usability Testing, to a Final Product.",
       icon: "images/projectIcons/StardewMuseumExhibit.gif",
       link: "https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1",
       pixelated: true,
@@ -64,4 +71,11 @@ $(function () {
       </a>`
     );
   });
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 900) {
+    $("#mobileNav").removeClass("is-active");
+    $("#hamburger-9").removeClass("is-active");
+  }
 });
