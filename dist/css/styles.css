@@ -301,7 +301,7 @@ body:has(#mobileNav.is-active) .hero {
   margin-bottom: 30px;
 }
 .featuredWork .featuredWorkContent {
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -378,16 +378,10 @@ body:has(#mobileNav.is-active) .hero {
     font-size: 18px;
   }
 }
-@media (max-width: 1620px) {
-  .featuredWork .featuredWorkContent {
-    width: 100%;
-  }
-}
 @media (max-width: 1200px) {
   .featuredWork .featuredWorkContent {
     flex-direction: column;
-    width: 80%;
-    max-width: 700px;
+    max-width: 570px;
   }
 }
 @media (max-width: 720px) {
