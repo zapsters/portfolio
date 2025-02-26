@@ -22,17 +22,11 @@ $(function () {
 
   var myProjects = [
     {
-      name: "Stardew Valley Web Exhibit",
-      description: "From User Personas, Wireframing, Usability Testing, to a Final Product.",
-      icon: "images/projectIcons/StardewMuseumExhibit.gif",
-      link: "https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1",
-      pixelated: true,
-    },
-    {
-      name: "Stardew Todo",
-      description: "To-do list web app made in the style of Stardew Valley",
-      icon: "images/projectIcons/StardewTodo.png",
-      link: "https://github.com/zapsters/stardew-todo",
+      name: "Sporeganizer",
+      description:
+        "A fully online class & assignment tracker  webapp with a fun mushroom theme. Under Development",
+      icon: "images/projectIcons/Sporeganizer.png",
+      link: "https://github.com/zapsters/Sporeganizer",
       pixelated: true,
     },
     {
@@ -43,10 +37,24 @@ $(function () {
       pixelated: false,
     },
     {
+      name: "Stardew Valley Web Exhibit",
+      description: "From User Personas, Wireframing, Usability Testing, to a Final Product.",
+      icon: "images/projectIcons/StardewMuseumExhibit.gif",
+      link: "https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1",
+      pixelated: true,
+    },
+    {
       name: "Realtime Paint Application",
       description: "A real time, online collaborative canvas.",
       icon: "images/projectIcons/PaintLogo.png",
       link: "https://github.com/zapsters/paint",
+      pixelated: true,
+    },
+    {
+      name: "Stardew Todo",
+      description: "To-do list web app made in the style of Stardew Valley",
+      icon: "images/projectIcons/StardewTodo.png",
+      link: "https://github.com/zapsters/stardew-todo",
       pixelated: true,
     },
     {
