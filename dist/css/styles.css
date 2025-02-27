@@ -244,10 +244,10 @@ body:has(#mobileNav.is-active) .hero {
   width: 90%;
   border-radius: 50%;
   aspect-ratio: 1/1;
-  background-image: url("../images/IMG_3287.jpg");
+  background-image: url("../images/IMG_1840.JPEG");
   margin: 0 auto;
   background-size: 120%;
-  background-position: center;
+  background-position: 0% 50%;
   background-repeat: no-repeat;
   border: 10px solid #127369;
   margin-bottom: 50px;
