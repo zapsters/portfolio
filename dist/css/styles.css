@@ -508,6 +508,7 @@ body:has(#mobileNav.is-active) .hero {
   justify-content: space-around;
   max-width: 640px;
   margin: 0 auto;
+  margin-bottom: 20px;
   color: #f9fafb;
 }
 .contact .socials a {
@@ -527,7 +528,7 @@ body:has(#mobileNav.is-active) .hero {
 }
 .contact .socials span {
   font-size: 44px;
-  transform: translateY(-10px);
+  transform: translateY(-4px);
 }
 .contact .socials--vertical {
   flex-direction: column;
