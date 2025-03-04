@@ -3,11 +3,10 @@ body:has(#mobileNav.is-active) .hero {
   margin-top: 180px;
 }
 .hero {
-  margin-top: 150px;
-  transition: margin 700ms;
+  margin-top: 130px;
   .photoHolder {
-    max-width: 466px;
-    width: 90%;
+    max-width: 500px;
+    width: 80%;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     background-image: url("../images/IMG_1840.JPEG");
@@ -16,10 +15,10 @@ body:has(#mobileNav.is-active) .hero {
     background-position: 0% 50%;
     background-repeat: no-repeat;
     border: 10px solid $site-main;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   h1 {
-    font-size: 38px;
+    font-size: 36px;
     font-family: "Afacad Flux", serif;
     font-weight: 500;
     max-width: 1054px;
@@ -30,7 +29,7 @@ body:has(#mobileNav.is-active) .hero {
       color: $site-mainVibrant;
       font-weight: 700;
       cursor: pointer;
-      font-size: 42px;
+      font-size: 40px;
       &:hover {
         text-decoration: underline;
       }
@@ -40,17 +39,21 @@ body:has(#mobileNav.is-active) .hero {
 
 @media (max-width: $layout-breakpoint-tablet) {
   .hero {
+    .photoHolder {
+      margin-bottom: 10px;
+    }
     h1 {
-      font-size: 33px;
+      font-size: 26px;
+
       span {
-        font-size: 37px;
+        font-size: 30px;
       }
     }
   }
 }
 
-@media (max-width: $layout-breakpoint-mobile) {
-  .hero {
-    margin-top: 130px;
-  }
-}
+// @media (max-width: $layout-breakpoint-mobile) {
+//   .hero {
+//     margin-top: 130px;
+//   }
+// }

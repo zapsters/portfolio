@@ -65,6 +65,7 @@ nav .colorBar .anchorTags a {
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
+  display: none;
   border-radius: 20px;
   margin: 0;
   padding: 5px 8px;
@@ -103,7 +104,7 @@ nav .nav--content .anchorTags {
 nav .nav--content .anchorTags a {
   color: #127369;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 22px;
   text-decoration: none;
   display: inline-block;
   padding: 3px 8px;
@@ -128,7 +129,7 @@ nav .nav--content .right .contactBtn {
   transition: background-color 0.2s linear, color 0.1s linear;
   color: #127369;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 22px;
   text-decoration: none;
   display: inline-block;
 }
@@ -216,10 +217,13 @@ nav .nav--content .right .hamburger {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   nav .colorBar {
     position: fixed;
     z-index: 10;
+  }
+  nav .colorBar .anchorTags a {
+    display: inline-block;
   }
   nav .nav--content .right .contactBtn {
     display: none;
@@ -236,12 +240,11 @@ body:has(#mobileNav.is-active) .hero {
 }
 
 .hero {
-  margin-top: 150px;
-  transition: margin 700ms;
+  margin-top: 130px;
 }
 .hero .photoHolder {
-  max-width: 466px;
-  width: 90%;
+  max-width: 500px;
+  width: 80%;
   border-radius: 50%;
   aspect-ratio: 1/1;
   background-image: url("../images/IMG_1840.JPEG");
@@ -250,10 +253,10 @@ body:has(#mobileNav.is-active) .hero {
   background-position: 0% 50%;
   background-repeat: no-repeat;
   border: 10px solid #127369;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .hero h1 {
-  font-size: 38px;
+  font-size: 36px;
   font-family: "Afacad Flux", serif;
   font-weight: 500;
   max-width: 1054px;
@@ -265,29 +268,27 @@ body:has(#mobileNav.is-active) .hero {
   color: #1ebdad;
   font-weight: 700;
   cursor: pointer;
-  font-size: 42px;
+  font-size: 40px;
 }
 .hero h1 span:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .hero .photoHolder {
+    margin-bottom: 10px;
+  }
   .hero h1 {
-    font-size: 33px;
+    font-size: 26px;
   }
   .hero h1 span {
-    font-size: 37px;
-  }
-}
-@media (max-width: 720px) {
-  .hero {
-    margin-top: 130px;
+    font-size: 30px;
   }
 }
 .featuredWork {
   font-family: "Afacad Flux", serif;
   background-color: #20524d;
-  padding: 42px 0 71px 0;
+  padding: 80px 0 170px 0;
 }
 .featuredWork a {
   text-decoration: none;
@@ -298,7 +299,7 @@ body:has(#mobileNav.is-active) .hero {
   font-size: 55px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .featuredWork .featuredWorkContent {
   width: 90%;
@@ -306,16 +307,9 @@ body:has(#mobileNav.is-active) .hero {
   flex-direction: row;
   align-items: stretch;
   justify-content: space-evenly;
-  max-width: 2500px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 0 15px;
   gap: 40px;
-}
-.featuredWork .featuredWorkContent .featuredWorkCard:nth-of-type(2) .featuredWorkCard-Cover {
-  background-image: url("../images/showcase/PaintHomepage.png");
-}
-.featuredWork .featuredWorkContent .featuredWorkCard:nth-of-type(3) .featuredWorkCard-Cover {
-  background-image: url("../images/showcase/InputStackGameplay.png");
 }
 .featuredWork .featuredWorkContent .featuredWorkCard {
   flex: 1;
@@ -336,7 +330,7 @@ body:has(#mobileNav.is-active) .hero {
   aspect-ratio: 9/5;
   transition: scale 0.1s linear;
   width: 100%;
-  background-image: url("../images/showcase/StardewExhibitHomepage.png");
+  background-image: url("../images/showcase/inputStackGameplay.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -349,8 +343,7 @@ body:has(#mobileNav.is-active) .hero {
   background-color: #8ab1ad;
   color: #20524d;
   border-radius: 0 0 21px 21px;
-  padding-top: 9px;
-  min-height: 138px;
+  padding: 14px 14px;
 }
 .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
   font-size: 38px;
@@ -370,6 +363,7 @@ body:has(#mobileNav.is-active) .hero {
 @media (max-width: 1920px) {
   .featuredWork h2 {
     font-size: 50px;
+    margin-bottom: 10px;
   }
   .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
     font-size: 35px;
@@ -378,17 +372,19 @@ body:has(#mobileNav.is-active) .hero {
     font-size: 18px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .featuredWork .featuredWorkContent {
     flex-direction: column;
-    max-width: 570px;
+    max-width: 500px;
   }
 }
 @media (max-width: 720px) {
   .featuredWork .featuredWorkContent {
     flex-direction: column;
     width: 80%;
-    max-width: 700px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content {
+    min-height: 0;
   }
   .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
     font-size: 30px;
@@ -398,12 +394,11 @@ body:has(#mobileNav.is-active) .hero {
   }
 }
 .projects {
-  max-width: 2500px;
+  max-width: 1700px;
   font-family: "Afacad Flux", serif;
-  max-width: 1800px;
   width: 87%;
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 80px 0 80px 0;
   margin-bottom: 100px;
 }
 .projects h1 {
@@ -465,9 +460,14 @@ body:has(#mobileNav.is-active) .hero {
 .projects .projectsContent .projectCard p {
   font-size: 20px;
   margin: 0;
+  width: 90%;
+  max-width: 350px;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1000px) {
+  .projects {
+    padding-bottom: 10px;
+  }
   .projects .projectsContent .projectCard {
     flex: 40%;
   }
@@ -488,11 +488,15 @@ body:has(#mobileNav.is-active) .hero {
     border-width: 4px;
     padding: 16px 16px 16px 16px;
   }
+  .projects .projectsContent .projectCard p {
+    font-size: 18px;
+    max-width: 80%;
+  }
 }
 .contact {
   font-family: "Afacad Flux", serif;
   background-color: #20524d;
-  padding: 42px 0 71px 0;
+  padding: 80px 0 71px 0;
   margin-bottom: 92px;
   min-height: 100%;
   text-align: center;
@@ -507,13 +511,17 @@ body:has(#mobileNav.is-active) .hero {
   color: #f9fafb;
 }
 .contact .socials a {
-  color: #f9fafb;
   font-size: 30px;
+  color: #f9fafb;
   text-decoration: none;
+}
+.contact .socials a p {
+  margin-bottom: 0;
 }
 .contact .socials a i {
   margin-right: 10px;
 }
+.contact .socials a:hover span,
 .contact .socials a:hover p {
   text-decoration: underline;
 }
@@ -534,13 +542,17 @@ body:has(#mobileNav.is-active) .hero {
 }
 .contact form {
   width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  gap: 10px;
   max-width: 620px;
   margin: 0 auto;
+}
+.contact form label {
+  color: #f9fafb;
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  display: block;
+  margin: 0;
 }
 .contact form input,
 .contact form textarea,
@@ -551,6 +563,7 @@ body:has(#mobileNav.is-active) .hero {
   padding: 3px 5px;
   color: black !important;
   background-color: #f9fafb;
+  margin-bottom: 14px;
   width: 100%;
   color: black;
   min-height: 40px;

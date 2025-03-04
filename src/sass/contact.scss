@@ -3,7 +3,7 @@
 .contact {
   font-family: "Afacad Flux", serif;
   background-color: $site-secondary;
-  padding: 42px 0 71px 0;
+  padding: 80px 0 71px 0;
   margin-bottom: 92px;
   min-height: 100%;
   text-align: center;
@@ -16,13 +16,17 @@
     margin: 0 auto;
     color: $site-offWhite;
     a {
-      color: $site-offWhite;
       font-size: 30px;
+      color: $site-offWhite;
       text-decoration: none;
+      p {
+        margin-bottom: 0;
+      }
       i {
         margin-right: 10px;
       }
       &:hover {
+        span,
         p {
           text-decoration: underline;
         }
@@ -46,13 +50,17 @@
   }
   form {
     width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    gap: 10px;
     max-width: 620px;
     margin: 0 auto;
+    label {
+      color: $site-offWhite;
+      font-size: 23px;
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+      display: block;
+      margin: 0;
+    }
     input,
     textarea,
     .btn {
@@ -62,6 +70,7 @@
       padding: 3px 5px;
       color: black !important;
       background-color: $site-offWhite;
+      margin-bottom: 14px;
       width: 100%;
       color: black;
       min-height: 40px;

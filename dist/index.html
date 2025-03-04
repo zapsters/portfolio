@@ -25,7 +25,7 @@
       <div class="colorBar" id="mobileNav">
         <div class="anchorTags mobileAnchorTags">
           <a href="#">About Me</a>
-          <a href="#showcase">Showcase</a>
+          <a href="#showcase">Featured</a>
           <a href="#projects">Projects</a>
           <a href="#contact" class="contactBtn"> Contact Me </a>
         </div>
@@ -34,7 +34,7 @@
         <a href="" class="logo"></a>
         <div class="anchorTags">
           <a href="#">About Me</a>
-          <a href="#showcase">Showcase</a>
+          <a href="#showcase">Featured</a>
           <a href="#projects">Projects</a>
         </div>
         <div class="right">
@@ -50,42 +50,48 @@
     <div class="hero">
       <div class="photoHolder"></div>
       <h1>
-        Hey, I'm <span onclick="window.location='#contact'">Erin Ballinger</span>! I'm a passionate
-        full-stack developer who loves crafting intuitive, engaging, and efficient web experiences.
-        Constantly learning and refining my skills, I build everything with care, creativity, and
-        love.
+        Hey, I'm <span onclick="window.location='#contact'">Erin Ballinger</span>&ndash; a
+        passionate full-stack developer crafting intuitive, engaging, and efficient web
+        applications. Always learning and refining my skills, I build everything I do with care,
+        creativity, and love.
       </h1>
     </div>
     <div class="featuredWork" id="showcase">
       <h2>Featured Work</h2>
       <div class="featuredWorkContent">
+        <a href="https://github.com/zapsters/inputstack" class="featuredWorkCard" target="_blank">
+          <div
+            class="featuredWorkCard-Cover"
+            style="background-image: url('../images/showcase/inputStackGameplay.png')"></div>
+          <div class="featuredWorkCard-Content">
+            <h3>Input Stack</h3>
+            <p>
+              A multiplayer game that runs in your browser! Can you manage an ever-growing set of
+              tasks? Sisyphus approved.
+            </p>
+          </div>
+        </a>
         <a
           href="https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1"
           target="_blank"
           class="featuredWorkCard">
-          <div class="featuredWorkCard-Cover"></div>
+          <div
+            class="featuredWorkCard-Cover"
+            style="background-image: url('../images/showcase/StardewExhibitHomepage.png')"></div>
           <div class="featuredWorkCard-Content">
             <h3>Stardew Valley Interactive Kiosk</h3>
             <p>An interactive kiosk for a Stardew Valley Museum Exhibit</p>
           </div>
         </a>
         <a href="https://github.com/zapsters/paint" class="featuredWorkCard" target="_blank">
-          <div class="featuredWorkCard-Cover"></div>
+          <div
+            class="featuredWorkCard-Cover"
+            style="background-image: url('../images/showcase/PaintHomepage.png')"></div>
           <div class="featuredWorkCard-Content">
             <h3>Realtime Paint Web App</h3>
             <p>
               My take on the r/place idea where anyone can contribute to an online canvas. Made with
               Firebase.
-            </p>
-          </div>
-        </a>
-        <a href="https://github.com/zapsters/inputstack" class="featuredWorkCard" target="_blank">
-          <div class="featuredWorkCard-Cover"></div>
-          <div class="featuredWorkCard-Content">
-            <h3>Input Stack</h3>
-            <p>
-              A multiplayer game that runs in your browser! Can you manage an ever-growing set of
-              tasks? Sisyphus approved.
             </p>
           </div>
         </a>
@@ -125,13 +131,16 @@
         action="https://formsubmit.co/3ce6dbeb9134a143121be25cc9e08bf1"
         method="POST">
         <input type="hidden" name="_url" value="https://erinballinger.com" />
+        <label for="name">Full Name</label>
         <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+        <label for="email">Email Address</label>
         <input
           type="email"
           name="email"
           class="form-control"
           placeholder="Email Address"
           required />
+        <label for="message">Message</label>
         <textarea
           placeholder="Your Message"
           class="form-control"
