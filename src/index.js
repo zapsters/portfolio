@@ -66,7 +66,6 @@ $(function () {
     },
   ];
   myProjects.forEach(function (projectEntry, i) {
-    console.log(projectEntry, i);
     let style = "";
     if (projectEntry.pixelated) {
       style += "image-rendering: pixelated;";
