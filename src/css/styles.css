@@ -1,0 +1,595 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+/* End of Reset */
+nav:has(#mobileNav.is-active) .nav--content {
+  margin-top: 53px;
+}
+
+nav {
+  font-family: "Afacad Flux", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  height: 14px;
+  padding-top: 14px;
+}
+nav #mobileNav.is-active {
+  transform: translateX(0);
+}
+nav .colorBar {
+  transition-property: transform;
+  transition-duration: 0s;
+  position: absolute;
+  top: 0;
+  background-color: #127369;
+  width: 100%;
+  display: flex;
+  transform: translateY(calc(-100% + 14px));
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 14px 0 14px 0;
+}
+nav .colorBar .anchorTags {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+nav .colorBar .anchorTags a {
+  text-align: center;
+  color: #f9fafb;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  display: none;
+  border-radius: 20px;
+  margin: 0;
+  padding: 5px 8px;
+  transition: background-color 0.2s linear, color 0.1s linear;
+}
+nav .colorBar .anchorTags a:hover {
+  background-color: #8ab1ad;
+  color: #f9fafb;
+}
+nav .nav--content {
+  transition: margin 700ms;
+  width: 90%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 14px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+nav .nav--content .logo {
+  background-image: url("../images/PersonalLogoFox.svg");
+  image-rendering: crisp-edges;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  aspect-ratio: 482/295;
+  width: 170px;
+}
+nav .nav--content .anchorTags {
+  margin-left: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+nav .nav--content .anchorTags a {
+  color: #127369;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 8px;
+  padding-bottom: 0;
+  border-bottom: 3px solid #127369;
+  border-radius: 11px 11px 0 0;
+  transition: background-color 0.2s linear, color 0.1s linear;
+}
+nav .nav--content .anchorTags a:hover {
+  background-color: #8ab1ad;
+  color: #f9fafb;
+}
+nav .nav--content .right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .nav--content .right .contactBtn {
+  border-radius: 11px;
+  outline: #127369 4px solid;
+  padding: 10px 32px;
+  transition: background-color 0.2s linear, color 0.1s linear;
+  color: #127369;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+  display: inline-block;
+}
+nav .nav--content .right .contactBtn:hover {
+  background-color: #8ab1ad;
+  color: #f9fafb;
+}
+nav .nav--content .right .hamburger {
+  display: none;
+}
+
+#hamburger-9 {
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg) translateX(-6px);
+}
+
+#hamburger-9:before {
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  border: 5px solid transparent;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-9.is-active:before {
+  border: 5px solid #127369;
+}
+
+#hamburger-9.is-active .line {
+  width: 35px;
+}
+
+#hamburger-9.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-9.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+#hamburger-9.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
+}
+
+.hamburger {
+  scale: 0.9;
+}
+
+.hamburger .line {
+  width: 40px;
+  height: 5px;
+  background-color: #127369;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  nav .colorBar {
+    position: fixed;
+    z-index: 10;
+  }
+  nav .colorBar .anchorTags a {
+    display: inline-block;
+  }
+  nav .nav--content .right .contactBtn {
+    display: none;
+  }
+  nav .nav--content .right .hamburger {
+    display: block;
+  }
+  nav .nav--content .anchorTags {
+    display: none;
+  }
+}
+body:has(#mobileNav.is-active) .hero {
+  margin-top: 180px;
+}
+
+.hero {
+  margin-top: 130px;
+}
+.hero .photoHolder {
+  max-width: 500px;
+  width: 80%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-image: url("../images/IMG_1840.JPEG");
+  margin: 0 auto;
+  background-size: 120%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  border: 10px solid #127369;
+  margin-bottom: 40px;
+}
+.hero h1 {
+  font-size: 36px;
+  font-family: "Afacad Flux", serif;
+  font-weight: 500;
+  max-width: 1054px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 115px;
+}
+.hero h1 span {
+  color: #1ebdad;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 40px;
+}
+.hero h1 span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .hero .photoHolder {
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+  .hero h1 span {
+    font-size: 30px;
+  }
+}
+.featuredWork {
+  font-family: "Afacad Flux", serif;
+  background-color: #20524d;
+  padding: 80px 0 170px 0;
+}
+.featuredWork a {
+  text-decoration: none;
+}
+.featuredWork h2 {
+  color: #f9fafb;
+  font-family: "Afacad Flux", serif;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.featuredWork .featuredWorkContent {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+  max-width: 1700px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 21px 21px 0 0;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard:hover .featuredWorkCard-Cover {
+  scale: 1.05;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard:hover .featuredWorkCard-Content h3 {
+  text-decoration: underline;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Cover {
+  max-height: 340px;
+  aspect-ratio: 9/5;
+  transition: scale 0.1s linear;
+  width: 100%;
+  background-image: url("../images/showcase/inputStackGameplay.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  background-color: #8ab1ad;
+  color: #20524d;
+  border-radius: 0 0 21px 21px;
+  padding: 14px 14px;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
+  font-size: 38px;
+  line-height: 0.9em;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 0 33px;
+}
+.featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
+  padding: 0 16px;
+  font-size: 20px;
+  text-align: center;
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1920px) {
+  .featuredWork h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
+    font-size: 35px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1000px) {
+  .featuredWork .featuredWorkContent {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+@media (max-width: 720px) {
+  .featuredWork .featuredWorkContent {
+    flex-direction: column;
+    width: 80%;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content {
+    min-height: 0;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content h3 {
+    font-size: 30px;
+  }
+  .featuredWork .featuredWorkContent .featuredWorkCard .featuredWorkCard-Content p {
+    font-size: 15px;
+  }
+}
+.projects {
+  max-width: 1700px;
+  font-family: "Afacad Flux", serif;
+  width: 87%;
+  margin: 0 auto;
+  padding: 80px 0 80px 0;
+  margin-bottom: 100px;
+}
+.projects h1 {
+  font-size: 44px;
+  margin-bottom: 13px;
+}
+.projects p {
+  font-size: 30px;
+  margin-bottom: 45px;
+}
+.projects h1,
+.projects p {
+  padding-left: 10px;
+}
+.projects a {
+  text-decoration: none;
+  color: black;
+}
+.projects .projectsContent {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin: 0 auto;
+  row-gap: 2vw;
+}
+.projects .projectsContent .projectCard {
+  border: 5px solid black;
+  border-radius: 27px;
+  max-width: 558px;
+  flex: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 26px 25px 20px 25px;
+  cursor: pointer;
+}
+.projects .projectsContent .projectCard:hover img {
+  scale: 1.1;
+}
+.projects .projectsContent .projectCard:hover h3 {
+  text-decoration: underline;
+}
+.projects .projectsContent .projectCard img {
+  transition: scale 0.1s linear;
+  max-width: 100px;
+  width: 100%;
+}
+.projects .projectsContent .projectCard h3 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  line-height: 0.9em;
+  margin-bottom: 6px;
+}
+.projects .projectsContent .projectCard p {
+  font-size: 20px;
+  margin: 0;
+  width: 90%;
+  max-width: 350px;
+}
+
+@media (max-width: 1000px) {
+  .projects {
+    padding-bottom: 10px;
+  }
+  .projects .projectsContent .projectCard {
+    flex: 40%;
+  }
+}
+@media (max-width: 720px) {
+  .projects h1 {
+    font-size: 38px;
+  }
+  .projects p {
+    font-size: 20px;
+  }
+  .projects .projectsContent {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .projects .projectsContent .projectCard {
+    flex: 1;
+    border-width: 4px;
+    padding: 16px 16px 16px 16px;
+  }
+  .projects .projectsContent .projectCard p {
+    font-size: 18px;
+    max-width: 80%;
+  }
+}
+.contact {
+  font-family: "Afacad Flux", serif;
+  background-color: #20524d;
+  padding: 80px 0 71px 0;
+  margin-bottom: 92px;
+  min-height: 100%;
+  text-align: center;
+}
+.contact .socials {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #f9fafb;
+}
+.contact .socials a {
+  font-size: 30px;
+  color: #f9fafb;
+  text-decoration: none;
+}
+.contact .socials a p {
+  margin-bottom: 0;
+}
+.contact .socials a i {
+  margin-right: 10px;
+}
+.contact .socials a:hover span,
+.contact .socials a:hover p {
+  text-decoration: underline;
+}
+.contact .socials span {
+  font-size: 44px;
+  transform: translateY(-4px);
+}
+.contact .socials--vertical {
+  flex-direction: column;
+}
+.contact h2 {
+  color: #f9fafb;
+  font-family: "Afacad Flux", serif;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact form {
+  width: 90%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.contact form label {
+  color: #f9fafb;
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  display: block;
+  margin: 0;
+}
+.contact form input,
+.contact form textarea,
+.contact form .btn {
+  font-family: "Afacad Flux", serif;
+  border: 2px solid black;
+  font-size: 16px;
+  padding: 3px 5px;
+  color: black !important;
+  background-color: #f9fafb;
+  margin-bottom: 14px;
+  width: 100%;
+  color: black;
+  min-height: 40px;
+  border-radius: 6px;
+  resize: vertical;
+  max-height: 400px;
+}
+.contact form textarea {
+  padding-top: 7px;
+  min-height: 190px;
+}
+.contact form .btn {
+  cursor: pointer;
+}
+.contact form .btn:hover {
+  background-color: #d6d6d6;
+}
+
+@media (max-width: 720px) {
+  .contact .socials a {
+    font-size: 20px;
+  }
+  .contact .socials span {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
