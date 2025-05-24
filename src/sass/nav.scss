@@ -1,29 +1,34 @@
 @use "variables.scss" as *;
-nav:has(#mobileNav.is-active) .nav--content {
-  margin-top: 53px;
+$navTransition: 0ms linear;
+nav:has(#mobileNav.is-active) {
+  .nav--content {
+    padding-top: calc(37px + 14px);
+  }
+  #mobileNav.is-active {
+    transform: translateX(0px);
+  }
 }
 nav {
   font-family: "Afacad Flux", serif;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(0deg, #f9fafb80 0%, #f9fafb 100%);
+  position: sticky;
+  top: 0;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  height: 14px;
-  padding-top: 14px;
-  #mobileNav.is-active {
-    transform: translateX(0);
-  }
+  z-index: 100;
   .colorBar {
-    transition-property: transform;
-    transition-duration: 0s;
     position: absolute;
+    transition: transform $navTransition;
     top: 0;
+    transform: translateY(calc(-100% + 0px));
     background-color: $site-main;
     width: 100%;
     display: flex;
-    transform: translateY(calc(-100% + 14px));
     align-items: flex-end;
     justify-content: space-evenly;
-    padding: 14px 0 14px 0;
+    box-sizing: border-box;
     .anchorTags {
       display: flex;
       align-items: center;
@@ -38,7 +43,7 @@ nav {
         font-size: 20px;
         text-decoration: none;
         display: inline-block;
-        display: none;
+        // display: none;
         border-radius: 20px;
         margin: 0;
         padding: 5px 8px;
@@ -51,11 +56,11 @@ nav {
     }
   }
   .nav--content {
-    transition: margin 700ms;
+    transition: padding-top $navTransition;
     width: 90%;
     max-width: 1700px;
     margin: 0 auto;
-    padding: 14px 0px;
+    padding: 8px 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -66,7 +71,7 @@ nav {
       background-position: top;
       background-repeat: no-repeat;
       aspect-ratio: 482 / 295;
-      width: 170px;
+      width: 140px;
     }
     .anchorTags {
       margin-left: 40px;
@@ -99,11 +104,11 @@ nav {
         // margin-right: 70px;
         border-radius: 11px;
         outline: $site-main 4px solid;
-        padding: 10px 32px;
+        padding: 6px 23px;
         transition: background-color 0.2s linear, color 0.1s linear;
         color: $site-main;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 25px;
         text-decoration: none;
         display: inline-block;
         &:hover {
@@ -113,9 +118,20 @@ nav {
       }
       .hamburger {
         display: none;
+        scale: 0.8;
       }
     }
   }
+}
+.navigationFocusable {
+  position: absolute;
+  top: 0;
+  transform: translateY(-146px);
+  background-color: red;
+  visibility: hidden;
+  left: 0;
+  width: 20px;
+  height: 20px;
 }
 
 #hamburger-9 {
@@ -139,8 +155,9 @@ nav {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 70px;
+  scale: 0.8;
   height: 70px;
-  border: 5px solid transparent;
+  border: 7px solid transparent;
   top: calc(50% - 35px);
   left: calc(50% - 35px);
   border-radius: 100%;
@@ -150,7 +167,7 @@ nav {
 }
 
 #hamburger-9.is-active:before {
-  border: 5px solid $site-main;
+  border: 6px solid $site-main;
 }
 
 #hamburger-9.is-active .line {
@@ -191,10 +208,10 @@ nav {
 .hamburger:hover {
   cursor: pointer;
 }
+
 @media (max-width: $layout-breakpoint-tablet) {
   nav {
     .colorBar {
-      position: fixed;
       z-index: 10;
     }
     .colorBar {

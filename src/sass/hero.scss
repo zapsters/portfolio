@@ -1,9 +1,10 @@
 @use "variables" as *;
 body:has(#mobileNav.is-active) .hero {
-  margin-top: 180px;
+  margin-top: 0px;
 }
 .hero {
-  margin-top: 130px;
+  transition: margin-top 700ms;
+  margin-top: 0px;
   .photoHolder {
     max-width: 500px;
     width: 80%;
@@ -18,10 +19,10 @@ body:has(#mobileNav.is-active) .hero {
     margin-bottom: 40px;
   }
   h1 {
-    font-size: 36px;
+    font-size: 32px;
     font-family: "Afacad Flux", serif;
-    font-weight: 500;
-    max-width: 1054px;
+    font-weight: 400;
+    max-width: 68ch;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 115px;
@@ -29,7 +30,7 @@ body:has(#mobileNav.is-active) .hero {
       color: $site-mainVibrant;
       font-weight: 700;
       cursor: pointer;
-      font-size: 40px;
+      font-size: 35px;
       &:hover {
         text-decoration: underline;
       }
