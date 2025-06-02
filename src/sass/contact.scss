@@ -9,7 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 30px;
+  padding-top: 100px;
+  color: $site-offWhite;
   flex-direction: column;
   .socials {
     width: 90%;
@@ -51,7 +52,10 @@
     font-size: 55px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-weight: 300;
   }
   form {
     width: 90%;
