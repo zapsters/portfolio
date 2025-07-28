@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve",
+    "dev": "webpack-dev-server --live-reload",
     "build": "webpack"
   },
   "scriptsOld": {

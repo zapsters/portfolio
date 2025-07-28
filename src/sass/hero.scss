@@ -10,10 +10,10 @@ body:has(#mobileNav.is-active) .hero {
     width: 80%;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
-    background-image: url("../images/IMG_1840.JPEG");
+    background-image: url("../images/IMG_5062.JPEG");
     margin: 0 auto;
-    background-size: 120%;
-    background-position: 0% 50%;
+    background-size: 140%;
+    background-position: 53% 50%;
     background-repeat: no-repeat;
     border: 10px solid $site-main;
     margin-bottom: 40px;
@@ -22,12 +22,12 @@ body:has(#mobileNav.is-active) .hero {
     font-size: 32px;
     font-family: "Afacad Flux", serif;
     font-weight: 400;
-    max-width: 68ch;
+    max-width: 69ch;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 115px;
     span {
-      color: $site-mainVibrant;
+      color: $site-main;
       font-weight: 700;
       cursor: pointer;
       font-size: 35px;

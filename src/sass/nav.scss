@@ -118,7 +118,6 @@ nav {
       }
       .hamburger {
         display: none;
-        scale: 0.8;
       }
     }
   }
@@ -192,7 +191,7 @@ nav {
   transform: translateY(-13px) rotate(90deg);
 }
 .hamburger {
-  scale: 0.9;
+  background-color: transparent !important;
 }
 .hamburger .line {
   width: 40px;

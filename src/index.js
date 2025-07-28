@@ -5,10 +5,10 @@ import favicon from "./images/PersonalLogoFoxIcon.png";
 // Import project icons
 import sporeganizerIcon from "./images/projectIcons/Sporeganizer.png";
 import inputStackIcon from "./images/projectIcons/InputStackIcon.png";
-import stardewExhibitIcon from "./images/projectIcons/StardewMuseumExhibit.gif";
+import stardewExhibitIcon from "./images/projectIcons/StardewMuseumExhibit.png";
 import paintIcon from "./images/projectIcons/PaintLogo.png";
 import stardewTodoIcon from "./images/projectIcons/StardewTodo.png";
-import saerIcon from "./images/projectIcons/SaERv2Spin.gif";
+import saerIcon from "./images/projectIcons/SaERv2.png";
 
 // Import featured work images
 import inputStackShowcaseArt from "./images/showcase/InputStackGameplay.png";
@@ -87,8 +87,7 @@ $(function () {
   var myProjects = [
     {
       name: "Sporeganizer",
-      description:
-        "A fully online class & assignment tracker  webapp with a fun mushroom theme. Under Development",
+      description: "A fully online class & assignment tracker webapp with a fun mushroom theme.",
       icon: sporeganizerIcon,
       link: "https://github.com/zapsters/Sporeganizer",
       pixelated: true,
@@ -102,7 +101,7 @@ $(function () {
     },
     {
       name: "Stardew Valley Web Exhibit",
-      description: "From User Personas, Wireframing, Usability Testing, to a Final Product.",
+      description: "From user personas, wireframing, usability testing, to a final product.",
       icon: stardewExhibitIcon,
       link: "https://www.figma.com/design/eOzrhe6A7hSipzltgWI2pa/StardewExhibit?node-id=0-1&t=IuqjlqkzMfsGD9Cm-1",
       pixelated: true,
@@ -123,7 +122,7 @@ $(function () {
     },
     {
       name: "Science and Entity Research",
-      description: "A passion project, collection of web apps.",
+      description: "A fictional passion project with a focus on protecting the world.",
       icon: saerIcon,
       link: "https://github.com/zapsters/SaER",
       pixelated: false,

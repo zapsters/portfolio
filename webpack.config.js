@@ -8,7 +8,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  mode: "development", // use 'production' for builds
+  mode: "production",
+  performance: {
+    hints: "error",
+    maxAssetSize: 1000000,
+    assetFilter: function (assetFilename) {
+      return !assetFilename.includes("JPEG");
+    },
+  },
   module: {
     rules: [
       {
@@ -31,7 +38,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: "./dist",
+    static: "./src",
     port: 3000,
     open: true,
     hot: true,
