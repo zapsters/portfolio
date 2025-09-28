@@ -1,0 +1,51 @@
+@use "sass:map";
+$theme-map: null;
+$themes: (
+  light: (text: #171717,
+    background: #ffffff,
+    primary: #6d65aa,
+    secondary: #ada7d6,
+    accent: #796dc7,
+    flight_computer_figure_warn: #f60606,
+    flight_computer_figure_bg: #404040,
+    flight_computer_figure_text: #ffff00,
+    flight_computer_button_text: #521152,
+  ),
+  dark: (text: #ededed,
+    background: #0a0a0a,
+    primary: #521111,
+    secondary: #2f2957,
+    accent: #fc1aa9,
+    button_color: #720a72,
+    button_color_hover: #521152,
+    button_color_active: #410b41,
+    flight_computer_figure_warn: #e60b0b,
+    flight_computer_figure_bg: #3a2a3c,
+    flight_computer_figure_text: #ffff00,
+    flight_computer_button_text: #240202,
+  ),
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    [data-bs-theme="#{$theme}"] & {
+      $theme-map: (
+        ) !global;
+
+      @each $key, $submap in $map {
+        $value: map.get(map.get($themes, $theme), "#{$key}"
+        );
+      $theme-map: map.merge($theme-map,
+          ($key: $value,
+          )) !global;
+    }
+
+    @content;
+    $theme-map: null !global;
+  }
+}
+}
+
+@function themed($key) {
+  @return map.get($theme-map, $key);
+}

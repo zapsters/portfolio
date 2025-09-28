@@ -1,0 +1,43 @@
+@use "../structure.scss" as *;
+@use "../theme.scss" as *;
+
+@font-face {
+  font-family: "bianzhidai-Base";
+  src: url("./bianzhidai-Base2.woff");
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: "bianzhidai-Base";
+  src: url("./bianzhidai_noBG-Base.woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "bianzhidai-Base";
+  src: url("./bianzhidai_COLR-grid.woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "bianzhidai-Base";
+  src: url("./bianzhidai_COLR-GRAY.woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "bianzhidai-Base";
+  src: url("./bianzhidai_COLR-RGB.woff");
+}
+
+.bianzhidai,
+.bianzhidaiBase {
+  letter-spacing: 0px;
+  font-family: "bianzhidai-Base";
+  font-weight: 400;
+  position: relative;
+  font-size: 4em;
+  white-space: pre;
+  text-align: center;
+  line-height: 1em;
+}
