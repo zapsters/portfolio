@@ -1,0 +1,14 @@
+@use "theme.scss" as *;
+
+a {
+  @include themify() {
+
+    color: themed("primary");
+    text-decoration-color: themed("primary");
+
+    &:hover,
+    &:focus-visible {
+      color: themed("accent")
+    }
+  }
+}

@@ -1,4 +1,6 @@
 @use "sass:map";
+$mobile-breakpoint: "600px";
+
 $theme-map: null;
 $themes: (
   light: (text: #171717,
@@ -6,6 +8,7 @@ $themes: (
     primary: #6d65aa,
     secondary: #ada7d6,
     accent: #796dc7,
+    marquee_color: #fc1aa9,
     flight_computer_figure_warn: #f60606,
     flight_computer_figure_bg: #404040,
     flight_computer_figure_text: #ffff00,
@@ -13,9 +16,10 @@ $themes: (
   ),
   dark: (text: #ededed,
     background: #0a0a0a,
-    primary: #521111,
+    primary: #900f61,
     secondary: #2f2957,
-    accent: #fc1aa9,
+    accent: #9d19a9,
+    marquee_color: #fc1aa9,
     button_color: #720a72,
     button_color_hover: #521152,
     button_color_active: #410b41,

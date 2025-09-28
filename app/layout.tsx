@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.scss";
 import { ThemeProvider } from "next-themes";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +55,19 @@ export default function RootLayout({
             </span>
           </Marquee>
           <article className="root">
-            <aside>Erin Ballinger</aside>
+            <aside>
+              <h1>
+                <Link href="./">Erin Ballinger</Link>
+              </h1>
+              <hr />
+              <nav>
+                <Link href="./">Home</Link>
+                <Link href="/projects">Projects</Link>
+                <Link href="/about">About</Link>
+                <Link href="/contact">Contacts</Link>
+                <Link href="/hello">NonExist</Link>
+              </nav>
+            </aside>
             <main>{children}</main>
           </article>
         </ThemeProvider>

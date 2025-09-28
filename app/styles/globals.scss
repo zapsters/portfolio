@@ -1,6 +1,7 @@
 @use "fonts/_fonts.scss" as *;
 @use "structure.scss" as *;
 @use "theme.scss" as *;
+@use "ui.scss" as *;
 
 body {
   @include themify() {
@@ -8,7 +9,8 @@ body {
     color: themed(text);
   }
 
-  font-family: Arial,
+  font-family: "ft88",
+  Arial,
   Helvetica,
   sans-serif;
 }
@@ -16,10 +18,10 @@ body {
 .marquee {
   @include themify() {
     padding: 4px;
-    border: 4px solid rgb(themed("accent"), 0.5);
+    border: 4px solid themed("primary");
     border-right: 0;
     border-left: 0;
-    color: themed("accent");
+    color: themed("marquee_color");
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -33,10 +35,9 @@ body {
 
 @mixin bordered() {
   @include themify() {
-    padding: 4px;
-    border: 2px solid rgb(themed("accent"), 0.5);
+    border: 2px solid themed("primary");
     border-radius: 6px;
-    padding: 4px 6px;
+    padding: 5px 5px;
   }
 }
 
@@ -47,12 +48,45 @@ body {
   padding-top: 14px;
   gap: 11px;
   max-width: 1300px;
-  width: 90%;
+  width: 97%;
   margin: 0 auto;
 
   // Navigation sidebar
   aside {
     @include bordered;
+
+    padding-top: 6px !important;
+
+    @include themify() {
+      h1 {
+        font-weight: 300;
+        font-size: 20px;
+        margin-bottom: 0px;
+        padding: 2px 7px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      hr {
+        margin: 3px 0;
+        border: 1px solid themed("primary");
+      }
+
+      nav {
+        padding: 1px 10px 1px 10px;
+        gap: 1px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        a {
+          padding: 3px 1px;
+        }
+      }
+    }
   }
 
   main {
@@ -67,5 +101,17 @@ main {
 
   h1 {
     font-weight: 700;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .root {
+    flex-direction: column;
+    align-items: stretch;
+    width: 96%;
+
+    aside {
+      text-align: center !important;
+    }
   }
 }
