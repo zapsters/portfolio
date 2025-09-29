@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.scss";
 import { ThemeProvider } from "next-themes";
 import Marquee from "react-fast-marquee";
-import Link from "next/link";
+import NavItem from "./components/NavItem";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "< Apollo />",
   description: "Portfolio site for Erin (Apollo) Ballinger",
   icons: {
-    icon: "PersonalLogoFox.png",
+    icon: "PersonalLogoFoxIcon.png",
   },
 };
 
@@ -57,15 +57,23 @@ export default function RootLayout({
           <article className="root">
             <aside>
               <h1>
-                <Link href="./">Erin Ballinger</Link>
+                <NavItem label="Erin Ballinger" href="./"></NavItem>
               </h1>
               <hr />
               <nav>
-                <Link href="./">Home</Link>
-                <Link href="/projects">Projects</Link>
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contacts</Link>
-                <Link href="/hello">NonExist</Link>
+                <NavItem label="Home" href="/" />
+                <NavItem
+                  href="/projects"
+                  label="Projects"
+                  children={[
+                    { href: "/projects/BLIMP", label: "B.L.I.M.P." },
+                    { href: "/projects/inputStack", label: "Input Stack" },
+                    { href: "/projects/sporeganizer", label: "Sporeganizer" },
+                  ]}
+                />
+                <NavItem label="About" href="/about" />
+                <NavItem label="Contact" href="/contact" />
+                <NavItem label="NonExist" href="/hello" />
               </nav>
             </aside>
             <main>{children}</main>

@@ -1,14 +1,29 @@
 @use "theme.scss" as *;
 
+hr {
+  margin: 15px 0;
+
+  @include themify() {
+    border: 1px solid themed("primary");
+  }
+}
+
 a {
   @include themify() {
 
     color: themed("primary");
     text-decoration-color: themed("primary");
+    text-decoration: underline;
 
     &:hover,
     &:focus-visible {
-      color: themed("accent")
+      color: themed("accent");
+      text-decoration-color: themed("accent");
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: themed("accent");
     }
   }
 }
