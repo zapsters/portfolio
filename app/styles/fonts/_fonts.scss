@@ -5,7 +5,6 @@
 
 .bianzhidai,
 .bianzhidaiBase {
-  letter-spacing: 0px;
   font-family: "bianzhidai";
   font-weight: 400;
   position: relative;
@@ -89,4 +88,22 @@
   font-weight: 600;
   font-family: "ft88";
   src: url("./ft88/FT88-Bold.otf");
+}
+
+.facade {
+  font-family: "facade";
+}
+
+@font-face {
+  font-family: "facade";
+  src: url("facade/Facade-Ouest.woff");
+}
+
+.grotesque {
+  font-family: "grotesque";
+}
+
+@font-face {
+  font-family: "grotesque";
+  src: url("grotesque/terminal-grotesque.ttf");
 }
