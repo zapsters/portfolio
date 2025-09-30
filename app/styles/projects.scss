@@ -1,0 +1,47 @@
+@use "theme.scss" as *;
+
+.projectCards {
+  gap: 8px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.projectCard {
+  padding: 0px 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include themify() {
+    border: themed("primary") 2px solid;
+    background-color: themed("background");
+    border-radius: 2px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 3px;
+    padding-bottom: 0;
+  }
+
+  .projectFlex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3px;
+
+    .projectContent {
+      flex: 1;
+    }
+
+    .slideshow {
+      @include themify() {
+        margin: 3px 3px;
+
+        border: 2px solid themed("text");
+        flex: 0.7;
+      }
+    }
+  }
+}

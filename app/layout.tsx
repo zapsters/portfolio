@@ -58,7 +58,12 @@ export default function RootLayout({
           <article className="root">
             <aside>
               <PersonalIcon
-                style={{ width: "60%", padding: "5px 0px", color: "var(--primary-color)" }}
+                style={{
+                  width: "60%",
+                  maxWidth: "220px",
+                  padding: "5px 0px",
+                  color: "var(--primary-color)",
+                }}
                 alignmentBaseline="central"
                 height={"autoFill"}
               />

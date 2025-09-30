@@ -2,6 +2,7 @@
 @use "structure.scss" as *;
 @use "theme.scss" as *;
 @use "ui.scss" as *;
+@use "projects.scss" as *;
 
 @include themify() {
   --primary-color: #{themed("primary")};
@@ -95,7 +96,8 @@ body {
       a {
         position: relative;
         /* needed for ::before/::after absolute positioning */
-        display: block;
+        display: inline;
+        width: fit-content;
         padding: 3px 1px;
         text-decoration: none;
 
@@ -127,6 +129,17 @@ body {
           margin-left: 1.3ch;
           padding-top: 0;
           padding-bottom: 0;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          width: fit-content;
+
+          a {
+            display: block;
+            width: 100%;
+            margin: unset;
+          }
 
           &::before {
             top: -1px;

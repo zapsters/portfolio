@@ -40,12 +40,20 @@ export default function NavItem({ href, label, children }: NavItemProps) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }} // snappier than 2s
-            style={{ overflow: "hidden" }}>
+            style={{
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              width: "fit-content",
+              margin: "0 auto",
+            }}>
             {children?.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}
-                className={`navExpandableLink ${pathname === child.href ? "active" : ""}`}>
+                className={`navExpandableLink ${pathname === child.href ? "active" : ""}`}
+                onFocus={() => setHoverOpen(true)}
+                onBlur={() => setHoverOpen(false)}>
                 {child.label}
               </Link>
             ))}
