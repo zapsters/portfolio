@@ -6,7 +6,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     data-name="Layer 2"
     viewBox="0 0 195.29 156.81"
     width="1em"
-    height="1em"
+    // height="1em"
     {...props}
     style={{ textAlign: "center", display: "block", margin: "0 auto", ...(props.style || {}) }}>
     <path

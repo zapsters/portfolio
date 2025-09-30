@@ -55,7 +55,6 @@ export default function ProjectCard({ href, label }: ProjectCardProps) {
               color: "var(--primary-color)",
             }}
             alignmentBaseline="central"
-            height={"autoFill"}
           />
         </div>
         <div className="projectContent">
