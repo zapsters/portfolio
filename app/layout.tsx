@@ -4,6 +4,7 @@ import "./styles/globals.scss";
 import { ThemeProvider } from "next-themes";
 import Marquee from "react-fast-marquee";
 import NavItem from "./components/NavItem";
+import PersonalIcon from "./components/PersonalIcon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "< Apollo />",
-  description: "Portfolio site for Erin (Apollo) Ballinger",
+  description: "Portfolio site for Apollo",
   icons: {
     icon: "PersonalLogoFoxIcon.png",
   },
@@ -56,6 +57,11 @@ export default function RootLayout({
           </Marquee>
           <article className="root">
             <aside>
+              <PersonalIcon
+                style={{ width: "60%", padding: "5px 0px", color: "var(--primary-color)" }}
+                alignmentBaseline="central"
+                height={"autoFill"}
+              />
               <h1>
                 <NavItem label="Erin Ballinger" href="./"></NavItem>
               </h1>

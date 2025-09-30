@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 type NavItemProps = {
   href: string;
@@ -22,25 +23,35 @@ export default function NavItem({ href, label, children }: NavItemProps) {
   const open = hoverOpen || isChildActive || isActive;
 
   return (
-    <li onMouseEnter={() => setHoverOpen(true)} onMouseLeave={() => setHoverOpen(false)}>
+    <li
+      onMouseEnter={() => setHoverOpen(true)}
+      onMouseLeave={() => setHoverOpen(false)}
+      onFocus={() => setHoverOpen(true)}
+      onBlur={() => setHoverOpen(false)}>
       <Link href={href} className={isActive ? "active" : ""}>
         {label}
       </Link>
 
-      {children && open && (
-        <div className={"navExpandableLink"}>
-          {children.map((child) => (
-            <Link
-              key={child.href}
-              href={child.href}
-              className={
-                pathname === child.href ? "active navExpandableLink" : " navExpandableLink"
-              }>
-              {child.label}
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="expandable"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }} // snappier than 2s
+            style={{ overflow: "hidden" }}>
+            {children?.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                className={`navExpandableLink ${pathname === child.href ? "active" : ""}`}>
+                {child.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </li>
   );
 }

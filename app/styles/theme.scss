@@ -21,7 +21,10 @@ $themes: (
 
 @mixin themify($themes: $themes) {
   @each $theme, $map in $themes {
-    [data-bs-theme="#{$theme}"] & {
+
+    // [data-bs-theme="#{$theme}"] & {
+    // Small edit between these two themes to allow for top level selection! Used for setting :root variables.
+    [data-bs-theme="#{$theme}"]#{if(&, " &", "")} {
       $theme-map: (
         ) !global;
 
