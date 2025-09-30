@@ -6,16 +6,6 @@ import Marquee from "react-fast-marquee";
 import NavItem from "./components/NavItem";
 import PersonalIcon from "./components/PersonalIcon";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "< Apollo />",
   description: "Portfolio site for Apollo",
@@ -65,7 +55,6 @@ export default function RootLayout({
                   color: "var(--primary-color)",
                 }}
                 alignmentBaseline="central"
-                height={"autoFill"}
               />
               <h1>
                 <NavItem label="Erin Ballinger" href="/"></NavItem>
