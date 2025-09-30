@@ -63,7 +63,7 @@ export default function RootLayout({
                 height={"autoFill"}
               />
               <h1>
-                <NavItem label="Erin Ballinger" href="./"></NavItem>
+                <NavItem label="Erin Ballinger" href="/"></NavItem>
               </h1>
               <hr />
               <nav>
