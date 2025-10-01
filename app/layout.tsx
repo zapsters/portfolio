@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import Marquee from "react-fast-marquee";
 import NavItem from "./components/NavItem";
 import PersonalIcon from "./components/PersonalIcon";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "< Apollo />",
@@ -56,7 +57,7 @@ export default function RootLayout({
                 alignmentBaseline="central"
               />
               <h1>
-                <NavItem label="Erin Ballinger" href="/"></NavItem>
+                <Link href="./">Erin Ballinger</Link>
               </h1>
               <hr />
               <nav>
