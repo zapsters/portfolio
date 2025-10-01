@@ -1,3 +1,5 @@
+@use "theme.scss" as *;
+
 /* Reset */
 * {
   margin: 0;
@@ -7,7 +9,12 @@
 
 html,
 body {
-  height: 100%;
+  @include themify() {
+    background: themed(background);
+    color: themed(text);
+  }
+
+  padding-bottom: 15px;
 }
 
 h1,
@@ -21,3 +28,35 @@ p {
 }
 
 /* End of Reset */
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+
+  &:hover {
+    width: 3px;
+  }
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  padding: 4px;
+  background: transparent;
+  position: absolute;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  @include themify() {
+
+    background: rgb(themed("primary"), 0.2);
+  }
+
+  border-radius: 5px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  @include themify() {
+    background: rgb(themed("primary"), 0.8);
+  }
+}

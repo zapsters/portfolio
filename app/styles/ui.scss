@@ -8,7 +8,20 @@ hr {
   }
 }
 
+ul {
+  margin-top: 3px;
+}
+
+li {
+  margin-bottom: 1px;
+  margin-left: 20px;
+}
+
 a {
+  &.raw {
+    text-decoration: none !important;
+  }
+
   @include themify() {
 
     color: themed("primary");

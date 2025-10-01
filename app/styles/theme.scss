@@ -9,13 +9,15 @@ $themes: (
     secondary: #ada7d6,
     accent: #796dc7,
     marquee_color: #fc1aa9,
+    input_bg: red,
   ),
   dark: (text: #ededed,
     background: #0a0a0a,
-    primary: #900f61,
-    secondary: #2f2957,
-    accent: #9d19a9,
+    primary: #bc157f,
+    secondary: #4a2957,
+    accent: #cd2ddb,
     marquee_color: #fc1aa9,
+    input_bg: rgb(23, 23, 25),
   ),
 );
 

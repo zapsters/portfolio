@@ -40,13 +40,7 @@ export default function NavItem({ href, label, children }: NavItemProps) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }} // snappier than 2s
-            style={{
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              width: "fit-content",
-              margin: "0 auto",
-            }}>
+            className="navExpandableArea">
             {children?.map((child) => (
               <Link
                 key={child.href}

@@ -71,9 +71,18 @@ export default function RootLayout({
                     { href: "/projects/sporeganizer", label: "Sporeganizer" },
                   ]}
                 />
+                <NavItem
+                  href="/projects"
+                  label="Projects"
+                  children={[
+                    { href: "/projects/BLIMP", label: "B.L.I.M.P." },
+                    { href: "/projects/inputStack", label: "Input Stack" },
+                    { href: "/projects/sporeganizer", label: "Sporeganizer" },
+                  ]}
+                />
                 <NavItem label="About" href="/about" />
                 <NavItem label="Contact" href="/contact" />
-                <NavItem label="NonExist" href="/hello" />
+                <NavItem label="404" href="/404" />
               </nav>
             </aside>
             <main>{children}</main>

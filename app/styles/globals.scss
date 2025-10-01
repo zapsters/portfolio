@@ -3,6 +3,7 @@
 @use "theme.scss" as *;
 @use "ui.scss" as *;
 @use "projects.scss" as *;
+@use "contact.scss" as *;
 
 @include themify() {
   --primary-color: #{themed("primary")};
@@ -10,21 +11,9 @@
   --background-color: #{themed("background")};
 }
 
-
-body {
-  @include themify() {
-    background: themed(background);
-    color: themed(text);
-  }
-
-  font-family: "grotesque",
-  Arial,
-  Helvetica,
-  sans-serif;
-}
-
 .marquee {
   @include themify() {
+    background-color: themed("background");
     padding: 4px;
     border: 4px solid themed("primary");
     border-right: 0;
@@ -61,6 +50,8 @@ body {
 
   // Navigation sidebar
   aside {
+    position: sticky;
+    top: 20px;
     @include bordered;
     padding-top: 6px !important;
     font-family: "ft88", "grotesque", "facade";
@@ -135,6 +126,10 @@ body {
           flex-direction: column;
           width: fit-content;
 
+          &:first-of-type {
+            margin-top: 3px;
+          }
+
           a {
             display: block;
             width: 100%;
@@ -196,10 +191,12 @@ body {
 
 
     p {
+      font-size: 19px;
+      font-weight: 400;
       text-indent: 2ch;
     }
 
-    span {
+    span:not(.raw) {
       font-weight: 300;
 
       @include themify() {
@@ -220,6 +217,16 @@ body {
 
     aside {
       text-align: center !important;
+
+      .navExpandableArea {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0px auto;
+        height: auto;
+        opacity: 1;
+      }
     }
   }
 }

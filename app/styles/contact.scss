@@ -1,0 +1,136 @@
+@use "theme.scss" as *;
+
+.contact {
+  @include themify() {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    color: themed("text");
+
+    flex-direction: column;
+
+    .socials {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 640px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      color: themed("primary");
+
+      a {
+        padding: 6px;
+        font-family: "ft88";
+        letter-spacing: -1px;
+        font-size: 30px;
+        text-decoration: none;
+        display: flex !important;
+        align-items: center;
+        justify-content: space;
+        gap: 10px;
+
+        svg {
+          width: 35px;
+        }
+
+        p {
+          font-size: 22px;
+          text-indent: 0 !important;
+          margin-bottom: 0;
+        }
+
+        &:hover {
+
+          span,
+          p {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      span {
+        font-size: 44px;
+        transform: translateY(-4px);
+      }
+    }
+
+    .socials--vertical {
+      flex-direction: column;
+    }
+
+    h2 {
+      color: themed("text");
+      font-size: 55px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      font-weight: 300;
+    }
+
+    form {
+      width: 90%;
+      max-width: 620px;
+      margin: 0 auto;
+
+      label {
+        color: themed("text");
+        font-size: 19px;
+        padding-left: 4px;
+        font-weight: 500;
+        width: 100%;
+        text-align: left;
+        display: block;
+        margin: 0;
+      }
+
+      input,
+      textarea,
+      .btn {
+        border: 2px solid themed("secondary");
+        background-color: themed("input_bg");
+        font-size: 16px;
+        padding: 3px 5px;
+        margin-bottom: 14px;
+        width: 100%;
+        min-height: 40px;
+        border-radius: 6px;
+        resize: vertical;
+        max-height: 400px;
+      }
+
+      textarea {
+        padding-top: 7px;
+        min-height: 190px;
+      }
+
+      .btn {
+        cursor: pointer;
+
+        &:hover {
+          color: themed("text");
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .contact {
+    .socials {
+      a {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+}
