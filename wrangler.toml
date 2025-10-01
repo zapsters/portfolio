@@ -1,3 +1,8 @@
+# wrangler.toml
 name = "portfolio"
-compatibility_date = "2025-10-01"
-compatibility_flags = [ "nodejs_compat" ]
+compatibility_date = "2024-12-30"
+
+compatibility_flags = [
+  "nodejs_compat",
+  "nodejs_compat_v2"
+]
