@@ -10,9 +10,9 @@
 
 .projectCard {
   padding: 4px;
-  color: white;
 
   @include themify() {
+    color: themed("text");
     border: themed("primary") 2px solid;
     background-color: themed("background");
     border-radius: 2px;
