@@ -8,16 +8,16 @@ import { AnimatePresence, motion } from "motion/react";
 type NavItemProps = {
   href: string;
   label: string;
-  children?: { href: string; label: string }[]; // structured child links
+  items?: { href: string; label: string }[]; // structured child links
 };
 
-export default function NavItem({ href, label, children }: NavItemProps) {
+export default function NavItem({ href, label, items }: NavItemProps) {
   const pathname = usePathname();
   const [hoverOpen, setHoverOpen] = useState(false);
 
   // active states
   const isActive = pathname === href;
-  const isChildActive = children?.some((child) => pathname.startsWith(child.href));
+  const isChildActive = items?.some((child) => pathname.startsWith(child.href));
 
   // menu should open if hovered OR a child is active
   const open = hoverOpen || isChildActive || isActive;
@@ -41,7 +41,7 @@ export default function NavItem({ href, label, children }: NavItemProps) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }} // snappier than 2s
             className="navExpandableArea">
-            {children?.map((child) => (
+            {items?.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}

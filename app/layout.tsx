@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   function marqueeSpacer() {
-    let space = "     ";
-    let separator = "|";
+    const space = "     ";
+    const separator = "|";
     return (
       <>
         {space}
@@ -65,7 +65,7 @@ export default function RootLayout({
                 <NavItem
                   href="/projects"
                   label="Projects"
-                  children={[
+                  items={[
                     { href: "/projects/BLIMP", label: "B.L.I.M.P." },
                     { href: "/projects/inputStack", label: "Input Stack" },
                     { href: "/projects/sporeganizer", label: "Sporeganizer" },
