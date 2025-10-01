@@ -1,4 +1,3 @@
-import Marquee from "react-fast-marquee";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
