@@ -2,30 +2,31 @@ name: Deploy to Cloudflare Workers
 
 on:
   push:
-    branches: ["main"]   # adjust if you deploy from another branch
+    branches:
+      - main   # or whichever branch you want to deploy from
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20   # match your project’s Node version
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js with OpenNext
-        run: |
-          npm run build
+      - name: Build project
+        run: npm run build
 
-      - name: Deploy with Wrangler
-        run: npx wrangler deploy
+      - name: Deploy to Cloudflare
+        run: npm run deploy
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
