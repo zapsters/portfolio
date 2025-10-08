@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Pixelated from "./components/pixelated";
 
 export default function NotFound() {
   return (
-    <div style={{ padding: "10px 0" }}>
+    <div style={{ padding: "4px" }}>
       <h3 style={{ fontFamily: "ft88", fontWeight: 600, marginBottom: "5px" }}>
         {"Whoops, looks like we've encountered an issue."}
       </h3>

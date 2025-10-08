@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <>
       <h3>
-        Hey, I’m <span>Erin Ballinger.</span>
+        Hey, I’m <span>Erin Ballinger</span>{" "}
+        <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p>
       </h3>
       <p>Full-stack developer in Indianapolis.</p>
       <p>

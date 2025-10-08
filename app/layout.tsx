@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import NavItem from "./components/NavItem";
 import PersonalIcon from "./components/PersonalIcon";
 import Link from "next/link";
+import Pixelated from "./components/pixelated";
 
 export const metadata: Metadata = {
   title: "< Apollo />",
@@ -46,37 +47,45 @@ export default function RootLayout({
             </span>
           </Marquee>
           <article className="root">
-            <aside>
-              <PersonalIcon
-                style={{
-                  width: "60%",
-                  maxWidth: "220px",
-                  padding: "5px 0px",
-                  color: "var(--primary-color)",
-                }}
-                alignmentBaseline="central"
-              />
-              <h1>
-                <Link href="./">Erin Ballinger</Link>
-              </h1>
-              <hr />
-              <nav>
-                <NavItem label="Home" href="/" />
-                <NavItem
-                  href="/projects"
-                  label="Projects"
-                  items={[
-                    { href: "/projects/BLIMP", label: "B.L.I.M.P." },
-                    { href: "/projects/inputStack", label: "Input Stack" },
-                    { href: "/projects/sporeganizer", label: "Sporeganizer" },
-                  ]}
+            <Pixelated>
+              <aside>
+                <PersonalIcon
+                  style={{
+                    width: "60%",
+                    maxWidth: "220px",
+                    padding: "5px 0px",
+                    color: "var(--primary-color)",
+                  }}
+                  alignmentBaseline="central"
                 />
-                <NavItem label="About" href="/about" />
-                <NavItem label="Contact" href="/contact" />
-                <NavItem label="404" href="/404" />
-              </nav>
-            </aside>
-            <main>{children}</main>
+                <h1>
+                  <Link href="./">
+                    Erin
+                    <br />
+                    Ballinger
+                  </Link>
+                </h1>
+                <hr />
+                <nav>
+                  <NavItem label="Home" href="/" />
+                  <NavItem
+                    href="/projects"
+                    label="Projects"
+                    items={[
+                      { href: "/projects/BLIMP", label: "B.L.I.M.P." },
+                      { href: "/projects/inputStack", label: "Input Stack" },
+                      { href: "/projects/sporeganizer", label: "Sporeganizer" },
+                    ]}
+                  />
+                  <NavItem label="About" href="/about" />
+                  <NavItem label="Contact" href="/contact" />
+                  <NavItem label="404" href="/404" />
+                </nav>
+              </aside>
+            </Pixelated>
+            <Pixelated style={{ padding: "8px" }}>
+              <main>{children}</main>
+            </Pixelated>
           </article>
         </ThemeProvider>
       </body>

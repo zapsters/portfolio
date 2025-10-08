@@ -4,6 +4,7 @@
 @use "ui.scss" as *;
 @use "projects.scss" as *;
 @use "contact.scss" as *;
+@use "pixelated.scss" as *;
 
 @include themify() {
   --primary-color: #{themed("primary")};
@@ -52,7 +53,6 @@
   aside {
     position: sticky;
     top: 20px;
-    @include bordered;
     padding-top: 6px !important;
     font-family: "ft88", "grotesque", "facade";
     list-style: none;
@@ -61,7 +61,6 @@
       font-weight: 600;
       font-size: 22px;
       margin-bottom: 0px;
-      padding: 2px 10px 1px 10px;
       text-align: center;
 
       a {
@@ -76,13 +75,18 @@
     }
 
     nav {
-      padding: 1px 18px;
       gap: 1px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       font-weight: 400;
       font-size: 18px;
+      padding-bottom: 5px;
+
+      li {
+        margin-left: 10px !important;
+        padding: 0 7px;
+      }
 
       a {
         position: relative;
@@ -117,7 +121,7 @@
         }
 
         &.navExpandableLink {
-          margin-left: 1.3ch;
+          margin-left: 1.05ch;
           padding-top: 0;
           padding-bottom: 0;
           display: flex;
@@ -165,7 +169,6 @@
   }
 
   main {
-    @include bordered;
     flex: 1;
     font-size: 17px;
     font-family: "grotesque", "facade";
