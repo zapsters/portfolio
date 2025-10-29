@@ -64,11 +64,59 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 2px;
+        gap: 4px;
       }
 
     }
   }
+}
+
+.projectPage {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include themify() {
+      font-family: "ft88", "grotesque", "facade";
+      color: themed("primary");
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "grotesque", "facade" !important;
+    font-weight: 100 !important;
+  }
+
+  p {
+    text-indent: 0 !important;
+  }
+
+  .Link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  h1 {
+    // letter-spacing: -1px;
+    font-weight: 400;
+    font-size: 25px !important;
+    margin-bottom: 9px;
+    text-decoration: none;
+  }
+
+  h2 {
+    margin-bottom: 10;
+    letter-spacing: -2;
+  }
+
 }
 
 @media (max-width:"800px") {

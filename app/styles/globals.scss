@@ -180,14 +180,13 @@
       font-family: "ft88", "grotesque", "facade";
       font-weight: 900;
       text-decoration-style: dashed;
-      letter-spacing: -0;
       text-underline-offset: 2px;
     }
 
     h1 {
       text-decoration: underline;
       font-size: 23px;
-      margin-bottom: 1px;
+      margin-bottom: 5px;
     }
 
 
@@ -203,7 +202,7 @@
 
       @include themify() {
         text-decoration-color: themed("primary") !important;
-        text-decoration: underline;
+        // text-decoration: underline;
         color: themed("primary")
       }
     }
