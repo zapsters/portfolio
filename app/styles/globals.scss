@@ -218,14 +218,17 @@
 
     .mainAside {
       position: unset !important;
-      text-align: center !important;
+      width: 100%;
+
+      .pixel-corners--wrapper {
+        width: 100%;
+      }
 
       .navExpandableArea {
         overflow: hidden;
         display: flex;
         flex-direction: column;
         width: fit-content;
-        margin: 0px auto;
         height: auto;
         opacity: 1;
       }

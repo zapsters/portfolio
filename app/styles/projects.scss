@@ -67,6 +67,15 @@
         gap: 4px;
       }
 
+      .links {
+        margin-top: 8px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4;
+        flex-direction: column;
+      }
+
     }
   }
 }
@@ -123,6 +132,16 @@
   .projectCard {
     .projectFlex {
       display: block;
+    }
+
+    .links {
+      justify-content: space-evenly !important;
+      flex-direction: row !important;
+      padding-bottom: 7px;
+
+      @include themify() {
+        border-bottom: 2px solid themed("primary");
+      }
     }
   }
 }

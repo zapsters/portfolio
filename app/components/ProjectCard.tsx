@@ -61,28 +61,30 @@ export default function ProjectCard({ children, href, label, github, url }: Proj
                 alignmentBaseline="central"
               />
             </div>
-            {url && (
-              <span
-                className="Link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open(url, "_blank");
-                }}>
-                <WebIcon />
-                Webpage
-              </span>
-            )}
-            {github && (
-              <span
-                className="Link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open(github, "_blank");
-                }}>
-                <OpenIcon />
-                Github
-              </span>
-            )}
+            <div className="links">
+              {url && (
+                <span
+                  className="Link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(url, "_blank");
+                  }}>
+                  <WebIcon />
+                  Webpage
+                </span>
+              )}
+              {github && (
+                <span
+                  className="Link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(github, "_blank");
+                  }}>
+                  <OpenIcon />
+                  Github
+                </span>
+              )}
+            </div>
           </aside>
           <div className="projectContent">{children}</div>
         </div>
