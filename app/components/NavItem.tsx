@@ -27,6 +27,7 @@ export default function NavItem({ href, label, items }: NavItemProps) {
       onMouseLeave={() => setHoverOpen(false)}
       onFocus={() => setHoverOpen(true)}
       onBlur={() => setHoverOpen(false)}
+      // style={{ height: "1em" }}
       className="relative list-none">
       <Link href={href} className={`navLink ${isActive ? "active" : ""}`}>
         {label}
@@ -39,6 +40,7 @@ export default function NavItem({ href, label, items }: NavItemProps) {
           height: open ? "auto" : 0,
           opacity: open ? 1 : 0,
         }}
+        style={{ display: "flex", alignItems: "flex-start", flexDirection: "column" }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="overflow-hidden navExpandableArea">
         {items?.map((child) => (

@@ -47,8 +47,8 @@ export default function RootLayout({
             </span>
           </Marquee>
           <article className="root">
-            <Pixelated>
-              <aside>
+            <aside className="mainAside">
+              <Pixelated>
                 <PersonalIcon
                   style={{
                     width: "60%",
@@ -59,7 +59,7 @@ export default function RootLayout({
                   alignmentBaseline="central"
                 />
                 <h1>
-                  <Link href="./">
+                  <Link href="/">
                     Erin
                     <br />
                     Ballinger
@@ -72,7 +72,7 @@ export default function RootLayout({
                     href="/projects"
                     label="Projects"
                     items={[
-                      { href: "/projects/BLIMP", label: "B.L.I.M.P." },
+                      { href: "/projects/BLIMP", label: "BLIMP" },
                       { href: "/projects/inputStack", label: "Input Stack" },
                       { href: "/projects/sporeganizer", label: "Sporeganizer" },
                     ]}
@@ -81,8 +81,8 @@ export default function RootLayout({
                   <NavItem label="Contact" href="/contact" />
                   <NavItem label="404" href="/404" />
                 </nav>
-              </aside>
-            </Pixelated>
+              </Pixelated>
+            </aside>
             <Pixelated style={{ padding: "8px" }}>
               <main>{children}</main>
             </Pixelated>

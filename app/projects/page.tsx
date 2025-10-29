@@ -11,16 +11,21 @@ export default function Projects() {
         how I approach challenges, craft user experiences, and bring ideas to life.
       </p>
       <p style={{ display: "block" }}>
-        The site you currently are viewing was made in Typescript and NextJS.{" "}
+        The site you currently are viewing was made in React, NextJS, and TypeScript.
+        <br />
         <a
           style={{ display: "inline" }}
           href="https://github.com/zapsters/portfolio"
           target="_blank">
-          Look at the source code here :3
+          Look at the source code here!
         </a>
       </p>
       <div className="projectCards">
-        <ProjectCard href="projects/BLIMP" label="BLIMP" status="In development">
+        <ProjectCard
+          href="projects/BLIMP"
+          label="BLIMP"
+          status="In development"
+          url="https://blimpview.app">
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             Balloon Live Instrumentation Monitoring Platform
@@ -46,7 +51,12 @@ export default function Projects() {
             <li>Cloudflare D1 (SQLite database)</li>
           </ul>
         </ProjectCard>
-        <ProjectCard href="projects/inputStack" label="Input Stack" status="V2">
+        <ProjectCard
+          href="projects/inputStack"
+          github="https://github.com/zapsters/InputStack"
+          url="https://zapsters.github.io/inputstack/"
+          label="Input Stack"
+          status="V2">
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             Multiplayer, chaos causing, friendship destroying web game
@@ -72,7 +82,12 @@ export default function Projects() {
             <li>Non-SQL Databases</li>
           </ul>
         </ProjectCard>
-        <ProjectCard href="projects/sporeganizer" label="Sporeganizer" status="V1">
+        <ProjectCard
+          href="projects/sporeganizer"
+          github="https://github.com/zapsters/Sporeganizer"
+          url="https://sporeganizer.com/"
+          label="Sporeganizer"
+          status="V1">
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             A mushroom themed student homework tracker

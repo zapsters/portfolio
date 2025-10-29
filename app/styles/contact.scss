@@ -90,33 +90,7 @@
         margin: 0;
       }
 
-      input,
-      textarea,
-      .btn {
-        border: 2px solid themed("secondary");
-        background-color: themed("input_bg");
-        font-size: 16px;
-        padding: 3px 5px;
-        margin-bottom: 14px;
-        width: 100%;
-        min-height: 40px;
-        border-radius: 6px;
-        resize: vertical;
-        max-height: 400px;
-      }
 
-      textarea {
-        padding-top: 7px;
-        min-height: 190px;
-      }
-
-      .btn {
-        cursor: pointer;
-
-        &:hover {
-          color: themed("text");
-        }
-      }
     }
   }
 }

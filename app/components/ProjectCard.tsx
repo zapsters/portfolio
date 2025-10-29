@@ -1,15 +1,18 @@
 "use client";
 import { motion } from "motion/react";
 import PersonalIcon from "./PersonalIcon";
+import { OpenIcon, WebIcon } from "./icons";
 import Link from "next/link";
 
 type ProjectCardProps = React.PropsWithChildren<{
   href: string;
   label: string;
   status: string;
+  github?: string;
+  url?: string;
 }>;
 
-export default function ProjectCard({ children, href, label }: ProjectCardProps) {
+export default function ProjectCard({ children, href, label, github, url }: ProjectCardProps) {
   return (
     <Link href={href} className="raw">
       <motion.div
@@ -46,17 +49,41 @@ export default function ProjectCard({ children, href, label }: ProjectCardProps)
           </motion.h2>
         </div>
         <div className="projectFlex">
-          <div className="slideshow">
-            <PersonalIcon
-              style={{
-                width: "60%",
-                maxWidth: "220px",
-                padding: "5px 0px",
-                color: "var(--primary-color)",
-              }}
-              alignmentBaseline="central"
-            />
-          </div>
+          <aside>
+            <div className="slideshow">
+              <PersonalIcon
+                style={{
+                  width: "60%",
+                  maxWidth: "220px",
+                  padding: "5px 0px",
+                  color: "var(--primary-color)",
+                }}
+                alignmentBaseline="central"
+              />
+            </div>
+            {url && (
+              <span
+                className="Link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(url, "_blank");
+                }}>
+                <WebIcon />
+                Webpage
+              </span>
+            )}
+            {github && (
+              <span
+                className="Link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(github, "_blank");
+                }}>
+                <OpenIcon />
+                Github
+              </span>
+            )}
+          </aside>
           <div className="projectContent">{children}</div>
         </div>
       </motion.div>

@@ -5,17 +5,17 @@ export default function Home() {
   return (
     <>
       <h3>
-        Hey, I’m <span>Erin Ballinger</span>{" "}
+        Hey, I’m <strong>Erin Ballinger</strong>{" "}
         <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p>
       </h3>
       <p>Full-stack developer in Indianapolis.</p>
       <p>
         I build accessible, responsive web apps with clean design and scalable backend architecture.
       </p>
-      <span style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <strong style={{ display: "flex", justifyContent: "space-evenly" }}>
         <Link href="/projects">■ View My Work</Link>
         <Link href="/contact">■ Get in Touch</Link>
-      </span>
+      </strong>
       <hr />
       <p>
         I’m a full-stack developer based in Indianapolis, passionate about building web applications
@@ -37,9 +37,9 @@ export default function Home() {
       </p>
       <hr />
       <Marquee speed={20}>
-        <span style={{ textDecoration: "none", fontWeight: "bold" }}>
+        <strong style={{ textDecoration: "none", fontWeight: "bold" }}>
           ❤ Code with clarity. Design with empathy. Build for everyone. ❤
-        </span>
+        </strong>
       </Marquee>
       <hr />
     </>
