@@ -2,9 +2,10 @@
 
 hr {
   margin: 15px 0;
+  opacity: 0.9;
 
   @include themify() {
-    border: 1px solid themed("primary");
+    border: 2px solid themed("primary");
   }
 }
 

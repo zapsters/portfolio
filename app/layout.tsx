@@ -39,7 +39,7 @@ export default function RootLayout({
             <span className="bianzhidai">{marqueeSpacer()}❤ FULL STACK WEB DEVELOPER ❤</span>
             <span className="bianzhidai">
               {marqueeSpacer()}
-              {"♨  APOLLO  ♨"}
+              {"APOLLO"}
             </span>
             <span className="bianzhidai">
               {marqueeSpacer()}
@@ -58,15 +58,15 @@ export default function RootLayout({
                   }}
                   alignmentBaseline="central"
                 />
-                <h1>
-                  <Link href="/">
+                <h1 style={{ fontSize: 25 }}>
+                  <Link href="/" style={{ fontSize: "inherit" }}>
                     Erin
                     <br />
                     Ballinger
                   </Link>
                 </h1>
                 <hr />
-                <nav>
+                <nav >
                   <NavItem label="Home" href="/" />
                   <NavItem
                     href="/projects"
