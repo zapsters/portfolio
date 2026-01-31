@@ -1,4 +1,4 @@
-import { OpenIcon, WebIcon } from "@/app/components/icons";
+import { WebIcon } from "@/app/components/icons";
 import Link from "next/link";
 
 export default function ProjectCard() {
@@ -53,7 +53,7 @@ export default function ProjectCard() {
       </p>
       <ol>
         <li>
-          <strong>DATA_UPLOADER</strong> – Software installed on a ground-based flight computer that uploads telemetry data from ViewData, AEROPHILE's flight computer software.
+          <strong>DATA_UPLOADER</strong> – Software installed on a ground-based flight computer that uploads telemetry data from ViewData, AEROPHILE&apos;s flight computer software.
         </li>
         <li>
           <strong>WORKER</strong> – A Cloudflare Worker endpoint that receives, validates, and processes incoming data.

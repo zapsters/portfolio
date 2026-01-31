@@ -1,4 +1,4 @@
-import { Children, CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 type PixelatedProp = React.PropsWithChildren<{
   style?: CSSProperties | undefined;

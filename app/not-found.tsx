@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Pixelated from "./components/pixelated";
 
 export default function NotFound() {
   return (
