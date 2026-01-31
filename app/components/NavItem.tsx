@@ -29,7 +29,7 @@ export default function NavItem({ href, label, items }: NavItemProps) {
       onBlur={() => setHoverOpen(false)}
       // style={{ height: "1em" }}
       className="relative list-none">
-      <Link href={href} className={`navLink ${isActive ? "active" : ""}`}>
+      <Link href={href} style={{ display: "block", width: "100%" }} className={`navLink ${isActive ? "active" : ""}`}>
         {label}
       </Link>
 
@@ -39,10 +39,16 @@ export default function NavItem({ href, label, items }: NavItemProps) {
         animate={{
           height: open ? "auto" : 0,
           opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
         }}
-        style={{ display: "flex", alignItems: "flex-start", flexDirection: "column" }}
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          flexDirection: "column",
+        }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="overflow-hidden navExpandableArea">
+        className="overflow-hidden navExpandableArea"
+      >
         {items?.map((child) => (
           <Link
             key={child.href}

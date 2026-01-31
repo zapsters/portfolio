@@ -79,7 +79,7 @@ export default function RootLayout({
                   />
                   <NavItem label="About" href="/about" />
                   <NavItem label="Contact" href="/contact" />
-                  <NavItem label="404" href="/404" />
+                  {/* <NavItem label="404" href="/404" /> */}
                 </nav>
               </Pixelated>
             </aside>
