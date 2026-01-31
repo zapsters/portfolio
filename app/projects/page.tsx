@@ -5,19 +5,16 @@ export default function Projects() {
     <>
       <h1>Projects</h1>
       <p>
-        A collection of my work showcasing design, code, and problem-solving in action. Each project
-        reflects my focus on building clean, functional, and creative solutions—ranging from
-        interactive web applications to thoughtful experiments. Explore the highlights below to see
-        how I approach challenges, craft user experiences, and bring ideas to life.
+        A collection of my work showcasing design, engineering, and problem-solving in action. These projects range from real-time SaaS platforms to multiplayer games and productivity tools — all built with a focus on usability, performance, and creativity.
       </p>
       <p style={{ display: "block" }}>
-        The site you currently are viewing was made in React, NextJS, and TypeScript.
+        This site was built with React and Next.js
         <br />
         <a
           style={{ display: "inline" }}
           href="https://github.com/zapsters/portfolio"
           target="_blank">
-          Look at the source code here!
+          [View the source code]
         </a>
       </p>
       <div className="projectCards">
@@ -31,24 +28,24 @@ export default function Projects() {
             Balloon Live Instrumentation Monitoring Platform
           </h1>
           <p>
-            A real-time monitoring system built for Conner Prairie’s 1859 Balloon Voyage, BLIMP
-            tracks critical flight data for Aerophile NG30 Tethered Balloons — including pressure,
-            wind speed, lift, temperatures, and battery status — and makes it accessible securely
-            offsite.
+            A real-time monitoring platform built for AEROPHILE 30NG Tethered Balloons. First developed for Conner Prairie, a non-profit museum in Fishers Indiana, with Conner Prairie being the first site to implement BLIMP officially in daily operations in 2026. BLIMP tracks critical flight data including pressure, wind speed, lift, temperature, voltage, and battery status — and makes it securely accessible remotely anywhere.
+          </p>
+
+          <p><strong>Impact: </strong>Supported safer balloon operations through continuous remote monitoring and offsite visibility, reducing reliance on on-site-only instrumentation access
           </p>
 
           <span>Key Features</span>
           <ul style={{ marginBottom: "14px" }}>
             <li>Live and historical data visualization</li>
-            <li>Automated alerts for unsafe readings Secure</li>
-            <li>authentication and access control</li>
+            <li>Automated alerts for unsafe readings</li>
+            <li>Secure authentication and access control</li>
           </ul>
 
           <span>Tech Stack</span>
           <ul>
-            <li>Next.js (frontend)</li>
-            <li>Cloudflare Workers (backend)</li>
-            <li>Cloudflare D1 (SQLite database)</li>
+            <li>Frontend: React, Next.js</li>
+            <li>Backend: Cloudflare Workers</li>
+            <li>Database: Cloudflare D1 (SQLite)</li>
           </ul>
         </ProjectCard>
         <ProjectCard
@@ -62,10 +59,7 @@ export default function Projects() {
             Multiplayer, chaos causing, friendship destroying web game
           </h1>
           <p>
-            A frantic, browser-based multiplayer game where players work together to manage an
-            ever-growing stack of timed challenges — from math problems and word scrambles to
-            sliders, buttons, and color pickers. Inspired by Keep Talking and Nobody Explodes,
-            InputStack blends collaboration with chaos in real time.
+            A frantic, browser-based multiplayer game where players collaborate to manage an ever-growing stack of timed challenges - from math problems and word scrambles to sliders, buttons, and color pickers. Inspired by Keep Talking and Nobody Explodes, InputStack blends teamwork with chaos in real time, inside of your browser.
           </p>
 
           <span>Key Features</span>
@@ -77,9 +71,8 @@ export default function Projects() {
 
           <span>Tech Stack</span>
           <ul>
-            <li>Realtime Databases</li>
-            <li>Google Firebase & Auth</li>
-            <li>Non-SQL Databases</li>
+            <li>Firebase Realtime Database & Auth</li>
+            <li>JavaScript, HTML, CSS</li>
           </ul>
         </ProjectCard>
         <ProjectCard
@@ -93,9 +86,7 @@ export default function Projects() {
             A mushroom themed student homework tracker
           </h1>
           <p>
-            A playful, mushroom-themed homework tracker designed to make staying organized more fun.
-            Sporeganizer helps students manage assignments with due dates and descriptions, all in a
-            colorful, responsive interface that works across devices. Made with SvelteKit.
+            A playful productivity app designed to make staying organized more fun. Sporeganizer helps students manage assignments with due dates and descriptions in a colorful, responsive interface that works across devices.
           </p>
 
           <span>Key Features</span>
@@ -103,6 +94,13 @@ export default function Projects() {
             <li>Track assignments with due dates and details</li>
             <li>Unique mushroom-inspired design</li>
             <li>Cross-device compatibility (mobile, tablet, desktop)</li>
+          </ul>
+
+          <span>Tech Stack</span>
+          <ul>
+            <li>SvelteKit</li>
+            <li>Firebase Auth & Firestore</li>
+            <li>JavaScript, HTML, SASS/CSS</li>
           </ul>
         </ProjectCard>
       </div>

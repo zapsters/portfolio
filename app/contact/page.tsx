@@ -6,10 +6,10 @@ export default function Contact() {
     <>
       <h1>Contact</h1>
       <div className="contact">
-        <h3>
-          Interested in freelance web design / development services? Contact me and I will be sure
-          to get back to you soon.
-        </h3>
+        <h4>
+          Interested in freelance web design or development services?
+          Reach out — I’d love to hear about your project.
+        </h4>
         <div className="socials">
           <a href="https://www.linkedin.com/in/erin-ballinger/" target="_blank">
             <Linkedin

@@ -18,27 +18,18 @@ export default function Home() {
       </strong>
       <hr />
       <p>
-        I’m a full-stack developer based in Indianapolis, passionate about building web applications
-        that are as inclusive as they are powerful. My work sits at the intersection of design and
-        engineering — creating products that don’t just work, but feel intuitive, accessible, and
-        enjoyable for every user.
+        I’m a full-stack developer based in Indianapolis who loves building web applications that feel just as good as they function. My work lives at the intersection of design and engineering; creating products that are intuitive, inclusive, and built to scale.
       </p>
       <p>
-        I specialize in crafting responsive interfaces backed by scalable, reliable architecture.
-        Whether it’s refining user interactions down to the smallest detail or architecting a system
-        that can grow with demand, I approach every project with the same goals: clarity,
-        performance, and accessibility.
+        Whether I’m fine-tuning micro-interactions, architecting real-time systems, or designing dashboards for mission-critical data, I bring the same goals to every project: clarity, performance, and accessibility.
       </p>
       <p>
-        Technology is constantly evolving, and I love being part of that evolution — learning new
-        tools, experimenting with ideas, and transforming challenges into solutions that make a
-        difference. To me, great development isn’t just about code; it’s about empathy for the
-        people who will use what I build.
+        Technology is always evolving — and so am I. I enjoy learning new tools, experimenting with ideas, and turning complex problems into thoughtful, human-centered solutions.
       </p>
       <hr />
       <Marquee speed={20}>
         <strong style={{ textDecoration: "none", fontWeight: "bold" }}>
-          ❤ Code with clarity. Design with empathy. Build for everyone. ❤
+          Code with clarity. Design with empathy. Build for everyone.
         </strong>
       </Marquee>
       <hr />

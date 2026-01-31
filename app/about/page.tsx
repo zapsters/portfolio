@@ -3,20 +3,18 @@ export default function About() {
     <>
       <h1>About</h1>
       <p>
-        Hi, I am Apollo (Also known as Erin or <i>zapsters</i> on github). a software developer,
-        designer, and occasional helium-air balloon pilot.
+        Hi! I’m Apollo — also known as Erin or zapsters on GitHub — a software developer, designer, and occasional helium balloon pilot.</p>
+      <p>
+        I’m the founder of Apollo Digital LLC, where I design and build real-world software solutions — from SaaS platforms to interactive web experiences. My work blends engineering, design, and a bit of play, whether that’s a mission-critical telemetry system or a chaotic multiplayer game.
       </p>
       <p>
-        I love building tools and experiences that blend functionality, creativity, and play,
-        whether that’s real-time monitoring systems, frantic multiplayer games, or productivity apps
-        with personality.
+        My projects range from serious engineering (BLIMP, a balloon flight monitoring platform used in live operations) to whimsical experiments (InputStack and Sporeganizer), but the common thread is a focus on usability, reliability, and thoughtful design.
       </p>
       <p>
-        My work spans from serious engineering (like BLIMP, a balloon flight monitoring platform) to
-        whimsical experiments (like InputStack and Sporeganizer), but the common thread is a focus
-        on usability, reliability, and a spark of fun. When I’m not coding, you’ll probably find me
-        tinkering with side projects, sketching out new ideas, or flying the 1859 Balloon Voyage at
-        Conner Prairie.
+        Through Apollo Digital, I’ve delivered production software to paying institutional clients, built scalable cloud-native systems, and learned how to ship, maintain, and iterate on real products — not just demos.
+      </p>
+      <p>
+        When I’m not coding, you’ll probably find me tinkering with side projects, sketching new ideas, or flying the 1859 Balloon Voyage at Conner Prairie.
       </p>
     </>
   );

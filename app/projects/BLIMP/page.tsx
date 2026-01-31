@@ -7,19 +7,14 @@ export default function ProjectCard() {
       <h1>BLIMP</h1>
       <h4>The Balloon Live Instrumentation Monitoring Platform</h4>
       <p>
-        BLIMP, AKA the Balloon Live Instrumentation Monitoring Platform, is a custom-built software
-        solution designed for Conner Prairie’s 1859 Balloon Voyage. It provides real-time, remote
-        monitoring of critical flight instrumentation—ensuring that vital safety and performance
-        data is accessible offsite during every launch.
+        BLIMP provides secure, remote, real-time access to instrumentation data from AEROPHILE NG30 tethered balloon systems, supporting safer and more efficient operational decision-making.
       </p>
       <p>
-        <strong>BLIMP</strong> is a custom-built software solution designed for{" "}
-        <strong>Conner Prairie’s 1859 Balloon Voyage</strong>. It provides real-time, remote
-        monitoring of critical flight instrumentation—ensuring vital safety and performance data is
-        accessible offsite during every launch.
+        <strong>BLIMP</strong> was originally developed for{" "}
+        <strong>Conner Prairie’s 1859 Balloon Voyage</strong> and now has expanded to other sites. It provides real-time, remote monitoring of critical flight instrumentation—ensuring vital safety and performance data is accessible offsite for monitoring the balloon, especially in inclement weather conditions.
       </p>
       <p style={{ marginBottom: 13 }}>
-        <strong>This project is currently under development.</strong>
+        <strong>Owned and developed by Apollo Digital LLC.</strong>
       </p>
 
       <hr />
@@ -39,10 +34,9 @@ export default function ProjectCard() {
 
       <hr />
 
-      <h2>Overview</h2>
+      <h2>Project Overview</h2>
       <p>
-        BLIMP was built to make balloon operations safer, smarter, and more transparent. It
-        continuously tracks and reports key telemetry data from the flight computer, including:
+        BLIMP enables monitoring of key metrics, including:
       </p>
 
       <ul>
@@ -55,16 +49,14 @@ export default function ProjectCard() {
       </ul>
       <br />
       <p style={{ marginBottom: 4 }}>
-        <strong>The platform is composed of three main components:</strong>
+        <strong>The platform consists of three separate components working together:</strong>
       </p>
       <ol>
         <li>
-          <strong>DATA_UPLOADER</strong> – A lightweight client that routinely transmits telemetry
-          via API from onboard computers or mirrored software.
+          <strong>DATA_UPLOADER</strong> – Software installed on a ground-based flight computer that uploads telemetry data from ViewData, AEROPHILE's flight computer software.
         </li>
         <li>
-          <strong>WORKER</strong> – The server layer that handles all incoming requests and API
-          calls.
+          <strong>WORKER</strong> – A Cloudflare Worker endpoint that receives, validates, and processes incoming data.
         </li>
         <li>
           <strong>WEB</strong> – A responsive dashboard for live and historical data visualization.
@@ -76,20 +68,16 @@ export default function ProjectCard() {
       <h2>Key Features</h2>
       <ul>
         <li>
-          <strong>Real-Time Monitoring</strong> – Live telemetry streamed directly from the flight
-          system to a secure web interface.
+          <strong>Real-Time Monitoring</strong> – Continuous telemetry streaming to a secure cloud endpoint.
         </li>
         <li>
-          <strong>Historical Data Visualization</strong> – Access past flight sessions with clear,
-          interactive graphs for temperature, wind, lift, and more.
+          <strong>Historical Data Visualization</strong> – Long-term storage enabling graphing, trend analysis, and flight history review.
         </li>
         <li>
-          <strong>Notifications & Alerts</strong> – Automated warnings for unsafe or abnormal
-          readings to assist in safety decisions.
+          <strong>Notifications & Alerts</strong> – Automatic warnings when readings exceed safety thresholds.
         </li>
         <li>
-          <strong>Authentication & Security</strong> – User-protected access ensures flight data
-          integrity and confidentiality.
+          <strong>Authentication & Security</strong> – Restricts access to authorized operational personnel.
         </li>
       </ul>
 
@@ -98,11 +86,10 @@ export default function ProjectCard() {
       <h2>Technology Stack</h2>
       <ul>
         <li>
-          <strong>Frontend:</strong> Next.js (React) – Hosted on <em>Cloudflare Pages</em> for fast,
-          global performance.
+          <strong>Frontend:</strong> Next.js (React), deployed via Cloudflare Pages – Responsive dashboard for data visualization and user interaction.
         </li>
         <li>
-          <strong>Backend:</strong> <em>Cloudflare Workers</em> – Serverless compute handling POST
+          <strong>Backend:</strong> Cloudflare Workers – Serverless compute handling POST
           uploads and GET queries efficiently.
         </li>
         <li>
@@ -110,6 +97,7 @@ export default function ProjectCard() {
           low-latency data storage and scalability.
         </li>
       </ul>
+      <br />
 
       <p>
         This architecture minimizes on-site hardware needs—requiring only a flight computer with
@@ -124,31 +112,16 @@ export default function ProjectCard() {
         <strong>future of balloon operations</strong>:
       </p>
       <ul>
-        <li>Redundant, offsite monitoring for increased flight safety.</li>
-        <li>Simplified data access for ground crew and operations staff.</li>
-        <li>
-          Long-term data preservation to benefit future balloon envelopes, including <em>Sophie</em>{" "}
-          and her successors.
-        </li>
+        <li>Enhance operational safety through redundant remote monitoring</li>
+        <li>Provide reliable offsite visibility for operators and management</li>
+        <li>Maintain historical telemetry across future balloon envelopes (e.g., Sophie and successors)</li>
       </ul>
 
       <hr />
 
-      <h2>License & Ownership</h2>
-      <p>
-        Ownership of all code and software remains with <strong>Erin Ballinger</strong>, with
-        <strong>Conner Prairie</strong> receiving lifetime access to the deployed system upon full
-        payment. Source code access is included should future self-hosting be required.
-      </p>
-      <p>© 2025 Erin Ballinger — All Rights Reserved.</p>
-
-      <hr />
-
-      <h2>Acknowledgments</h2>
-      <p>
-        Special thanks to <strong>Conner Prairie</strong> and <strong>Chris Greiling</strong> for
-        championing innovation in balloon safety and monitoring technology.
-      </p>
+      <h2>Author</h2>
+      <p>Erin Apollo Ballinger</p>
+      <p>© 2026 Apollo Digital LLC — All Rights Reserved.</p>
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="data-bs-theme" enableSystem>
-          <Marquee autoFill={true} speed={50} className="marquee">
+          <Marquee autoFill={true} speed={20} className="marquee">
             <span className="bianzhidai">{marqueeSpacer()}❤ FULL STACK WEB DEVELOPER ❤</span>
             <span className="bianzhidai">
               {marqueeSpacer()}
