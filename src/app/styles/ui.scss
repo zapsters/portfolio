@@ -1,0 +1,71 @@
+@use "theme.scss" as *;
+
+hr {
+  margin: 15px 0;
+  opacity: 0.9;
+
+  border: 2px solid $primary;
+}
+
+ul {
+  margin-top: 3px;
+}
+
+li {
+  margin-bottom: 1px;
+  margin-left: 20px;
+}
+
+a,
+.Link {
+  &.raw {
+    text-decoration: none !important;
+  }
+
+
+  color: $primary;
+  text-decoration-color: $primary;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus-visible {
+    color: $accent;
+    text-decoration-color: $accent;
+    text-decoration: underline;
+  }
+
+  &.active {
+    color: $accent
+  }
+}
+
+input,
+textarea,
+.btn {
+  border: 2px solid $primary;
+  background-color: $input_bg;
+
+  font-size: 16px;
+  padding: 3px 5px;
+  margin-bottom: 14px;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 6px;
+  resize: vertical;
+  max-height: 400px;
+  font-family: "grotesque",
+    "facade";
+}
+
+textarea {
+  padding-top: 7px;
+  min-height: 190px;
+}
+
+.btn {
+  cursor: pointer;
+
+  &:hover {
+    color: $text;
+  }
+}

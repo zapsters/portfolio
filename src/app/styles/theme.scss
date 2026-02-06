@@ -1,0 +1,15 @@
+@use "sass:map";
+$mobile-breakpoint: "600px";
+$text: #ededed;
+$background: #141112;
+$primary: #e54d7a;
+$secondary: #4a2957;
+$accent: #c0bd17;
+$marquee_color: #f44b9d;
+$input_bg: rgb(23, 23, 25);
+
+:root {
+  /* Global variable */
+  --text-color: #ffffff;
+  --primary: #e54d7a;
+}

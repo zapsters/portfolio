@@ -1,0 +1,21 @@
+export default function About() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>
+        Hi! I’m Apollo — also known as Erin or zapsters on GitHub — a software developer, designer, and occasional helium balloon pilot.</p>
+      <p>
+        I’m the founder of Apollo Digital LLC, where I design and build real-world software solutions — from SaaS platforms to interactive web experiences. My work blends engineering, design, and a bit of play, whether that’s a mission-critical telemetry system or a chaotic multiplayer game.
+      </p>
+      <p>
+        My projects range from serious engineering (BLIMP, a balloon flight monitoring platform used in live operations) to whimsical experiments (InputStack and Sporeganizer), but the common thread is a focus on usability, reliability, and thoughtful design.
+      </p>
+      <p>
+        Through Apollo Digital, I’ve delivered production software to paying institutional clients, built scalable cloud-native systems, and learned how to ship, maintain, and iterate on real products — not just demos.
+      </p>
+      <p>
+        When I’m not coding, you’ll probably find me tinkering with side projects, sketching new ideas, or flying the 1859 Balloon Voyage at Conner Prairie.
+      </p>
+    </>
+  );
+}
