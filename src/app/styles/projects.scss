@@ -12,11 +12,11 @@
   padding: 4px;
 
   color: $text;
-  border: $primary 2px solid;
+  border: $primary 3px solid;
   background-color: $background;
-  border-radius: 2px;
+  border-radius: 5px !important;
 
-  h2 {
+  h1 {
     margin: 0;
     padding-bottom: 0;
   }
@@ -50,7 +50,6 @@
 
       .slideshow {
         border: 2px solid $text;
-
         margin-bottom: 4px;
       }
 

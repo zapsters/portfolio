@@ -23,7 +23,7 @@ export default function ProjectCard({ children, href, label, github, url }: Proj
           // If I can figure out a fix, ill reimplement this scaling. <3
           // Arf! Arf Wruff! I am barking in source code.
           initial: { scale: 1 },
-          hover: { scale: 1, borderRadius: "6px" },
+          hover: { scale: 1 },
         }}
         transition={{ duration: 0.2 }}
         className="projectCard">
@@ -33,7 +33,8 @@ export default function ProjectCard({ children, href, label, github, url }: Proj
             width: "100%",
             position: "relative",
           }}>
-          <motion.h2
+          <motion.h1
+            style={{ textDecoration: "none" }}
             variants={{
               initial: { width: "fit-content" },
               hover: { width: "100%" },
@@ -43,10 +44,10 @@ export default function ProjectCard({ children, href, label, github, url }: Proj
               style={{
                 height: "3px",
                 width: "100%",
-                backgroundColor: "var(--primary-color)",
+                backgroundColor: "var(--primary)",
               }}
             />
-          </motion.h2>
+          </motion.h1>
         </div>
         <div className="projectFlex">
           <aside>
