@@ -10,9 +10,10 @@ type ProjectCardProps = React.PropsWithChildren<{
   status: string;
   github?: string;
   url?: string;
+  icon?: React.ReactNode
 }>;
 
-export default function ProjectCard({ children, href, label, github, url }: ProjectCardProps) {
+export default function ProjectCard({ children, href, label, github, url, icon }: ProjectCardProps) {
   return (
     <Link href={href} className="raw">
       <motion.div
@@ -52,15 +53,17 @@ export default function ProjectCard({ children, href, label, github, url }: Proj
         <div className="projectFlex">
           <aside>
             <div className="slideshow">
-              <PersonalIcon
-                style={{
-                  width: "60%",
-                  maxWidth: "220px",
-                  padding: "5px 0px",
-                  color: "var(--primary)",
-                }}
-                alignmentBaseline="central"
-              />
+              {icon ? icon :
+                <PersonalIcon
+                  style={{
+                    width: "60%",
+                    maxWidth: "220px",
+                    padding: "5px 0px",
+                    color: "var(--primary)",
+                  }}
+                  alignmentBaseline="central"
+                />
+              }
             </div>
             <div className="links">
               {url && (

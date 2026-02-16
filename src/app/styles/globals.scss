@@ -162,7 +162,7 @@
           &:focus-within::before {
             transform: scaleY(1);
             top: -1px;
-            content: ">" !important;
+            // content: ">" !important;
           }
         }
       }

@@ -49,7 +49,10 @@
       flex: 0.4;
 
       .slideshow {
-        border: 2px solid $text;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 2px solid $secondary;
         margin-bottom: 4px;
       }
 

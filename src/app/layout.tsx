@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "< Apollo />",
   description: "Portfolio site for Apollo",
   icons: {
-    icon: "PersonalLogoFoxIcon.png",
+    icon: "/PersonalLogoFoxIcon.png",
   },
 };
 

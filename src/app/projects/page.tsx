@@ -1,3 +1,4 @@
+import { BlimpIcon, InputStackLogo } from "../components/icons";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
@@ -22,7 +23,8 @@ export default function Projects() {
           href="projects/BLIMP"
           label="BLIMP"
           status="In development"
-          url="https://blimpview.app">
+          url="https://blimpview.app"
+          icon={<BlimpIcon style={{ width: "60%", maxWidth: "220px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}>
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             Balloon Live Instrumentation Monitoring Platform
@@ -53,7 +55,9 @@ export default function Projects() {
           github="https://github.com/zapsters/InputStack"
           url="https://zapsters.github.io/inputstack/"
           label="Input Stack"
-          status="V2">
+          status="V2"
+          icon={<InputStackLogo style={{ width: "60%", maxWidth: "90px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}
+        >
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             Multiplayer, chaos causing, friendship destroying web game
@@ -80,7 +84,9 @@ export default function Projects() {
           github="https://github.com/zapsters/Sporeganizer"
           url="https://sporeganizer.com/"
           label="Sporeganizer"
-          status="V1">
+          status="V1"
+          icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "60%", maxWidth: "90px", padding: "5px 0px", color: "var(--primary)" }} />}
+        >
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             A mushroom themed student homework tracker
@@ -103,7 +109,7 @@ export default function Projects() {
             <li>JavaScript, HTML, SASS/CSS</li>
           </ul>
         </ProjectCard>
-      </div>
+      </div >
     </>
   );
 }
