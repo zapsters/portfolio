@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       <h3>
-        Hey, I’m <strong>Erin Ballinger</strong>{" "}
-        <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p>
+        Hey, I’m <strong>Apollo Ballinger</strong>{" "}
+        {/* <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p> */}
       </h3>
       <p>Full-stack developer in Indianapolis.</p>
       <p>
