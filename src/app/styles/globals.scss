@@ -9,7 +9,7 @@
 
 .marquee {
   background-color: $background;
-  padding: 4px;
+  padding: 0px;
   border: 3px solid $primary;
   border-right: 0;
   border-left: 0;
@@ -53,6 +53,7 @@
     flex-direction: column;
     gap: 10px;
     max-width: 200px;
+    flex: 1;
 
     .pixel-corners--wrapper {
       width: 100%;
@@ -206,6 +207,15 @@
       font-size: 23px;
       margin-bottom: 5px;
       text-decoration-thickness: 2px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 4;
+      text-decoration: underline;
+      text-decoration-color: $primary;
+      text-decoration-thickness: 1.5px;
+      letter-spacing: 0;
     }
 
 
