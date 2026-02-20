@@ -42,15 +42,21 @@
 
   // Navigation sidebar
   .mainAside {
+
     position: sticky;
     top: 13px;
     font-family: "ft88", "grotesque", "facade";
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-evenly;
     flex-direction: column;
     gap: 10px;
+    max-width: 200px;
+
+    .pixel-corners--wrapper {
+      width: 100%;
+    }
 
     h1 {
       font-weight: 600;
