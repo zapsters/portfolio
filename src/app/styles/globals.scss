@@ -32,7 +32,7 @@
 .root {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 14px;
   gap: 11px;
   max-width: 1000px;
@@ -63,7 +63,7 @@
     }
 
     nav {
-      gap: 0px;
+      gap: 2px;
       display: flex;
       flex-direction: column;
       justify-content: stretch;
@@ -170,6 +170,8 @@
   }
 
   main {
+    width: 100%;
+    display: block;
     flex: 1;
     font-size: 17px;
     font-family: "grotesque", "facade";
@@ -191,6 +193,7 @@
       text-decoration: underline;
       font-size: 23px;
       margin-bottom: 5px;
+      text-decoration-thickness: 2px;
     }
 
 
