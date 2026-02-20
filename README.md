@@ -1,6 +1,6 @@
 # Hey, I am Apollo!
 
-###### (i am also known as 'Erin Ballinger' and /Zapsters on github)
+###### (i am also known as 'Erin' and /Zapsters on github)
 
 This is my portfolio! It is my living document all about me.
 

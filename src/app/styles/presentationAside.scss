@@ -1,0 +1,15 @@
+.presentationAside {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-direction: row;
+
+  position: sticky;
+  top: 13px;
+
+  span {
+    font-size: 20px;
+    display: block;
+  }
+}

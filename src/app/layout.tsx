@@ -6,12 +6,13 @@ import NavItem from "./components/NavItem";
 import PersonalIcon from "./components/PersonalIcon";
 import Link from "next/link";
 import Pixelated from "./components/pixelated";
+import PresentationAside from "./components/presentationAside";
 
 export const metadata: Metadata = {
   title: "< Apollo />",
   description: "Portfolio site for Apollo",
   icons: {
-    icon: "PersonalLogoFoxIcon.png",
+    icon: "/PersonalLogoFoxIcon.png",
   },
 };
 
@@ -60,7 +61,7 @@ export default function RootLayout({
                 />
                 <h1 style={{ fontSize: 25 }}>
                   <Link href="/" style={{ fontSize: "inherit" }}>
-                    Erin
+                    Apollo
                     <br />
                     Ballinger
                   </Link>
@@ -83,6 +84,7 @@ export default function RootLayout({
                   {/* <NavItem label="404" href="/404" /> */}
                 </nav>
               </Pixelated>
+              <PresentationAside />
             </aside>
             <Pixelated wrapperStyle={{ flex: 1, width: "100%" }} style={{ padding: 8 }}>
               <main>{children}</main>

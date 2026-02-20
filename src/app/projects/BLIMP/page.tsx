@@ -120,7 +120,7 @@ export default function ProjectCard() {
       <hr />
 
       <h2>Author</h2>
-      <p>Erin Apollo Ballinger</p>
+      <p>Apollo Ballinger</p>
       <p>© 2026 Apollo Digital LLC — All Rights Reserved.</p>
     </div>
   );
