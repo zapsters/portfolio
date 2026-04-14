@@ -78,6 +78,7 @@ export default function RootLayout({
                       { href: "/projects/sporeganizer", label: "Sporeganizer" },
                     ]}
                   />
+                  <NavItem label="Freelance" href="/freelance" />
                   <NavItem label="About" href="/about" />
                   <NavItem label="Contact" href="/contact" />
                   {/* <NavItem label="404" href="/404" /> */}
@@ -85,7 +86,7 @@ export default function RootLayout({
               </Pixelated>
               <PresentationAside />
             </aside>
-            <Pixelated style={{ padding: "5px" }}>
+            <Pixelated wrapperStyle={{ flex: 1, width: "100%" }} style={{ padding: 8 }}>
               <main>{children}</main>
             </Pixelated>
           </article>
