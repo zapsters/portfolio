@@ -69,3 +69,15 @@ textarea {
     color: $text;
   }
 }
+
+.customLiIcon li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0px;
+
+  svg {
+    width: 25px;
+    margin-right: 2px;
+  }
+}

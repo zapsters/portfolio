@@ -7,7 +7,7 @@ import Link from "next/link";
 type ProjectCardProps = React.PropsWithChildren<{
   href: string;
   label: string;
-  status: string;
+  status: React.ReactNode;
   github?: string;
   url?: string;
   icon?: React.ReactNode
@@ -91,7 +91,7 @@ export default function ProjectCard({ children, href, label, github, url, icon, 
                 </span>
               )}
             </div>
-            <p style={{ color: "var(--primary)", marginTop: "6px", fontSize: "17px", fontFamily: "ft88", letterSpacing: "-1px", textAlign: "left" }}>{status}</p>
+            <div style={{ color: "var(--primary)", marginTop: "6px", fontSize: "16px", fontFamily: "ft88", letterSpacing: "-1px", textAlign: "left" }}>{status}</div>
           </aside>
         </div>
       </motion.div>

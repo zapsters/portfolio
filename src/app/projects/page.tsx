@@ -1,4 +1,4 @@
-import { BlimpIcon, InputStackLogo } from "../components/icons";
+import { BlimpIcon, BracesContent, InputStackLogo, PixelArtIconsBox, PixelArtIconSunglasses } from "../components/icons";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
@@ -24,7 +24,7 @@ export default function Projects() {
         <ProjectCard
           href="projects/BLIMP"
           label="BLIMP"
-          status="In development"
+          status={<><p style={{ fontSize: "inherit" }}>Constantly updated</p><hr /><p style={{ fontSize: "inherit" }}>Used in production by Conner Prairie since 2026</p></>}
           url="https://blimpview.app"
           icon={<BlimpIcon style={{ width: "100%", maxWidth: "220px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}>
           <h1
@@ -39,17 +39,17 @@ export default function Projects() {
           </p>
 
           <span><strong>Key Features</strong></span>
-          <ul style={{ marginBottom: "14px" }}>
-            <li>Live and historical data visualization</li>
-            <li>Automated alerts for unsafe readings</li>
-            <li>Secure authentication and access control</li>
+          <ul style={{ marginBottom: "14px" }} className="customLiIcon">
+            <li><PixelArtIconsBox />Live and historical data visualization</li>
+            <li><PixelArtIconsBox />Automated alerts for unsafe readings</li>
+            <li><PixelArtIconsBox />Secure authentication and access control</li>
           </ul>
 
           <span><strong>Tech Stack</strong></span>
-          <ul>
-            <li>Frontend: React, Next.js</li>
-            <li>Backend: Cloudflare Workers</li>
-            <li>Database: Cloudflare D1 (SQLite)</li>
+          <ul className="customLiIcon">
+            <li><BracesContent />Frontend: React, Next.js</li>
+            <li><BracesContent />Backend: Cloudflare Workers</li>
+            <li><BracesContent />Database: Cloudflare D1 (SQLite)</li>
           </ul>
         </ProjectCard>
 
@@ -69,25 +69,29 @@ export default function Projects() {
             A frantic, browser-based multiplayer game where players collaborate to manage an ever-growing stack of timed challenges - from math problems and word scrambles to sliders, buttons, and color pickers. Inspired by Keep Talking and Nobody Explodes, InputStack blends teamwork with chaos in real time, inside of your browser.
           </p>
 
+          <span><strong>Inspiration</strong></span>
+          <ul style={{ marginBottom: "14px" }} className="customLiIcon">
+            <li><PixelArtIconSunglasses />Jackpot Games</li>
+          </ul>
+
           <span><strong>Key Features</strong></span>
-          <ul style={{ marginBottom: "14px" }}>
-            <li>Real-time multiplayer powered by Firebase</li>
-            <li>Wide variety of task modules and input types</li>
-            <li>Instant browser play, no downloads required</li>
+          <ul className="customLiIcon" style={{ marginBottom: "14px" }}>
+            <li><PixelArtIconsBox />Real-time multiplayer powered by Firebase</li>
+            <li><PixelArtIconsBox />Wide variety of task modules and input types</li>
+            <li><PixelArtIconsBox />Instant browser play, no downloads required</li>
           </ul>
 
           <span><strong>Tech Stack</strong></span>
-          <ul>
-            <li>Firebase Realtime Database & Auth</li>
-            <li>JavaScript, HTML, CSS</li>
+          <ul className="customLiIcon">
+            <li><BracesContent />Firebase Realtime Database & Auth</li>
+            <li><BracesContent />JavaScript, HTML, CSS</li>
           </ul>
         </ProjectCard>
         <ProjectCard
           href="projects/sporeganizer"
           github="https://github.com/zapsters/Sporeganizer"
-          url="https://sporeganizer.com/"
           label="Sporeganizer"
-          status="V1"
+          status="Open source, not being actively developed"
           icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "100%", padding: "5px 0px", color: "var(--primary)" }} />}
         >
           <h1
@@ -99,17 +103,17 @@ export default function Projects() {
           </p>
 
           <span><strong>Key Features</strong></span>
-          <ul style={{ marginBottom: "14px" }}>
-            <li>Track assignments with due dates and details</li>
-            <li>Unique mushroom-inspired design</li>
-            <li>Cross-device compatibility (mobile, tablet, desktop)</li>
+          <ul className="customLiIcon" style={{ marginBottom: "14px" }}>
+            <li><PixelArtIconsBox />Track assignments with due dates and details</li>
+            <li><PixelArtIconsBox />Unique mushroom-inspired design</li>
+            <li><PixelArtIconsBox />Cross-device compatibility (mobile, tablet, desktop)</li>
           </ul>
 
           <span><strong>Tech Stack</strong></span>
-          <ul>
-            <li>SvelteKit</li>
-            <li>Firebase Auth & Firestore</li>
-            <li>JavaScript, HTML, SASS/CSS</li>
+          <ul className="customLiIcon">
+            <li><BracesContent />SvelteKit</li>
+            <li><BracesContent />Firebase Auth & Firestore</li>
+            <li><BracesContent />JavaScript, HTML, SASS/CSS</li>
           </ul>
         </ProjectCard>
 
