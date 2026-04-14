@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./styles/globals.scss";
+import "../app/styles/globals.scss";
 import { ThemeProvider } from "next-themes";
 import Marquee from "react-fast-marquee";
 import NavItem from "./components/NavItem";

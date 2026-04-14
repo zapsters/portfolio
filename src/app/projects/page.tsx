@@ -26,7 +26,7 @@ export default function Projects() {
           label="BLIMP"
           status="In development"
           url="https://blimpview.app"
-          icon={<BlimpIcon style={{ width: "60%", maxWidth: "220px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}>
+          icon={<BlimpIcon style={{ width: "100%", maxWidth: "220px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}>
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
             Balloon Live Instrumentation Monitoring Platform
@@ -52,13 +52,14 @@ export default function Projects() {
             <li>Database: Cloudflare D1 (SQLite)</li>
           </ul>
         </ProjectCard>
+
         <ProjectCard
           href="projects/inputStack"
           github="https://github.com/zapsters/InputStack"
           url="https://zapsters.github.io/inputstack/"
           label="Input Stack"
-          status="V2"
-          icon={<InputStackLogo style={{ width: "60%", maxWidth: "90px", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}
+          status="Finished 2025"
+          icon={<InputStackLogo style={{ width: "100%", padding: "5px 0px", color: "var(--primary)" }} alignmentBaseline="central" />}
         >
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
@@ -87,7 +88,7 @@ export default function Projects() {
           url="https://sporeganizer.com/"
           label="Sporeganizer"
           status="V1"
-          icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "60%", maxWidth: "90px", padding: "5px 0px", color: "var(--primary)" }} />}
+          icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "100%", padding: "5px 0px", color: "var(--primary)" }} />}
         >
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
@@ -111,7 +112,10 @@ export default function Projects() {
             <li>JavaScript, HTML, SASS/CSS</li>
           </ul>
         </ProjectCard>
+
       </div >
+      {/* <hr />
+      <p>Below are some notable projects:</p> */}
     </>
   );
 }

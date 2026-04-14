@@ -1,7 +1,7 @@
 @use "theme.scss" as *;
 
 .projectCards {
-  gap: 8px;
+  gap: 28px;
   display: flex;
   align-items: stretch;
   justify-content: space-evenly;
@@ -12,8 +12,7 @@
   padding: 4px;
 
   color: $text;
-  border: $secondary 3px solid;
-  background-color: $background;
+  border: $primary 0px solid;
   border-radius: 5px !important;
 
   h1 {
@@ -35,11 +34,13 @@
       h1 {
         // letter-spacing: -1px;
         font-weight: 400 !important;
-        font-size: 19px !important;
+        font-size: 29px;
         margin-bottom: 12px;
         text-decoration: none;
-
+        text-decoration-thickness: 2px;
+        font-weight: 900 !important;
         color: $primary;
+        text-align: center !important;
       }
     }
 
@@ -48,12 +49,19 @@
       margin: 3px 3px;
       flex: 0.4;
 
+      p {
+        text-indent: 0px;
+      }
+
       .slideshow {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        border: 2px solid $secondary;
+        border: 2px solid $primary;
         margin-bottom: 4px;
+        padding: 10px;
+        border-radius: 8px;
+        aspect-ratio: 1/1;
       }
 
       .Link {

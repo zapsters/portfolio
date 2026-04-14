@@ -13,7 +13,7 @@ type ProjectCardProps = React.PropsWithChildren<{
   icon?: React.ReactNode
 }>;
 
-export default function ProjectCard({ children, href, label, github, url, icon }: ProjectCardProps) {
+export default function ProjectCard({ children, href, label, github, url, icon, status }: ProjectCardProps) {
   return (
     <Link href={href} className="raw">
       <motion.div
@@ -28,29 +28,31 @@ export default function ProjectCard({ children, href, label, github, url, icon }
         }}
         transition={{ duration: 0.2 }}
         className="projectCard">
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            position: "relative",
-          }}>
-          <motion.h1
-            style={{ textDecoration: "none" }}
-            variants={{
-              initial: { width: "fit-content" },
-              hover: { width: "100%" },
-            }}>
-            {label}
+        <div className="projectFlex">
+          <div className="projectContent">
             <div
               style={{
-                height: "3px",
+                display: "flex",
                 width: "100%",
-                backgroundColor: "var(--primary)",
-              }}
-            />
-          </motion.h1>
-        </div>
-        <div className="projectFlex">
+                position: "relative",
+              }}>
+              <motion.h1
+                style={{ textDecoration: "none" }}
+                variants={{
+                  initial: { width: "fit-content" },
+                  hover: { width: "100%" },
+                }}>
+                {label}
+                <div
+                  style={{
+                    height: "3px",
+                    width: "100%",
+                    backgroundColor: "var(--primary)",
+                  }}
+                />
+              </motion.h1>
+            </div>
+            {children}</div>
           <aside>
             <div className="slideshow">
               {icon ? icon :
@@ -89,10 +91,10 @@ export default function ProjectCard({ children, href, label, github, url, icon }
                 </span>
               )}
             </div>
+            <p style={{ color: "var(--primary)", marginTop: "6px", fontSize: "17px", fontFamily: "ft88", letterSpacing: "-1px", textAlign: "left" }}>{status}</p>
           </aside>
-          <div className="projectContent">{children}</div>
         </div>
       </motion.div>
-    </Link>
+    </Link >
   );
 }
