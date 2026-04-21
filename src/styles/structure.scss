@@ -19,12 +19,12 @@ body {
 
 html {
   background: $background;
-  background-image: url("/fade.png"), url("/background/stars.jpg"), ;
+  background-image: url("/background/fade.png"), url("/background/stars.jpg"), ;
   image-rendering: pixelated;
   background-repeat: repeat-x, repeat;
   background-position: bottom, top;
   padding-bottom: 190px;
-  background-size: auto 130;
+  background-size: auto 90, 400 auto;
 }
 
 h1,

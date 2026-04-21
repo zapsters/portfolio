@@ -2,14 +2,17 @@
 $mobile-breakpoint: "600px";
 $text: #ededed;
 $background: #141112;
-$primary: #e54d7a;
+$primary: #dc384d;
 $secondary: #a40a88;
-$accent: #c0bd17;
-$marquee_color: #e54d7a;
-$input_bg: rgb(23, 23, 25);
+$accent: #d9f90d;
+
+$marquee_color: #ff00cc;
+$marquee_border: 3px solid #dc384d;
+
+$input_bg: #171719;
 
 :root {
   /* Global variable */
   --text-color: #ffffff;
-  --primary: #e54d7a;
+  --primary: #dc384d;
 }

@@ -6,8 +6,9 @@ export default function ProjectCard() {
     <div className="projectPage">
       <h1>BLIMP</h1>
       <h4>The Balloon Live Instrumentation Monitoring Platform</h4>
+      <h4 style={{ color: "#bcbcbc", textAlign: "center", fontStyle: "italic" }}>"The blackbox for balloons"</h4>
       <p>
-        BLIMP provides secure, remote, real-time access to instrumentation data from AEROPHILE NG30 tethered balloon systems, supporting safer and more efficient operational decision-making.
+        BLIMP provides secure, remote, real-time access to instrumentation data from AEROPHILE NG30 tethered balloon systems.
       </p>
       <p>
         <strong>BLIMP</strong> was originally developed for{" "}
@@ -33,6 +34,30 @@ export default function ProjectCard() {
       </div>
 
       <hr />
+      <h2>Abstract</h2>
+      <p>I have been apart of the Conner Prairie 1859 Balloon Team for a little over a year. Being able to fly people from all types of backgrounds and show them the earth from 377 feet high is an irreplaceable feeling. With my tech background, I had a unique perspective on how best to solve some of our issues. My bosses initially had a security camera pointed at a computer monitor to monitor the flight computer remotely. This had many obvious flaws; it could get knocked into place, have unreliable connection, and was dependent on the camera software/app.</p>
+      <p>
+        I figured, there must be a better way and if someone hadn't made it yet, I will. So I began to reverse engineer the flight computer software to build a remote monitoring platform. I got a working prototype running and talked with the senior pilots and they were instantly interested. I began on a formal proposal for this project and just needed a name; eventually it struck me...</p>
+
+      <p>the Balloon Live Instrumentation Monitoring Platform, or BLIMP.</p>
+
+      <p>I started by analyzing the flight computer and analyzing it's style and function.</p>
+      <img width={"100%"} className="showcaseImage" src="/BLIMP/flightComputerStory.png" alt="Picture of the AEROPHILE Balloon System Flight Computer" />
+      <p style={{ opacity: "0.7", fontStyle: "italic", textAlign: "center" }}>Picture of the AEROPHILE flight computer</p>
+
+      <p>To make sure the design and interface of BLIMP was familiar with pilots, I closely followed the ViewData layout while also formatting it for mobile. As a production app, authentication and authorization where a priority from the start, utilizing JWT, we ensure that only authorized pilots and sites can access flight data. Once I had the system set up, the opportunity for BLIMP to become more than just a remote flight computer emerged itself.</p>
+
+      <p>In the BLIMP acronym, "Live" is prominent and important part of what BLIMP is. Utilizing authenticated websocket connections, the BLIMP dashboard has the ability to toggle live mode, showing the most recent flightlogs at approximately every 10 seconds.</p>
+
+      <p>Historical data viewing is also a core pillar of BLIMP, providing pilots and insurers a quick way to see what happened yesterday, the week before, the month before, and beyond, being able to see data every minute of the day.</p>
+
+      <p>My next step was to integrate data visualization. Using recharts, I was able to get some prototypes running fairly quickly using the BLIMP SQL table data. This instantly made BLIMP something valuable just at a glance, no matter what you are looking at: wind, height, lift, pressure, battery voltage, and temperature.</p>
+
+      <img width={"100%"} className="showcaseImage" src="/BLIMP/BlimpScreenshot4-21.jpg" alt="Screenshot of the BLIMP dashboard" />
+      <p style={{ opacity: "0.7", fontStyle: "italic", textAlign: "center" }}>Screenshot of the BLIMP dashboard [4/21/2026]</p>
+
+      <p>As a passion project turned production web app, BLIMP is driven by my research, creativity, design, and development skills. It is constantly evolving to best be a companion to Conner Prairie's 1859 Balloon Voyage and other Aerophile 30NG sites. Some features are still under development.</p>
+
 
       <h2>Project Overview</h2>
       <p>
@@ -42,6 +67,7 @@ export default function ProjectCard() {
       <ul>
         <li>Pressure</li>
         <li>Wind Speed</li>
+        <li>Height</li>
         <li>Lift</li>
         <li>Internal & External Temperature</li>
         <li>Voltage</li>
@@ -86,11 +112,10 @@ export default function ProjectCard() {
       <h2>Technology Stack</h2>
       <ul>
         <li>
-          <strong>Frontend:</strong> Next.js (React), deployed via Cloudflare Pages – Responsive dashboard for data visualization and user interaction.
+          <strong>Frontend:</strong> Next.js / React
         </li>
         <li>
-          <strong>Backend:</strong> Cloudflare Workers – Serverless compute handling POST
-          uploads and GET queries efficiently.
+          <strong>Backend:</strong> Cloudflare Workers – Serverless architecture
         </li>
         <li>
           <strong>Database:</strong> <em>Cloudflare D1</em> – A serverless SQLite solution for
