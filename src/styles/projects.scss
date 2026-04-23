@@ -23,16 +23,16 @@
   .projectFlex {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: stretch;
     flex-wrap: wrap;
     gap: 3px;
+    row-gap: 9px;
 
     .projectContent {
       flex: 1;
       padding: 3px;
 
       h1 {
-        // letter-spacing: -1px;
         font-weight: 400 !important;
         font-size: 29px;
         margin-bottom: 12px;
@@ -60,6 +60,8 @@
         border: 2px solid $primary;
         margin-bottom: 4px;
         padding: 10px;
+        max-width: 130px;
+        margin: 0 auto;
         border-radius: 8px;
         aspect-ratio: 1/1;
       }
@@ -116,7 +118,6 @@
   }
 
   h1 {
-    // letter-spacing: -1px;
     font-weight: 400;
     font-size: 25px !important;
     margin-bottom: 9px;
@@ -125,7 +126,6 @@
 
   h2 {
     margin-bottom: 10;
-    letter-spacing: -2;
   }
 
   .showcaseImage {
@@ -136,9 +136,6 @@
 
 @media (max-width:"800px") {
   .projectCard {
-    .projectFlex {
-      display: block;
-    }
 
     .links {
       justify-content: space-evenly !important;

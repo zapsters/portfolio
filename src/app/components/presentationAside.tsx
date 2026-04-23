@@ -24,13 +24,13 @@ export default function PresentationAside() {
   return (
     <>
       {showMe && (
-        <Pixelated style={{ padding: "2px" }} className="presentationAside">
-          <span>Add me on LinkedIn</span>
+        <Pixelated style={{ padding: "19px 2px 14px 2px" }} className="presentationAside">
           <img
             src="/socials/linkedin_qrCode.jpeg"
-            style={{ maxWidth: "140px", height: "auto" }}
+            style={{ maxWidth: "138px", height: "auto" }}
             alt="[LinkedIn QR Code]"
           />
+          <span style={{ marginTop: 7, fontSize: 20 }}>Add me on<br />LinkedIn</span>
         </Pixelated>
       )}
     </>

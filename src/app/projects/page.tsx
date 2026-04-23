@@ -5,11 +5,7 @@ export default function Projects() {
   return (
     <>
       <h1>Projects</h1>
-      <p>
-        A collection of my work showcasing design, engineering, and problem-solving in action. These projects range from real-time SaaS platforms to multiplayer games and productivity tools — all built with a focus on usability, performance, and creativity.
-      </p>
-      <p>I typically build web applications using React and Next.js, with a strong emphasis on performance and accessibility.</p>
-      <p><strong>Thank you for checking out my work &mdash; :3</strong></p>
+      <p>Thank you for checking out my work</p>
       {/* <p style={{ display: "block" }}>
         This site was built with React and Next.js
         <br />

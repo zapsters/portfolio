@@ -21,6 +21,7 @@ html {
   background: $background;
   background-image: url("/background/fade.png"), url("/background/stars.jpg"), ;
   image-rendering: pixelated;
+  // background-attachment: normal, fixed;
   background-repeat: repeat-x, repeat;
   background-position: bottom, top;
   padding-bottom: 190px;

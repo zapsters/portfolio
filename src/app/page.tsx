@@ -4,10 +4,23 @@ import Marquee from "react-fast-marquee";
 export default function Home() {
   return (
     <>
-      <h3>
+      {/* <h3>
         <strong>Apollo Ballinger</strong>{" "}
-        {/* <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p> */}
-      </h3>
+      </h3> */}
+      {/* <p style={{ display: "inline", fontSize: 18 }}>[AKA Apollo]</p> */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <span style={{ fontSize: 39, textAlign: "center", marginTop: 30 }} className="pixel-text">&lt;Apollo&gt;</span>
+      </div>
+
+      <section style={{ color: "#e175a7", margin: "16px auto" }} className="slant-text pixel-text-center" >
+        <div id="one" className="tilt-l">Full</div>
+        <div id="one" className="tilt-r">Stack</div>
+        <div id="two" className="tilt-l">Dev</div>
+        <div id="two" className="tilt-r">exploring</div>
+        <div id="three" className="tilt-l">a</div>
+        <div id="four" className="tilt-l2x">digital</div>
+        <div id="four" className="tilt-r">world.</div>
+      </section>
       <p>Hey, my name is Apollo, I’m a Full-stack developer in Indianapolis. I believe the web is a powerful platform for creating self expressive and creative experiences. </p>
       <p>
         I am passionate about a blend of web and game design and development, and I am always looking for new ways to push the boundaries of what is possible on the web. The web can be so much more than just a medium for displaying information, it can be a canvas for creativity and expression.

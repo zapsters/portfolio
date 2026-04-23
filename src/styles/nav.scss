@@ -6,48 +6,40 @@
   top: 13px;
   font-family: "ft88", "grotesque", "facade";
   list-style: none;
-  flex: 1;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: stretch;
   flex-direction: column;
   gap: 10px;
-  min-width: 250px;
+  flex: 0;
 
   .pixel-corners--wrapper {
     width: 100%;
   }
 
-  h1 {
-    font-weight: 600;
+
+  .name {
+    display: block;
     margin-bottom: 0px;
     text-align: center;
-
-    a {
-      text-decoration: none;
-      border: 0px;
-      outline: 0px;
-    }
+    padding: 0 8px;
+    text-decoration: none;
+    border: 0px;
+    outline: 0px;
   }
 
   hr {
     margin: 3px 0;
+    border-width: 1.3px;
   }
 
   nav {
-    gap: 0px;
+    gap: 3px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     font-weight: 400;
-    font-size: 18px;
-    padding-bottom: 10px;
-
-    h1 a {
-      background-color: red;
-      font-size: 10px !important;
-    }
+    padding-bottom: 19px;
 
     li {
       margin-left: 10px !important;
@@ -55,6 +47,7 @@
     }
 
     a {
+      font-size: 19px;
       position: relative;
       /* needed for ::before/::after absolute positioning */
       display: inline;
@@ -139,5 +132,12 @@
         // }
       }
     }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .mainAside {
+    position: relative;
+    top: unset;
   }
 }

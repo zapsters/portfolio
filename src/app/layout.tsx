@@ -53,19 +53,17 @@ export default function RootLayout({
                 <PersonalIcon
                   style={{
                     width: "60%",
-                    maxWidth: "220px",
-                    padding: "5px 0px",
+                    maxWidth: "120px",
+                    padding: "13px 0px 4px 0px",
                     color: "var(--primary)",
                   }}
                   alignmentBaseline="central"
                 />
-                <h1 style={{ fontSize: 25 }}>
-                  <Link href="/" style={{ fontSize: "inherit" }}>
-                    Apollo
-                    <br />
-                    Ballinger
-                  </Link>
-                </h1>
+                <Link className="name" href="/" style={{ fontSize: 23, fontWeight: 400 }}>
+                  Apollo
+                  <br />
+                  Ballinger
+                </Link>
                 <hr />
                 <nav >
                   <NavItem label="Home" href="/" />
@@ -78,7 +76,7 @@ export default function RootLayout({
                       { href: "/projects/sporeganizer", label: "Sporeganizer" },
                     ]}
                   />
-                  <NavItem label="Freelance" href="/freelance" />
+                  {/* <NavItem label="Freelance" href="/freelance" /> */}
                   <NavItem label="About" href="/about" />
                   <NavItem label="Contact" href="/contact" />
                   {/* <NavItem label="404" href="/404" /> */}
@@ -86,7 +84,7 @@ export default function RootLayout({
               </Pixelated>
               <PresentationAside />
             </aside>
-            <Pixelated wrapperStyle={{ flex: 1, width: "100%" }} style={{ padding: 8 }}>
+            <Pixelated wrapperStyle={{ flex: 5, width: "100%" }} style={{ padding: 8 }}>
               <main>{children}</main>
             </Pixelated>
           </article>
