@@ -1,7 +1,17 @@
+"use client";
+import EmblaCarousel from "@/app/components/EmblaCarousel";
+import { EmblaOptionsType } from 'embla-carousel'
+
 import { WebIcon } from "@/app/components/icons";
 import Link from "next/link";
 
 export default function ProjectCard() {
+
+  const OPTIONS: EmblaOptionsType = {}
+  const SLIDE_COUNT = 5
+  // const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+  const SLIDES = ["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie.jpeg"]
+
   return (
     <div className="projectPage">
       <h1>BLIMP</h1>
@@ -34,6 +44,10 @@ export default function ProjectCard() {
       </div>
 
       <hr />
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+
+
+      <hr />
       <h2>Abstract</h2>
       <p>I have been apart of the Conner Prairie 1859 Balloon Team for a little over a year. Being able to fly people from all types of backgrounds and show them the earth from 377 feet high is an irreplaceable feeling. With my tech background, I had a unique perspective on how best to solve some of our issues. My bosses initially had a security camera pointed at a computer monitor to monitor the flight computer remotely. This had many obvious flaws; it could get knocked into place, have unreliable connection, and was dependent on the camera software/app.</p>
       <p>
@@ -42,7 +56,7 @@ export default function ProjectCard() {
       <p>the Balloon Live Instrumentation Monitoring Platform, or BLIMP.</p>
 
       <p>I started by analyzing the flight computer and analyzing it's style and function.</p>
-      <img width={"100%"} className="showcaseImage" src="/BLIMP/flightComputerStory.png" alt="Picture of the AEROPHILE Balloon System Flight Computer" />
+      <img width={"100%"} style={{ maxWidth: 520 }} className="showcaseImage" src="/BLIMP/flightComputerStory.png" alt="Picture of the AEROPHILE Balloon System Flight Computer" />
       <p style={{ opacity: "0.7", fontStyle: "italic", textAlign: "center" }}>Picture of the AEROPHILE flight computer</p>
 
       <p>To make sure the design and interface of BLIMP was familiar with pilots, I closely followed the ViewData layout while also formatting it for mobile. As a production app, authentication and authorization where a priority from the start, utilizing JWT, we ensure that only authorized pilots and sites can access flight data. Once I had the system set up, the opportunity for BLIMP to become more than just a remote flight computer emerged itself.</p>
@@ -52,9 +66,6 @@ export default function ProjectCard() {
       <p>Historical data viewing is also a core pillar of BLIMP, providing pilots and insurers a quick way to see what happened yesterday, the week before, the month before, and beyond, being able to see data every minute of the day.</p>
 
       <p>My next step was to integrate data visualization. Using recharts, I was able to get some prototypes running fairly quickly using the BLIMP SQL table data. This instantly made BLIMP something valuable just at a glance, no matter what you are looking at: wind, height, lift, pressure, battery voltage, and temperature.</p>
-
-      <img width={"100%"} className="showcaseImage" src="/BLIMP/BlimpScreenshot4-21.jpg" alt="Screenshot of the BLIMP dashboard" />
-      <p style={{ opacity: "0.7", fontStyle: "italic", textAlign: "center" }}>Screenshot of the BLIMP dashboard [4/21/2026]</p>
 
       <p>As a passion project turned production web app, BLIMP is driven by my research, creativity, design, and development skills. It is constantly evolving to best be a companion to Conner Prairie's 1859 Balloon Voyage and other Aerophile 30NG sites. Some features are still under development.</p>
 

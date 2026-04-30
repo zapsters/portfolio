@@ -118,10 +118,9 @@
   }
 
   h1 {
-    font-weight: 400;
-    font-size: 25px !important;
-    margin-bottom: 9px;
-    text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    // text-decoration: none;
   }
 
   h2 {
@@ -130,6 +129,8 @@
 
   .showcaseImage {
     border: 2px solid $accent;
+    display: block;
+    margin: 9 auto;
   }
 
 }

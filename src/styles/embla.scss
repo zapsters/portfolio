@@ -1,0 +1,529 @@
+@use "theme.scss" as *;
+
+.embla {
+  max-width: 48rem;
+  margin: 15 auto;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  transition: height 0.54s ease-in;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  // gap: 20px;
+  // margin-left: calc(var(--slide-spacing) * -1);
+  // margin-left: var(--slide-spacing) // gap: var(--slide-spacing);
+}
+
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  // margin-left: var(--slide-spacing);
+  height: var(--slide-height);
+  box-sizing: content-box;
+
+  &:not(:first-of-type) {
+    padding-left: calc(var(--slide-spacing) * 2)
+  }
+
+  .slide-pixel-corners--wrapper {
+    margin: 0 auto;
+  }
+}
+
+.embla__slide__img {
+  max-height: 500px;
+  display: block;
+  // height: var(--slide-height); 
+  height: auto;
+  width: var(--slide-size);
+  object-fit: cover;
+  scale: 1.02;
+}
+
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0.2rem solid $primary;
+  width: 2.7rem;
+  height: 2.7rem;
+
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.115);
+  }
+}
+
+.embla__button--disabled {
+  color: var(--detail-high-contrast);
+}
+
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  gap: 4px;
+}
+
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+
+  background-color: rgba(255, 255, 255, 0);
+  width: 2.2rem;
+  height: 2.2rem;
+
+  border-radius: 50%;
+  content: '';
+
+  border: 0.2rem solid $primary;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.063);
+  }
+}
+
+.embla__dot:after {
+  // border: 0.2rem solid rgb($primary, 0.5);
+  opacity: 0.2;
+}
+
+.embla__dot--selected:after {
+  opacity: 1;
+}
+
+// embla borders
+.embla:not(.embla__slide) {
+
+  // outline: 
+  .embla-pixel-corners,
+  .embla-pixel-corners--wrapper {
+    clip-path: polygon(0px calc(100% - 14px),
+        2px calc(100% - 14px),
+        2px calc(100% - 10px),
+        4px calc(100% - 10px),
+        4px calc(100% - 6px),
+        6px calc(100% - 6px),
+        6px calc(100% - 4px),
+        10px calc(100% - 4px),
+        10px calc(100% - 2px),
+        14px calc(100% - 2px),
+        14px 100%,
+        calc(100% - 14px) 100%,
+        calc(100% - 14px) calc(100% - 2px),
+        calc(100% - 10px) calc(100% - 2px),
+        calc(100% - 10px) calc(100% - 4px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 6px) calc(100% - 6px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 4px) calc(100% - 10px),
+        calc(100% - 2px) calc(100% - 10px),
+        calc(100% - 2px) calc(100% - 14px),
+        100% calc(100% - 14px),
+        100% 14px,
+        calc(100% - 2px) 14px,
+        calc(100% - 2px) 10px,
+        calc(100% - 4px) 10px,
+        calc(100% - 4px) 6px,
+        calc(100% - 6px) 6px,
+        calc(100% - 6px) 4px,
+        calc(100% - 10px) 4px,
+        calc(100% - 10px) 2px,
+        calc(100% - 14px) 2px,
+        calc(100% - 14px) 0px,
+        14px 0px,
+        14px 2px,
+        10px 2px,
+        10px 4px,
+        6px 4px,
+        6px 6px,
+        4px 6px,
+        4px 10px,
+        2px 10px,
+        2px 14px,
+        0px 14px);
+    position: relative;
+  }
+
+  .embla-pixel-corners {
+    border: 3px solid transparent;
+  }
+
+  .embla-pixel-corners--wrapper {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .embla-pixel-corners--wrapper .embla-pixel-corners {
+    display: block;
+    clip-path: polygon(4px 16px,
+        6px 16px,
+        6px 12px,
+        8px 12px,
+        8px 8px,
+        12px 8px,
+        12px 6px,
+        16px 6px,
+        16px 4px,
+        calc(100% - 16px) 4px,
+        calc(100% - 16px) 6px,
+        calc(100% - 12px) 6px,
+        calc(100% - 12px) 8px,
+        calc(100% - 8px) 8px,
+        calc(100% - 8px) 12px,
+        calc(100% - 6px) 12px,
+        calc(100% - 6px) 16px,
+        calc(100% - 4px) 16px,
+        calc(100% - 4px) calc(100% - 16px),
+        calc(100% - 6px) calc(100% - 16px),
+        calc(100% - 6px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 6px),
+        calc(100% - 16px) calc(100% - 6px),
+        calc(100% - 16px) calc(100% - 4px),
+        16px calc(100% - 4px),
+        16px calc(100% - 6px),
+        12px calc(100% - 6px),
+        12px calc(100% - 8px),
+        8px calc(100% - 8px),
+        8px calc(100% - 12px),
+        6px calc(100% - 12px),
+        6px calc(100% - 16px),
+        4px calc(100% - 16px));
+  }
+
+  .embla-pixel-corners::after,
+  .embla-pixel-corners--wrapper::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0px calc(100% - 14px),
+        2px calc(100% - 14px),
+        2px calc(100% - 10px),
+        4px calc(100% - 10px),
+        4px calc(100% - 6px),
+        6px calc(100% - 6px),
+        6px calc(100% - 4px),
+        10px calc(100% - 4px),
+        10px calc(100% - 2px),
+        14px calc(100% - 2px),
+        14px 100%,
+        calc(100% - 14px) 100%,
+        calc(100% - 14px) calc(100% - 2px),
+        calc(100% - 10px) calc(100% - 2px),
+        calc(100% - 10px) calc(100% - 4px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 6px) calc(100% - 6px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 4px) calc(100% - 10px),
+        calc(100% - 2px) calc(100% - 10px),
+        calc(100% - 2px) calc(100% - 14px),
+        100% calc(100% - 14px),
+        100% 14px,
+        calc(100% - 2px) 14px,
+        calc(100% - 2px) 10px,
+        calc(100% - 4px) 10px,
+        calc(100% - 4px) 6px,
+        calc(100% - 6px) 6px,
+        calc(100% - 6px) 4px,
+        calc(100% - 10px) 4px,
+        calc(100% - 10px) 2px,
+        calc(100% - 14px) 2px,
+        calc(100% - 14px) 0px,
+        14px 0px,
+        14px 2px,
+        10px 2px,
+        10px 4px,
+        6px 4px,
+        6px 6px,
+        4px 6px,
+        4px 10px,
+        2px 10px,
+        2px 14px,
+        0px 14px,
+        0px 50%,
+        4px 50%,
+        4px 16px,
+        6px 16px,
+        6px 12px,
+        8px 12px,
+        8px 8px,
+        12px 8px,
+        12px 6px,
+        16px 6px,
+        16px 4px,
+        calc(100% - 16px) 4px,
+        calc(100% - 16px) 6px,
+        calc(100% - 12px) 6px,
+        calc(100% - 12px) 8px,
+        calc(100% - 8px) 8px,
+        calc(100% - 8px) 12px,
+        calc(100% - 6px) 12px,
+        calc(100% - 6px) 16px,
+        calc(100% - 4px) 16px,
+        calc(100% - 4px) calc(100% - 16px),
+        calc(100% - 6px) calc(100% - 16px),
+        calc(100% - 6px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 8px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 12px) calc(100% - 6px),
+        calc(100% - 16px) calc(100% - 6px),
+        calc(100% - 16px) calc(100% - 4px),
+        16px calc(100% - 4px),
+        16px calc(100% - 6px),
+        12px calc(100% - 6px),
+        12px calc(100% - 8px),
+        8px calc(100% - 8px),
+        8px calc(100% - 12px),
+        6px calc(100% - 12px),
+        6px calc(100% - 16px),
+        4px calc(100% - 16px),
+        4px 50%,
+        0px 50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $primary;
+    display: block;
+    pointer-events: none;
+  }
+
+  .embla-pixel-corners::after {
+    margin: -4px;
+  }
+
+  // EMBLE SLIDE CORNERS
+  .slide-pixel-corners,
+  .slide-pixel-corners--wrapper {
+    clip-path: polygon(0px calc(100% - 10px),
+        2px calc(100% - 10px),
+        2px calc(100% - 6px),
+        4px calc(100% - 6px),
+        4px calc(100% - 4px),
+        6px calc(100% - 4px),
+        6px calc(100% - 2px),
+        10px calc(100% - 2px),
+        10px 100%,
+        calc(100% - 10px) 100%,
+        calc(100% - 10px) calc(100% - 2px),
+        calc(100% - 6px) calc(100% - 2px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 2px) calc(100% - 6px),
+        calc(100% - 2px) calc(100% - 10px),
+        100% calc(100% - 10px),
+        100% 10px,
+        calc(100% - 2px) 10px,
+        calc(100% - 2px) 6px,
+        calc(100% - 4px) 6px,
+        calc(100% - 4px) 4px,
+        calc(100% - 6px) 4px,
+        calc(100% - 6px) 2px,
+        calc(100% - 10px) 2px,
+        calc(100% - 10px) 0px,
+        10px 0px,
+        10px 2px,
+        6px 2px,
+        6px 4px,
+        4px 4px,
+        4px 6px,
+        2px 6px,
+        2px 10px,
+        0px 10px);
+    position: relative;
+  }
+
+  .slide-pixel-corners {
+    border: 2px solid transparent;
+  }
+
+  .slide-pixel-corners--wrapper {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .slide-pixel-corners--wrapper .slide-pixel-corners {
+    display: block;
+    clip-path: polygon(2px 10px,
+        4px 10px,
+        4px 6px,
+        6px 6px,
+        6px 4px,
+        10px 4px,
+        10px 2px,
+        calc(100% - 10px) 2px,
+        calc(100% - 10px) 4px,
+        calc(100% - 6px) 4px,
+        calc(100% - 6px) 6px,
+        calc(100% - 4px) 6px,
+        calc(100% - 4px) 10px,
+        calc(100% - 2px) 10px,
+        calc(100% - 2px) calc(100% - 10px),
+        calc(100% - 4px) calc(100% - 10px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 6px) calc(100% - 6px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 10px) calc(100% - 4px),
+        calc(100% - 10px) calc(100% - 2px),
+        10px calc(100% - 2px),
+        10px calc(100% - 4px),
+        6px calc(100% - 4px),
+        6px calc(100% - 6px),
+        4px calc(100% - 6px),
+        4px calc(100% - 10px),
+        2px calc(100% - 10px));
+  }
+
+  .slide-pixel-corners::after,
+  .slide-pixel-corners--wrapper::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0px calc(100% - 10px),
+        2px calc(100% - 10px),
+        2px calc(100% - 6px),
+        4px calc(100% - 6px),
+        4px calc(100% - 4px),
+        6px calc(100% - 4px),
+        6px calc(100% - 2px),
+        10px calc(100% - 2px),
+        10px 100%,
+        calc(100% - 10px) 100%,
+        calc(100% - 10px) calc(100% - 2px),
+        calc(100% - 6px) calc(100% - 2px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 2px) calc(100% - 6px),
+        calc(100% - 2px) calc(100% - 10px),
+        100% calc(100% - 10px),
+        100% 10px,
+        calc(100% - 2px) 10px,
+        calc(100% - 2px) 6px,
+        calc(100% - 4px) 6px,
+        calc(100% - 4px) 4px,
+        calc(100% - 6px) 4px,
+        calc(100% - 6px) 2px,
+        calc(100% - 10px) 2px,
+        calc(100% - 10px) 0px,
+        10px 0px,
+        10px 2px,
+        6px 2px,
+        6px 4px,
+        4px 4px,
+        4px 6px,
+        2px 6px,
+        2px 10px,
+        0px 10px,
+        0px 50%,
+        2px 50%,
+        2px 10px,
+        4px 10px,
+        4px 6px,
+        6px 6px,
+        6px 4px,
+        10px 4px,
+        10px 2px,
+        calc(100% - 10px) 2px,
+        calc(100% - 10px) 4px,
+        calc(100% - 6px) 4px,
+        calc(100% - 6px) 6px,
+        calc(100% - 4px) 6px,
+        calc(100% - 4px) 10px,
+        calc(100% - 2px) 10px,
+        calc(100% - 2px) calc(100% - 10px),
+        calc(100% - 4px) calc(100% - 10px),
+        calc(100% - 4px) calc(100% - 6px),
+        calc(100% - 6px) calc(100% - 6px),
+        calc(100% - 6px) calc(100% - 4px),
+        calc(100% - 10px) calc(100% - 4px),
+        calc(100% - 10px) calc(100% - 2px),
+        10px calc(100% - 2px),
+        10px calc(100% - 4px),
+        6px calc(100% - 4px),
+        6px calc(100% - 6px),
+        4px calc(100% - 6px),
+        4px calc(100% - 10px),
+        2px calc(100% - 10px),
+        2px 50%,
+        0px 50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $primary;
+    display: block;
+    pointer-events: none;
+  }
+
+  .slide-pixel-corners::after {
+    margin: -2px;
+  }
+}
