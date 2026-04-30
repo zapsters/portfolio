@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+"use client";
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoHeight from 'embla-carousel-auto-height'
@@ -8,6 +8,7 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { useEffect } from 'react';
 
 type PropType = {
   slides: string[]
@@ -28,18 +29,7 @@ const EmblaCarousel = (props: PropType) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
-  // Full Screen
-  const [expandedIndex, setExpandedIndex] = useState(null)
-  const toggleExpand = useCallback((index: any) => {
-    console.log("clicked")
-    setExpandedIndex(expandedIndex === index ? null : index)
-  }, [expandedIndex])
 
-
-  // Critical: Re-initialize Embla whenever the expanded state changes
-  useEffect(() => {
-    if (emblaApi) emblaApi.reInit()
-  }, [emblaApi, expandedIndex])
 
   return (
     <>
@@ -47,10 +37,16 @@ const EmblaCarousel = (props: PropType) => {
         <div className="embla__viewport" ref={emblaRef} style={{ height: "fit-content" }}>
           <div className="embla__container" style={{ height: "fit-content" }}>
             {slides.map((value, index) => (
-              <div className={`embla__slide ${expandedIndex === index ? 'is-expanded' : ''}`} style={{ height: "fit-content" }} key={index} onClick={() => toggleExpand(value)}>
+              <div className='embla__slide' style={{ height: "fit-content" }} key={index}>
                 <div className="relative slide-pixel-corners--wrapper">
 
                   <img
+                    onLoad={() => {
+                      if (emblaApi) {
+                        emblaApi.reInit();
+                      }
+                    }}
+                    loading='eager'
                     className="embla__slide__img embla-pixel-corners"
                     src={value ? value : `https://picsum.photos/600/350?v=${index}`}
                     alt="Your alt text"

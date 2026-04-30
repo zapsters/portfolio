@@ -1,3 +1,4 @@
+import EmblaCarousel from "@/app/components/EmblaCarousel";
 import { OpenIcon, WebIcon } from "@/app/components/icons";
 import Link from "next/link";
 
@@ -37,6 +38,8 @@ export default function ProjectCard() {
         </Link>
       </div>
 
+      <hr />
+      <EmblaCarousel slides={["/InputStack/GameScreen.png", "/InputStack/GameScreen2.png", "/InputStack/joinGameScreen.png", "/InputStack/roomScreen.png"]} />
       <hr />
 
       <h2>How It Works</h2>

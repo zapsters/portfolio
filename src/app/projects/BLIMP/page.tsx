@@ -1,4 +1,3 @@
-"use client";
 import EmblaCarousel from "@/app/components/EmblaCarousel";
 import { EmblaOptionsType } from 'embla-carousel'
 
@@ -6,11 +5,6 @@ import { WebIcon } from "@/app/components/icons";
 import Link from "next/link";
 
 export default function ProjectCard() {
-
-  const OPTIONS: EmblaOptionsType = {}
-  const SLIDE_COUNT = 5
-  // const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-  const SLIDES = ["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie.jpeg"]
 
   return (
     <div className="projectPage">
@@ -44,7 +38,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      <EmblaCarousel slides={["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie.jpeg"]} />
 
 
       <hr />
