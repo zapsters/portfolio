@@ -1,3 +1,4 @@
+import EmblaCarousel from "@/app/components/EmblaCarousel";
 import { OpenIcon, WebIcon } from "@/app/components/icons";
 import Link from "next/link";
 
@@ -30,6 +31,8 @@ export default function ProjectCard() {
           Github
         </Link>
       </div>
+      <hr />
+      <EmblaCarousel slides={["/Sporeganizer/DashboardPage.png", "/Sporeganizer/EditClassCard.png", "/Sporeganizer/EditAssignmentCard.png", "/Sporeganizer/EditClassCard2.png", "/Sporeganizer/HomePage.png", "/Sporeganizer/OptionsPage.png"]} />
       <hr />
 
       <h2>Key Features</h2>
