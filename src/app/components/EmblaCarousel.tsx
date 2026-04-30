@@ -33,7 +33,7 @@ const EmblaCarousel = (props: PropType) => {
 
   return (
     <>
-      <div className="embla" style={{ height: "fit-content" }}>
+      <div className="embla" style={{ height: "fit-content" }} >
         <div className="embla__viewport" ref={emblaRef} style={{ height: "fit-content" }}>
           <div className="embla__container" style={{ height: "fit-content" }}>
             {slides.map((value, index) => (
@@ -62,15 +62,15 @@ const EmblaCarousel = (props: PropType) => {
 
         <div className="embla__controls">
           <div className="embla__buttons">
-            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            <PrevButton onClick={(e) => { e.preventDefault(); onPrevButtonClick() }} disabled={prevBtnDisabled} />
+            <NextButton onClick={(e) => { e.preventDefault(); onNextButtonClick() }} disabled={nextBtnDisabled} />
           </div>
 
           <div className="embla__dots">
             {scrollSnaps.map((_, index) => (
               <DotButton
                 key={index}
-                onClick={() => onDotButtonClick(index)}
+                onClick={(e) => { e.preventDefault(); onDotButtonClick(index) }}
                 className={'embla__dot embla-pixel-corners'.concat(
                   index === selectedIndex ? ' embla__dot--selected' : ''
                 )}

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import PersonalIcon from "./PersonalIcon";
 import { OpenIcon, WebIcon } from "./icons";
 import Link from "next/link";
+import EmblaCarousel from "./EmblaCarousel";
 
 type ProjectCardProps = React.PropsWithChildren<{
   href: string;
@@ -10,10 +11,11 @@ type ProjectCardProps = React.PropsWithChildren<{
   status: React.ReactNode;
   github?: string;
   url?: string;
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
+  carousel?: string[];
 }>;
 
-export default function ProjectCard({ children, href, label, github, url, icon, status }: ProjectCardProps) {
+export default function ProjectCard({ children, href, label, github, url, icon, status, carousel }: ProjectCardProps) {
   return (
     <Link href={href} className="raw">
       <motion.div
@@ -35,6 +37,7 @@ export default function ProjectCard({ children, href, label, github, url, icon, 
                 display: "flex",
                 width: "100%",
                 position: "relative",
+                flexDirection: "column",
               }}>
               <motion.h1
                 style={{ textDecoration: "none" }}
@@ -51,6 +54,9 @@ export default function ProjectCard({ children, href, label, github, url, icon, 
                   }}
                 />
               </motion.h1>
+              {carousel &&
+                <EmblaCarousel slides={carousel} />
+              }
             </div>
             {children}</div>
           <aside>
