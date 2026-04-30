@@ -51,7 +51,7 @@ const EmblaCarousel = (props: PropType) => {
                     src={value ? value : `https://picsum.photos/600/350?v=${index}`}
                     alt="Your alt text"
                   />
-                  <a href={value} target='_blank'>
+                  <a href={value} target='_blank' tabIndex={-1}>
                     <svg style={{ position: "absolute", right: 10, bottom: 10 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M5 5h6v2H5zm8-2h8v2h-8zM5 19h12v2H5zM3 7h2v12H3zm14 6h2v6h-2z" /><path d="M19 3h2v8h-2zm-8 8h2v2h-2zm6-4h-2v2h2zm2-2h-2v2h2zm-4 4h-2v2h2zm-4 4H9v2h2z" /></g></svg>
                   </a>
                 </div>
