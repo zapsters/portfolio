@@ -1,0 +1,36 @@
+@use "theme.scss" as *;
+
+.homepage {
+  .homepage-card {
+    // border: 3px solid $primary;
+    padding: 8px 9px;
+
+    margin: 1em auto 1.4em auto;
+    width: 90%;
+
+    .label-value-pair {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      .label {
+        font-family: "ft88";
+        font-weight: 300;
+        font-weight: 600;
+        color: #ffffff6a;
+        text-decoration: 2px underline;
+        margin-bottom: 3px;
+        font-size: 1.3em;
+      }
+
+      .value {
+        font-family: "ft88";
+        font-weight: 600;
+        color: #dadada;
+        font-size: 1.2em;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-@use "../structure.scss" as *;
-@use "../theme.scss" as *;
+@use "structure.scss" as *;
+@use "theme.scss" as *;
 
 // ==================================================
 
@@ -16,31 +16,31 @@
 
 @font-face {
   font-family: "bianzhidai";
-  src: url("./bianzhidai/bianzhidai-Base.woff");
+  src: url("./fonts/bianzhidai/bianzhidai-Base.woff");
 }
 
 @font-face {
   font-weight: 100;
   font-family: "bianzhidai";
-  src: url("./bianzhidai/bianzhidai_noBG-Base.woff");
+  src: url("./fonts/bianzhidai/bianzhidai_noBG-Base.woff");
 }
 
 @font-face {
   font-weight: 500;
   font-family: "bianzhidai";
-  src: url("./bianzhidai/bianzhidai_COLR-grid.woff");
+  src: url("./fonts/bianzhidai/bianzhidai_COLR-grid.woff");
 }
 
 @font-face {
   font-weight: 600;
   font-family: "bianzhidai";
-  src: url("./bianzhidai/bianzhidai_COLR-GRAY.woff");
+  src: url("./fonts/bianzhidai/bianzhidai_COLR-GRAY.woff");
 }
 
 @font-face {
   font-weight: 700;
   font-family: "bianzhidai";
-  src: url("./bianzhidai/bianzhidai_COLR-RGB.woff");
+  src: url("./fonts/bianzhidai/bianzhidai_COLR-RGB.woff");
 }
 
 // ==================================================
@@ -51,43 +51,43 @@
 @font-face {
   font-weight: 100;
   font-family: "ft88";
-  src: url("./ft88/FT88-Expanded.otf");
+  src: url("./fonts/ft88/FT88-Expanded.otf");
 }
 
 @font-face {
   font-weight: 200;
   font-family: "ft88";
-  src: url("./ft88/FT88-School.otf");
+  src: url("./fonts/ft88/FT88-School.otf");
 }
 
 @font-face {
   font-weight: 300;
   font-family: "ft88";
-  src: url("./ft88/FT88-Serif.otf");
+  src: url("./fonts/ft88/FT88-Serif.otf");
 }
 
 @font-face {
   font-weight: 400;
   font-family: "ft88";
-  src: url("./ft88/FT88-Regular.otf");
+  src: url("./fonts/ft88/FT88-Regular.otf");
 }
 
 @font-face {
   font-style: italic;
   font-family: "ft88";
-  src: url("./ft88/FT88-Italic.otf");
+  src: url("./fonts/ft88/FT88-Italic.otf");
 }
 
 @font-face {
   font-weight: 500;
   font-family: "ft88";
-  src: url("./ft88/FT88-Gothique.otf");
+  src: url("./fonts/ft88/FT88-Gothique.otf");
 }
 
 @font-face {
   font-weight: 600;
   font-family: "ft88";
-  src: url("./ft88/FT88-Bold.otf");
+  src: url("./fonts/ft88/FT88-Bold.otf");
 }
 
 .facade {
@@ -96,7 +96,7 @@
 
 @font-face {
   font-family: "facade";
-  src: url("facade/Facade-Ouest.woff");
+  src: url("./fonts/facade/Facade-Ouest.woff");
 }
 
 .grotesque {
@@ -106,5 +106,5 @@
 @font-face {
   font-family: "grotesque";
   font-kerning: 450px;
-  src: url("grotesque/terminal-grotesque.ttf");
+  src: url("./fonts/grotesque/terminal-grotesque.ttf");
 }

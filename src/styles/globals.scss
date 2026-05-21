@@ -1,14 +1,17 @@
-@use "fonts/_fonts.scss" as *;
+@use "fonts.scss" as *;
 @use "structure.scss" as *;
 @use "theme.scss" as *;
 @use "ui.scss" as *;
+
+@use "homepage.scss" as *;
 @use "projects.scss" as *;
 @use "contact.scss" as *;
-@use "pixelated.scss" as *;
-@use "presentationAside.scss" as *;
-@use "text-effects.scss" as *;
 @use "nav.scss" as *;
+
+@use "pixelated.scss" as *;
+@use "text-effects.scss" as *;
 @use "embla.scss" as *;
+@use "presentationAside.scss" as *;
 
 .marquee {
   background-color: $background;

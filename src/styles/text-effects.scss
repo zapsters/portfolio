@@ -1,23 +1,23 @@
 @use "theme.scss" as *;
 // #dc384d
 $color-primary: $primary;
-$color-secondary: #7e2f38;
-$color-tertiary: #591820;
-$color-quaternary: #410911;
-$color-quinary: #240202;
+$color-secondary: #9a1b2e;
+$color-tertiary: #9a1b2e;
+$color-quaternary: #9a1b2e;
+$color-quinary: #970d22;
 
-$offsetMultiplier: 0.07em;
+$offsetMultiplier: 1.4px;
 
 .pixel-text {
   text-shadow: $offsetMultiplier $offsetMultiplier 0 $color-secondary, 6px 6px 0 $color-tertiary,
     9px 9px $color-quaternary, 12px 12px 0 $color-quinary;
   font-family: "ft88", bungee, sans-serif;
-  font-weight: 200 !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
   text-align: center;
   color: $color-primary;
-  animation: shadows 1.5s ease-in-out infinite;
-  letter-spacing: 0.7rem;
+  animation: shadows 3s ease-out infinite;
+  letter-spacing: 0.1rem;
 }
 
 @keyframes shadows {
