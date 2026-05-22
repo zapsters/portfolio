@@ -48,6 +48,7 @@
   row-gap: 11px !important;
   margin: 0 auto;
   flex-wrap: wrap;
+  font-family: "grotesque";
 
   .pixel-corners--wrapper {
     background-color: $background;
@@ -59,7 +60,6 @@ main {
   display: block;
   flex: 1;
   padding: 12px;
-  font-family: "grotesque", "facade";
   font-size: 17px;
   letter-spacing: 0.4px;
 
@@ -94,6 +94,8 @@ main {
   p {
     font-weight: 400;
     text-indent: 2ch;
+    font-size: 17px;
+    font-family: "grotesque";
   }
 
   strong,

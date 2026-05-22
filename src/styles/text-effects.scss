@@ -84,12 +84,16 @@ $offsetMultiplier: 1.4px;
 .slant-text {
   // outline: 1px solid #eee;
   width: 100%;
+  font-family: "ft88";
+  font-size: 17px;
+  font-weight: 600;
 
   &.pixel-text-center {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1ch;
   }
 
   div {

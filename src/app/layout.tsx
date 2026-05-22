@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="data-bs-theme" enableSystem>
-          <Marquee autoFill={true} speed={20} className="marquee">
+          {/* <Marquee autoFill={true} speed={20} className="marquee">
             <span className="bianzhidai">{marqueeSpacer()}❤ FULL STACK WEB DEVELOPER ❤</span>
             <span className="bianzhidai">
               {marqueeSpacer()}
@@ -46,7 +46,7 @@ export default function RootLayout({
               {marqueeSpacer()}
               {"</>"}
             </span>
-          </Marquee>
+          </Marquee> */}
           <article className="root">
             <aside className="mainAside">
               <Pixelated>
@@ -60,7 +60,7 @@ export default function RootLayout({
                   alignmentBaseline="central"
                 />
                 <Link className="name" href="/" style={{ fontSize: 23, fontWeight: 400 }}>
-                  Apollo
+                  Erin Apollo
                   <br />
                   Ballinger
                 </Link>

@@ -1,6 +1,33 @@
 @use "theme.scss" as *;
 
 .homepage {
+  .call-to-action-links {
+    font-family: "ft88";
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+
+    // text-underline-offset: 2px;
+    // position: relative;
+    a {
+
+      &:hover,
+      &:focus-visible {
+        color: $accent;
+      }
+
+      &.active {
+        color: $accent
+      }
+
+      &::before {
+        margin-right: 0.8ch;
+        display: inline-block;
+        content: "■ ";
+      }
+    }
+  }
+
   .homepage-card {
     // border: 3px solid $primary;
     padding: 8px 9px;

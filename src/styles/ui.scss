@@ -22,16 +22,16 @@ a,
     text-decoration: none !important;
   }
 
+  text-decoration: unset;
 
   color: $primary;
   text-decoration-color: $primary;
-  text-decoration: underline;
+  text-decoration-thickness: 1px;
 
   &:hover,
   &:focus-visible {
     color: $accent;
     text-decoration-color: $accent;
-    text-decoration: underline;
   }
 
   &.active {
