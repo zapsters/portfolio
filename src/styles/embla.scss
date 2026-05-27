@@ -99,14 +99,16 @@
 
 
 
-  &:hover {
+  &:hover:not(.embla__button--disabled) {
     opacity: 1 !important;
     background-color: rgba(255, 255, 255, 0.115);
   }
 }
 
 .embla__button--disabled {
-  color: var(--detail-high-contrast);
+  // color: var(--detail-high-contrast);
+  opacity: 0.5;
+  cursor: default !important;
 }
 
 .embla__button__svg {

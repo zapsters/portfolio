@@ -38,7 +38,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel slides={["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie.jpeg"]} />
+      <EmblaCarousel slides={["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie-Sunset.jpg", "/BLIMP/sophie.jpeg", "/BLIMP/sophie-inner-winch.JPG", "/BLIMP/sophie-End-of-Super-Low-Moor.jpg", "/BLIMP/sophie-Balloon-out-of-SLMS-2026-silly.JPG"]} />
 
 
       <hr />

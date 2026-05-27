@@ -1,3 +1,5 @@
+import EmblaCarousel from "../components/EmblaCarousel";
+
 export default function About() {
   return (
     <>
@@ -16,6 +18,8 @@ export default function About() {
       <p>
         When I’m not coding, you’ll probably find me tinkering with side projects, sketching new ideas, or flying the 1859 Balloon Voyage at Conner Prairie.
       </p>
+      <EmblaCarousel slides={["/BLIMP/sophie-Balloon-out-of-SLMS-2026-silly.JPG", "/BLIMP/sophie-End-of-Super-Low-Moor.jpg", "/BLIMP/sophie-inner-winch.JPG", "/BLIMP/sophie-Sunset.jpg", "/BLIMP/sophie.jpeg"]} />
+
     </>
   );
 }
