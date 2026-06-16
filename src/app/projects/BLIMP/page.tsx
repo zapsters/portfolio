@@ -38,7 +38,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel slides={["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie-Sunset.jpg", "/BLIMP/sophie.jpeg", "/BLIMP/sophie-inner-winch.JPG", "/BLIMP/sophie-End-of-Super-Low-Moor.jpg", "/BLIMP/sophie-Balloon-out-of-SLMS-2026-silly.JPG"]} />
+      <EmblaCarousel slides={[{ src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by Apollo Digital LLC." }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }, { src: "/BLIMP/sophie-inner-winch.JPG", alt: "Me learning how to moor the balloon with the low stow / inner mooring system" }, { src: "/BLIMP/sophie-End-of-Super-Low-Moor.jpg", alt: "Picture of us taking the balloon out of hibernation this Spring 2026!" }, { src: "/BLIMP/sophie-Balloon-out-of-SLMS-2026-silly.JPG", alt: "Picture of the 1859 Balloon Crew Team [2025] - I blend in pretty well, I am the green haired one ;)" }]} />
 
 
       <hr />

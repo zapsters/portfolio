@@ -32,7 +32,7 @@ export default function ProjectCard() {
         </Link>
       </div>
       <hr />
-      <EmblaCarousel slides={["/Sporeganizer/DashboardPage.png", "/Sporeganizer/EditClassCard.png", "/Sporeganizer/EditAssignmentCard.png", "/Sporeganizer/EditClassCard2.png", "/Sporeganizer/HomePage.png", "/Sporeganizer/OptionsPage.png"]} />
+      <EmblaCarousel slides={[{ src: "/Sporeganizer/DashboardPage.png" }, { src: "/Sporeganizer/EditClassCard.png" }, { src: "/Sporeganizer/EditAssignmentCard.png" }, { src: "/Sporeganizer/EditClassCard2.png" }, { src: "/Sporeganizer/HomePage.png" }, { src: "/Sporeganizer/OptionsPage.png" }]} />
       <hr />
 
       <h2>Key Features</h2>

@@ -20,7 +20,7 @@ export default function Projects() {
         <ProjectCard
           href="projects/BLIMP"
           label="BLIMP"
-          carousel={["/BLIMP/BlimpScreenshot4-21.jpg", "/BLIMP/sophie.jpeg"]}
+          carousel={[{ src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by Apollo Digital LLC." }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]}
           status={<><p style={{ fontSize: "inherit" }}>Constantly updated</p><hr /><p style={{ fontSize: "inherit" }}>Used in production by Conner Prairie since 2026</p></>}
           url="https://blimpview.app"
           icon={<BlimpIcon style={{ width: "100%", maxWidth: "220px", padding: "5px 0px" }} alignmentBaseline="central" />}>
@@ -55,7 +55,7 @@ export default function Projects() {
           github="https://github.com/zapsters/InputStack"
           url="https://zapsters.github.io/inputstack/"
           label="Input Stack"
-          carousel={["/InputStack/GameScreen.png", "/InputStack/GameScreen2.png", "/InputStack/joinGameScreen.png", "/InputStack/roomScreen.png"]}
+          carousel={[{ src: "/InputStack/GameScreen.png" }, { src: "/InputStack/GameScreen2.png" }, { src: "/InputStack/joinGameScreen.png" }, { src: "/InputStack/roomScreen.png" }]}
           status="Finished 2025"
           icon={<InputStackLogo style={{ width: "100%", padding: "5px 0px" }} alignmentBaseline="central" />}
         >
@@ -89,7 +89,7 @@ export default function Projects() {
           href="projects/sporeganizer"
           github="https://github.com/zapsters/Sporeganizer"
           label="Sporeganizer"
-          carousel={["/Sporeganizer/DashboardPage.png", "/Sporeganizer/EditClassCard.png", "/Sporeganizer/EditAssignmentCard.png", "/Sporeganizer/EditClassCard2.png", "/Sporeganizer/HomePage.png", "/Sporeganizer/OptionsPage.png"]}
+          carousel={[{ src: "/Sporeganizer/DashboardPage.png" }, { src: "/Sporeganizer/EditClassCard.png" }, { src: "/Sporeganizer/EditAssignmentCard.png}" }, { src: "/Sporeganizer/EditClassCard2.png" }, { src: "/Sporeganizer/HomePage.png" }, { src: "/Sporeganizer/OptionsPage.png" }]}
           status="Open source, not being actively developed"
           icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "100%", padding: "5px 0px" }} />}
         >

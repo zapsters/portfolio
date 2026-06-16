@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import Pixelated from "./components/pixelated";
+import EmblaCarousel from "./components/EmblaCarousel";
 
 export default function Home() {
   return (
@@ -37,6 +38,17 @@ export default function Home() {
       </section>
       <hr />
 
+
+      <EmblaCarousel slides={[{ src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by Apollo Digital LLC." }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
+
+      <hr />
+
+
+      <strong className="call-to-action-links" style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <Link href="/projects">View My Work</Link>
+        <Link href="/contact">Get in Touch</Link>
+      </strong>
+      <hr />
       <p>
         I am full-stack developer focused on building interactive, user-centered web applications. I enjoy turning complex ideas into clean, practical experiences using modern web technologies.
       </p>
@@ -48,11 +60,6 @@ export default function Home() {
       <p>
         Outside of development, I am an amateur game dev, keyboardist, and more. Recently I have been watching movies such as the original Matrix and Fight Club for the first time.
       </p>
-      <hr />
-      <strong className="call-to-action-links" style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <Link href="/projects">View My Work</Link>
-        <Link href="/contact">Get in Touch</Link>
-      </strong>
       <hr />
       {/* <p style={{ textAlign: "center" }}><svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg>
         {" "}Made with love{" "}

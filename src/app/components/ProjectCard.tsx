@@ -12,7 +12,7 @@ type ProjectCardProps = React.PropsWithChildren<{
   github?: string;
   url?: string;
   icon?: React.ReactNode;
-  carousel?: string[];
+  carousel?: { src: string, alt?: string }[];
 }>;
 
 export default function ProjectCard({ children, href, label, github, url, icon, status, carousel }: ProjectCardProps) {

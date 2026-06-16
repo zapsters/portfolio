@@ -39,7 +39,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel slides={["/InputStack/GameScreen.png", "/InputStack/GameScreen2.png", "/InputStack/joinGameScreen.png", "/InputStack/roomScreen.png"]} />
+      <EmblaCarousel slides={[{src: "/InputStack/GameScreen.png"}, {src: "/InputStack/GameScreen2.png"}, {src: "/InputStack/joinGameScreen.png"}, {src: "/InputStack/roomScreen.png"}]} />
       <hr />
 
       <h2>How It Works</h2>
