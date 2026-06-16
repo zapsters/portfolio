@@ -91,7 +91,7 @@ export default function Projects() {
           label="Sporeganizer"
           carousel={[{ src: "/Sporeganizer/DashboardPage.png" }, { src: "/Sporeganizer/EditClassCard.png" }, { src: "/Sporeganizer/EditAssignmentCard.png}" }, { src: "/Sporeganizer/EditClassCard2.png" }, { src: "/Sporeganizer/HomePage.png" }, { src: "/Sporeganizer/OptionsPage.png" }]}
           status="Open source, not being actively developed"
-          icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ width: "100%", padding: "5px 0px" }} />}
+          icon={<img src="/Sporeganizer/Sporeganizer.png" alt="Sporeganizer Logo" style={{ imageRendering: "pixelated", width: "100%", padding: "5px 0px" }} />}
         >
           <h1
             style={{ display: "block", textAlign: "center", fontWeight: "500", fontSize: "20px" }}>
