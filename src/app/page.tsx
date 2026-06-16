@@ -57,16 +57,16 @@ export default function Home() {
       {/* <p style={{ textAlign: "center" }}><svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg>
         {" "}Made with love{" "}
         <svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg></p> */}
-      <div style={{ margin: "0 auto", border: "5px solid #ffffff54", display: "flex", borderRadius: 10, justifyContent: "center", alignItems: "flex-start", width: "fit-content", gap: 0, background: "linear-gradient(127deg,rgba(153, 41, 95, 0.7) 0%, rgba(205, 23, 81, 0.26)39%, rgba(139, 18, 18, 0.9) 100%)" }}>
-        <span style={{ padding: "7px 0px 7px 7px", fontFamily: "ft88", fontWeight: 600, maxWidth: "15ch", lineHeight: "1.4em", fontSize: 18 }}>What I have been up to:</span>
+      <Pixelated wrapperStyle={{ margin: '0 auto', padding: '10px 10px' }}>
+        <span style={{ padding: "7px 0px 7px 7px", fontFamily: "ft88", fontWeight: 300, maxWidth: "15ch", lineHeight: "1.4em", fontSize: 18 }}>What I have been up to:</span>
         <ul style={{
           margin: 0, padding: "20px 15px", paddingLeft: 20, flex: 1, listStyle: "square", backgroundColor: "#00000027", fontWeight: 300, fontFamily: "ft88", fontSize: 15
         }}>
           <li>Learning GoLang</li>
           <li>Refining <a style={{ all: "unset", cursor: "help", textDecorationThickness: 1.5 }} href="/projects/BLIMP">BLIMP</a></li>
-          <li>Playing Keyboard</li>
+          <li>Going to Local Indy Shows</li>
         </ul>
-      </div >
+      </Pixelated>
     </div >
   );
 }
