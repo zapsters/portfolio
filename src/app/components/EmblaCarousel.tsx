@@ -12,12 +12,15 @@ import { useEffect } from 'react';
 import { relative } from 'path';
 
 type PropType = {
-  slides: { src: string, alt?: string }[]
-  options?: EmblaOptionsType
+  slides: {
+    skip?: any; src: string, alt?: string
+  }[]
+  options?: EmblaOptionsType;
+  skip?: boolean;
 }
 
 const EmblaCarousel = (props: PropType) => {
-  const { slides, options } = props
+  const { slides, options, skip } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoHeight()])
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -38,25 +41,27 @@ const EmblaCarousel = (props: PropType) => {
         <div className="embla__viewport" ref={emblaRef} style={{ height: "fit-content" }}>
           <div className="embla__container" style={{ height: "fit-content" }}>
             {slides.map((slide, index) => (
-              <div className='embla__slide' style={{ height: "fit-content" }} key={index}>
-                <div className="relative slide-pixel-corners--wrapper">
+              !slide.skip && (
+                <div className='embla__slide' style={{ height: "fit-content" }} key={index}>
+                  <div className="relative slide-pixel-corners--wrapper">
 
-                  <img
-                    onLoad={() => {
-                      if (emblaApi) {
-                        emblaApi.reInit();
-                      }
-                    }}
-                    loading='eager'
-                    className="embla__slide__img"
-                    src={slide.src ? slide.src : `https://picsum.photos/600/350?v=${index}`}
-                    alt={slide.alt}
-                  />
-                  <a href={slide.src} target='_blank' tabIndex={-1}>
-                    <svg style={{ position: "absolute", right: 10, bottom: 10 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M5 5h6v2H5zm8-2h8v2h-8zM5 19h12v2H5zM3 7h2v12H3zm14 6h2v6h-2z" /><path d="M19 3h2v8h-2zm-8 8h2v2h-2zm6-4h-2v2h2zm2-2h-2v2h2zm-4 4h-2v2h2zm-4 4H9v2h2z" /></g></svg>
-                  </a>
+                    <img
+                      onLoad={() => {
+                        if (emblaApi) {
+                          emblaApi.reInit();
+                        }
+                      }}
+                      loading='eager'
+                      className="embla__slide__img"
+                      src={slide.src ? slide.src : `https://picsum.photos/600/350?v=${index}`}
+                      alt={slide.alt}
+                    />
+                    <a href={slide.src} target='_blank' tabIndex={-1}>
+                      <svg style={{ position: "absolute", right: 10, bottom: 10 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M5 5h6v2H5zm8-2h8v2h-8zM5 19h12v2H5zM3 7h2v12H3zm14 6h2v6h-2z" /><path d="M19 3h2v8h-2zm-8 8h2v2h-2zm6-4h-2v2h2zm2-2h-2v2h2zm-4 4h-2v2h2zm-4 4H9v2h2z" /></g></svg>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              )
             ))}
           </div>
           <p style={{ zIndex: 1, position: 'relative', textAlign: "center", marginBottom: 0, marginTop: '0.5em' }}>{slides[selectedIndex]?.alt}</p>
