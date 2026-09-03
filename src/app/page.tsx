@@ -61,10 +61,10 @@ export default function Home() {
         Outside of development, I am an amateur game dev, keyboardist, and more. Recently I have been watching movies such as the original Matrix and Fight Club for the first time.
       </p>
       <hr />
-      {/* <p style={{ textAlign: "center" }}><svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg>
+      <p style={{ textAlign: "center" }}><svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg>
         {" "}Made with love{" "}
-        <svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg></p> */}
-      <Pixelated wrapperStyle={{ margin: '0 auto', padding: '10px 10px' }}>
+        <svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg></p>
+      {/* <Pixelated wrapperStyle={{ margin: '0 auto', padding: '10px 10px' }}>
         <span style={{ padding: "7px 0px 7px 7px", fontFamily: "ft88", fontWeight: 300, maxWidth: "15ch", lineHeight: "1.4em", fontSize: 18 }}>What I have been up to:</span>
         <ul style={{
           margin: 0, padding: "20px 15px", paddingLeft: 20, flex: 1, listStyle: "square", backgroundColor: "#00000027", fontWeight: 300, fontFamily: "ft88", fontSize: 15
@@ -73,7 +73,7 @@ export default function Home() {
           <li>Refining <a style={{ all: "unset", cursor: "help", textDecorationThickness: 1.5 }} href="/projects/BLIMP">BLIMP</a></li>
           <li>Going to Local Indy Shows</li>
         </ul>
-      </Pixelated>
+      </Pixelated> */}
     </div >
   );
 }
