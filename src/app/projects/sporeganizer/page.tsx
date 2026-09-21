@@ -22,10 +22,11 @@ export default function ProjectCard() {
           maxWidth: 400,
           margin: "0 auto",
         }}>
-        <Link target="_blank" className="Link" href={"https://sporeganizer.com"}>
+        {/* SPOREGANIZER NO LONGER LIVE AT THIS DOMAIN */}
+        {/* <Link target="_blank" className="Link" href={"https://sporeganizer.com"}>
           <WebIcon />
           Open Webpage
-        </Link>
+        </Link> */}
         <Link target="_blank" className="Link" href={"https://github.com/zapsters/InputStack"}>
           <OpenIcon />
           Github
