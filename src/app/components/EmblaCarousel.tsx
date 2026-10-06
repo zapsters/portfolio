@@ -16,11 +16,12 @@ type PropType = {
     skip?: any; src: string, alt?: string
   }[]
   options?: EmblaOptionsType;
-  skip?: boolean;
+  autoscroll?: boolean;
+  autoscrollDelay?: number;
 }
 
 const EmblaCarousel = (props: PropType) => {
-  const { slides, options, skip } = props
+  const { slides, options, autoscroll, autoscrollDelay } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [AutoHeight()])
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -33,7 +34,22 @@ const EmblaCarousel = (props: PropType) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
+  // Autoscroll logic
+  useEffect(() => {
+    if (autoscroll === undefined || !autoscroll || slides.length <= 1) return;
 
+    const scrollInterval = setInterval(() => {
+      if (emblaApi?.canScrollNext()) {
+        emblaApi?.scrollNext()
+      } else {
+        emblaApi?.scrollTo(0)
+      }
+      console.log()
+    }, autoscrollDelay || 7000);
+
+    // Clean up interval on unmount
+    return () => clearInterval(scrollInterval);
+  }, [emblaApi]);
 
   return (
     <>
@@ -44,18 +60,26 @@ const EmblaCarousel = (props: PropType) => {
               !slide.skip && (
                 <div className='embla__slide' style={{ height: "fit-content" }} key={index}>
                   <div className="relative slide-pixel-corners--wrapper">
-
-                    <img
-                      onLoad={() => {
-                        if (emblaApi) {
-                          emblaApi.reInit();
-                        }
-                      }}
-                      loading='eager'
-                      className="embla__slide__img"
-                      src={slide.src ? slide.src : `https://picsum.photos/600/350?v=${index}`}
-                      alt={slide.alt}
-                    />
+                    {slide.src.endsWith("MOV") ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        className="embla__slide__img"
+                        src={slide.src}
+                      />
+                    ) : (
+                      <img
+                        onLoad={() => {
+                          if (emblaApi) {
+                            emblaApi.reInit();
+                          }
+                        }}
+                        loading='eager'
+                        className="embla__slide__img"
+                        src={slide.src ? slide.src : `https://picsum.photos/600/350?v=${index}`}
+                        alt={slide.alt}
+                      />)}
                     <a href={slide.src} target='_blank' tabIndex={-1}>
                       <svg style={{ position: "absolute", right: 10, bottom: 10 }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M5 5h6v2H5zm8-2h8v2h-8zM5 19h12v2H5zM3 7h2v12H3zm14 6h2v6h-2z" /><path d="M19 3h2v8h-2zm-8 8h2v2h-2zm6-4h-2v2h2zm2-2h-2v2h2zm-4 4h-2v2h2zm-4 4H9v2h2z" /></g></svg>
                     </a>

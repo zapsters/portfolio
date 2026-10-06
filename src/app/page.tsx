@@ -39,7 +39,7 @@ export default function Home() {
       <hr />
 
 
-      <EmblaCarousel slides={[{ src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by Apollo Digital LLC." }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
+      <EmblaCarousel autoscroll options={{ loop: true }} slides={[{ src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/me/100_0958.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Made by me, a screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage at Conner Prairie in Indiana. Check out the project page for more." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }, { src: "/BLIMP/IMG_7883_SophieSway.MOV", alt: "Sophie swaying in the wind" }]} />
 
       <hr />
 
@@ -55,10 +55,6 @@ export default function Home() {
 
       <p>
         I&apos;m especially interested in interactive web experiences, creative technology, and applications that feel memorable, engaging, and expressive.  Many of my projects explore the space between software, design, and entertainment — drawing inspiration from games, online communities, and digital creativity to create experiences that people genuinely enjoy using.
-      </p>
-
-      <p>
-        Outside of development, I am an amateur game dev, keyboardist, and more. Recently I have been watching movies such as the original Matrix and Fight Club for the first time.
       </p>
       <hr />
       <p style={{ textAlign: "center" }}><svg style={{ position: "relative", top: "5px" }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--primary)" d="M13 22h-2v-2h2zm-2-2H9v-2h2zm4 0h-2v-2h2zm-6-2H7v-2h2zm8 0h-2v-2h2zM7 16H5v-2h2zm12 0h-2v-2h2zM5 14H3v-2h2zm16 0h-2v-2h2zM3 12H1V6h2zm20 0h-2V6h2zM13 8h-2V6h2zM5 6H3V4h2zm6 0H9V4h2zm4 0h-2V4h2zm6 0h-2V4h2zM9 4H5V2h4zm10 0h-4V2h4z" /></svg>
