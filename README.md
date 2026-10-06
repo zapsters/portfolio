@@ -1,6 +1,6 @@
 # Hey, I am Apollo!
 
-###### (i am also known as 'Erin' and /Zapsters on github)
+### You may also know me as /zapsters on github
 
 This is my portfolio! It is my living document all about me.
 
@@ -9,3 +9,5 @@ This is my portfolio! It is my living document all about me.
 If you are interested in freelance web design / development, feel free to reach out from the contact page!
 
 Live Link: [erinballinger.com](https://erinballinger.com)
+
+### by Erin Apollo Ballinger
