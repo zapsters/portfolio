@@ -62,7 +62,6 @@ const EmblaCarousel = (props: PropType) => {
                   <div className="relative slide-pixel-corners--wrapper">
                     {slide.src.endsWith("MOV") ? (
                       <video
-                        autoPlay
                         loop
                         muted
                         className="embla__slide__img"
