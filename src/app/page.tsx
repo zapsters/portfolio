@@ -39,7 +39,7 @@ export default function Home() {
       <hr />
 
 
-      <EmblaCarousel autoscroll options={{ loop: true }} slides={[{ src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/me/100_0958.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Made by me, a screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage at Conner Prairie in Indiana. Check out the project page for more." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
+      <EmblaCarousel autoscroll options={{ loop: true }} slides={[{ src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Made by me, a screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage at Conner Prairie in Indiana. Check out the project page for more." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
 
       <hr />
 
