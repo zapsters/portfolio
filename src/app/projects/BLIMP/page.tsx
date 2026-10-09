@@ -38,7 +38,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel options={{ loop: true }} slides={[{ src: "/BLIMP/BlimpScreenshot6-16.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by me / Apollo Digital" }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/IMG_7883_SophieSway.MOV", alt: "Sophie swaying in the wind" }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
+      <EmblaCarousel options={{ loop: true }} slides={[{ src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by me / Apollo Digital" }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/IMG_7883_SophieSway.MOV", alt: "Sophie swaying in the wind" }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
 
 
       <hr />
@@ -62,6 +62,12 @@ export default function ProjectCard() {
       <p>My next step was to integrate data visualization. Using recharts, I was able to get some prototypes running fairly quickly using the BLIMP SQL table data. This instantly made BLIMP something valuable just at a glance, no matter what you are looking at: wind, height, lift, pressure, battery voltage, and temperature.</p>
 
       <p>As a passion project turned production web app, BLIMP is driven by my research, creativity, design, and development skills. It is constantly evolving to best be a companion to Conner Prairie's 1859 Balloon Voyage and other Aerophile 30NG sites. Some features are still under development.</p>
+
+      <hr />
+      <p>BLIMP grew alot in 2026, continuously improving the user experience and getting a solid look.</p>
+      <img width={"100%"} style={{ maxWidth: 680 }} className="showcaseImage" src="/BLIMP/BlimpDashboard_4-21-26.jpg" alt="BLIMP Growth Chart" />
+      <img width={"100%"} style={{ maxWidth: 680 }} className="showcaseImage" src="/BLIMP/BlimpDashboard_6-16-26.png" alt="BLIMP Growth Chart" />
+      <img width={"100%"} style={{ maxWidth: 680 }} className="showcaseImage" src="/BLIMP/BlimpDashboard_10-9-26.png" alt="BLIMP Growth Chart" />
 
 
       <h2>Project Overview</h2>
