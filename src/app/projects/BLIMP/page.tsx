@@ -38,7 +38,7 @@ export default function ProjectCard() {
       </div>
 
       <hr />
-      <EmblaCarousel options={{ loop: true }} slides={[{ src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by me / Apollo Digital" }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/IMG_7883_SophieSway.MOV", alt: "Sophie swaying in the wind" }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
+      <EmblaCarousel options={{ loop: true }} slides={[{ src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by me / Apollo Digital" }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }, { src: "/BLIMP/sophie.jpeg", alt: "Picture of the 1859 Balloon Voyage in sunset." }]} />
 
 
       <hr />
