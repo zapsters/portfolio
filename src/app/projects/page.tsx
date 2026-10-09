@@ -21,7 +21,7 @@ export default function Projects() {
           href="projects/BLIMP"
           label="BLIMP"
           carousel={[{ src: "/BLIMP/BlimpDashboard_10-9-26.png", alt: "Screenshot of the BLIMP Dashboard [Balloon Live Instrumentation Monitoring Platform], made for the 1859 Balloon Voyage in Indiana. Made by Apollo Digital LLC." }, { src: "/me/IMG_0027.JPEG", alt: "me piloting the 1859 Balloon Voyage" }, { src: "/BLIMP/flightComputer-reference.png", alt: "Screenshot of the Balloon Software / Flight Computer. This flight computer heavily influenced BLIMP dashboard design. Digitizing this software in a neat package for remote viewing is the basis of BLIMP." }, { src: "/BLIMP/sophie-Sunset.jpg", alt: "Picture of the sunset from the 1859 Balloon Voyage." }]}
-          status={<><span style={{ fontSize: "inherit" }}>Constantly updated</span><hr /><span style={{ fontSize: "inherit" }}>Used by the 1859 Balloon Voyage at Conner Prairie since 2026</span></>}
+          status={<><span style={{ fontSize: "inherit" }}>Remote telementry monitoring from the browser for AEROPHILE 30NG Tethered Helium Balloons.</span><hr /><span style={{ fontSize: "inherit" }}>Used by the 1859 Balloon Voyage at Conner Prairie since 2026</span></>}
           url="https://blimpview.app"
           icon={<BlimpIcon style={{ width: "100%", maxWidth: "220px", padding: "5px 0px" }} alignmentBaseline="central" />}>
           <h1
